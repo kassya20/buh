@@ -13,14 +13,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
-      - name: Build split file index
+      - name: Build repository and audit indexes
         shell: bash
         run: |
+          set -euo pipefail
+
           rm -f REPO_INDEX.txt
-          rm -rf REPO_INDEX
-          mkdir -p REPO_INDEX
+          rm -rf REPO_INDEX CONFIG_AUDIT_INDEX
+          mkdir -p REPO_INDEX CONFIG_AUDIT_INDEX
 
           find . -type f \
             ! -path './.git/*' \
@@ -55,20 +57,15 @@ jobs:
           for file in REPO_INDEX/files_*; do
             mv "$file" "$file.txt"
           done
-
           for file in REPO_INDEX/files_*.txt; do
             echo "$(basename "$file") $(wc -l < "$file") lines" >> REPO_INDEX/SUMMARY.txt
           done
 
-      - name: Build configuration audit index
-        shell: bash
-        run: |
-          rm -rf CONFIG_AUDIT_INDEX
-          mkdir -p CONFIG_AUDIT_INDEX
           python3 - <<'PY'
           from pathlib import Path
-          from collections import Counter, defaultdict
+          from collections import Counter
           import csv
+          import os
           import re
 
           root = Path('.')
@@ -124,10 +121,11 @@ jobs:
                   w.writerows(rows)
 
           def split_tsv(base_name, rows, header, chunk_size=5000):
-              if not rows:
-                  write_tsv(out / f'{base_name}_0000.tsv', rows, header)
-                  return [f'{base_name}_0000.tsv']
               names = []
+              if not rows:
+                  name = f'{base_name}_0000.tsv'
+                  write_tsv(out / name, rows, header)
+                  return [name]
               for i in range(0, len(rows), chunk_size):
                   name = f'{base_name}_{i//chunk_size:04d}.tsv'
                   write_tsv(out / name, rows[i:i+chunk_size], header)
@@ -145,31 +143,31 @@ jobs:
                   obj_dir = top_path / name
                   forms_count = len(list((obj_dir / 'Forms').glob('*.xml'))) if (obj_dir / 'Forms').exists() else 0
                   commands_count = len(list((obj_dir / 'Commands').glob('*'))) if (obj_dir / 'Commands').exists() else 0
-                  has_manager = (obj_dir / 'Ext' / 'ManagerModule.bsl').exists()
-                  has_object = (obj_dir / 'Ext' / 'ObjectModule.bsl').exists()
-                  has_recordset = (obj_dir / 'Ext' / 'RecordSetModule.bsl').exists()
-                  has_module = (obj_dir / 'Ext' / 'Module.bsl').exists()
-                  objects.append([top, ru_type, name, str(xml), str(obj_dir) if obj_dir.exists() else '', forms_count, commands_count, int(has_manager), int(has_object), int(has_recordset), int(has_module)])
+                  objects.append([
+                      top, ru_type, name, str(xml), str(obj_dir) if obj_dir.exists() else '',
+                      forms_count, commands_count,
+                      int((obj_dir / 'Ext' / 'ManagerModule.bsl').exists()),
+                      int((obj_dir / 'Ext' / 'ObjectModule.bsl').exists()),
+                      int((obj_dir / 'Ext' / 'RecordSetModule.bsl').exists()),
+                      int((obj_dir / 'Ext' / 'Module.bsl').exists()),
+                  ])
                   object_counts[ru_type] += 1
 
           write_tsv(out / 'metadata_objects.tsv', objects, ['top_folder','type','name','xml_path','object_dir','forms_count','commands_count','has_manager_module','has_object_module','has_recordset_module','has_module'])
-          write_tsv(out / 'metadata_object_counts.tsv', [[k, v] for k, v in object_counts.most_common()], ['type','count'])
+          write_tsv(out / 'metadata_object_counts.tsv', object_counts.most_common(), ['type','count'])
 
-          def source_from_path(path: Path):
+          def source_from_path(path):
               parts = path.parts
-              if not parts:
-                  return ('', '', '')
-              top = parts[0]
+              top = parts[0] if parts else ''
               if top in top_type_names and len(parts) >= 2:
-                  return (top, top_type_names[top], parts[1])
-              return (top, top, '')
+                  return top, top_type_names[top], parts[1]
+              return top, top, ''
 
           bsl_paths = sorted(p for p in root.rglob('*.bsl') if '.git' not in p.parts and 'CONFIG_AUDIT_INDEX' not in p.parts and 'REPO_INDEX' not in p.parts)
           module_rows = []
           ref_edges = set()
           move_edges = set()
           query_tables = set()
-          query_sources = Counter()
 
           ns_pattern = re.compile(r'(?<![A-Za-zА-Яа-яЁё0-9_])(Справочники|Документы|РегистрыСведений|РегистрыНакопления|РегистрыБухгалтерии|ПланыСчетов|ПланыВидовХарактеристик|ПланыВидовРасчета|Перечисления|Отчеты|Обработки|БизнесПроцессы|Задачи|Константы|ОбщиеФормы|ОбщиеКоманды|ОбщиеМакеты|HTTPСервисы|WebСервисы)\.([A-Za-zА-Яа-яЁё0-9_]+)')
           move_pattern = re.compile(r'(?<![A-Za-zА-Яа-яЁё0-9_])Движения\.([A-Za-zА-Яа-яЁё0-9_]+)')
@@ -181,16 +179,13 @@ jobs:
                   text = p.read_text(encoding='utf-8-sig', errors='ignore')
               except Exception:
                   text = ''
-              lines = text.count('\n') + (1 if text else 0)
-              size = p.stat().st_size
               top, src_type, src_name = source_from_path(p)
-              module_rows.append([rel, top, src_type, src_name, lines, size])
+              module_rows.append([rel, top, src_type, src_name, text.count('\n') + (1 if text else 0), p.stat().st_size])
               for m in ns_pattern.finditer(text):
                   ref_edges.add((top, src_type, src_name, rel, m.group(1), m.group(2)))
               for m in move_pattern.finditer(text):
                   move_edges.add((top, src_type, src_name, rel, 'Движения', m.group(1)))
               if 'ВЫБРАТЬ' in text or 'SELECT' in text.upper():
-                  query_sources[(top, src_type, src_name, rel)] += 1
                   for m in table_pattern.finditer(text):
                       query_tables.add((top, src_type, src_name, rel, m.group(1)))
 
@@ -203,20 +198,19 @@ jobs:
           query_chunks = split_tsv('query_tables', query_rows, ['source_top_folder','source_type','source_name','source_path','query_table'])
 
           ref_by_kind = Counter(row[4] for row in ref_rows)
-          ref_by_name = Counter((row[4], row[5]) for row in ref_rows)
           move_by_name = Counter(row[5] for row in move_rows)
           query_by_table = Counter(row[4] for row in query_rows)
 
           with (out / 'SUMMARY.md').open('w', encoding='utf-8') as f:
-              f.write(f'# Configuration audit index\n\n')
-              f.write(f'Repository: {"${GITHUB_REPOSITORY}"}\n')
-              f.write(f'Commit: {"${GITHUB_SHA}"}\n\n')
-              f.write(f'## Metadata objects\n\n')
+              f.write('# Configuration audit index\n\n')
+              f.write(f"Repository: {os.environ.get('GITHUB_REPOSITORY','')}\n")
+              f.write(f"Commit: {os.environ.get('GITHUB_SHA','')}\n\n")
+              f.write('## Metadata objects\n\n')
               f.write(f'Total metadata objects: {len(objects)}\n\n')
               for k, v in object_counts.most_common():
                   f.write(f'- {k}: {v}\n')
               f.write(f'\n## BSL modules\n\nTotal BSL modules: {len(module_rows)}\n\n')
-              f.write(f'## Extracted links\n\n')
+              f.write('## Extracted links\n\n')
               f.write(f'- Namespace references: {len(ref_rows)}\n')
               f.write(f'- Movement references: {len(move_rows)}\n')
               f.write(f'- Query table references: {len(query_rows)}\n\n')
@@ -230,26 +224,21 @@ jobs:
               for k, v in query_by_table.most_common(80):
                   f.write(f'- {k}: {v}\n')
               f.write('\n## Files\n\n')
-              f.write('- metadata_objects.tsv\n')
-              f.write('- metadata_object_counts.tsv\n')
-              f.write('- bsl_modules.tsv\n')
-              for name in ref_chunks:
-                  f.write(f'- {name}\n')
-              for name in move_chunks:
-                  f.write(f'- {name}\n')
-              for name in query_chunks:
+              for name in ['metadata_objects.tsv', 'metadata_object_counts.tsv', 'bsl_modules.tsv'] + ref_chunks + move_chunks + query_chunks:
                   f.write(f'- {name}\n')
           PY
 
       - name: Commit indexes
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add REPO_INDEX REPO_INDEX.txt CONFIG_AUDIT_INDEX
+          git add -A REPO_INDEX REPO_INDEX.txt CONFIG_AUDIT_INDEX
           if git diff --cached --quiet; then
             echo "Repository indexes are already up to date"
           else
             git commit -m "Обновить индексы репозитория для анализа"
-            git push
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
