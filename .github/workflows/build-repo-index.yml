@@ -13,64 +13,70 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 1
 
-      - name: Build repository and audit indexes
+      - name: Build and publish indexes
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-
-          rm -f REPO_INDEX.txt
-          rm -rf REPO_INDEX CONFIG_AUDIT_INDEX
-          mkdir -p REPO_INDEX CONFIG_AUDIT_INDEX
-
-          find . -type f \
-            ! -path './.git/*' \
-            ! -path './REPO_INDEX/*' \
-            ! -path './CONFIG_AUDIT_INDEX/*' \
-            ! -path './REPO_INDEX.txt' \
-            | sed 's#^./##' \
-            | sort > /tmp/all_files.txt
-
-          {
-            echo "Repository: $GITHUB_REPOSITORY"
-            echo "Branch: ${GITHUB_REF_NAME}"
-            echo "Commit: ${GITHUB_SHA}"
-            echo "Generated at: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            echo "Total files: $(wc -l < /tmp/all_files.txt)"
-            echo
-            echo "== Top-level directories =="
-            find . -mindepth 1 -maxdepth 1 -type d \
-              ! -path './.git' \
-              ! -path './REPO_INDEX' \
-              ! -path './CONFIG_AUDIT_INDEX' \
-              | sed 's#^./##' \
-              | sort
-            echo
-            echo "== Top-level file counts =="
-            awk -F/ '{print $1}' /tmp/all_files.txt | sort | uniq -c | sort -nr
-            echo
-            echo "== Index chunks =="
-          } > REPO_INDEX/SUMMARY.txt
-
-          split -d -a 4 -l 3000 /tmp/all_files.txt REPO_INDEX/files_
-          for file in REPO_INDEX/files_*; do
-            mv "$file" "$file.txt"
-          done
-          for file in REPO_INDEX/files_*.txt; do
-            echo "$(basename "$file") $(wc -l < "$file") lines" >> REPO_INDEX/SUMMARY.txt
-          done
-
           python3 - <<'PY'
           from pathlib import Path
           from collections import Counter
+          import base64
           import csv
+          import json
           import os
           import re
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          repo = os.environ['GITHUB_REPOSITORY']
+          branch = os.environ['GITHUB_REF_NAME']
+          commit_sha = os.environ['GITHUB_SHA']
+          token = os.environ['GH_TOKEN']
 
           root = Path('.')
-          out = Path('CONFIG_AUDIT_INDEX')
-          out.mkdir(exist_ok=True)
+          gen = Path('/tmp/generated-indexes')
+          repo_index = gen / 'REPO_INDEX'
+          audit_index = gen / 'CONFIG_AUDIT_INDEX'
+          repo_index.mkdir(parents=True, exist_ok=True)
+          audit_index.mkdir(parents=True, exist_ok=True)
+
+          def is_excluded(p: Path):
+              parts = p.parts
+              return (
+                  '.git' in parts
+                  or (len(parts) > 0 and parts[0] in {'REPO_INDEX', 'CONFIG_AUDIT_INDEX'})
+                  or str(p) == 'REPO_INDEX.txt'
+              )
+
+          all_files = sorted(str(p).replace('\\', '/') for p in root.rglob('*') if p.is_file() and not is_excluded(p))
+
+          top_counts = Counter(path.split('/')[0] for path in all_files)
+          top_dirs = sorted({path.split('/')[0] for path in all_files if '/' in path})
+
+          with (repo_index / 'SUMMARY.txt').open('w', encoding='utf-8') as f:
+              f.write(f'Repository: {repo}\n')
+              f.write(f'Branch: {branch}\n')
+              f.write(f'Commit: {commit_sha}\n')
+              f.write(f'Total files: {len(all_files)}\n\n')
+              f.write('== Top-level directories ==\n')
+              for name in top_dirs:
+                  f.write(name + '\n')
+              f.write('\n== Top-level file counts ==\n')
+              for name, count in top_counts.most_common():
+                  f.write(f'{count}\t{name}\n')
+              f.write('\n== Index chunks ==\n')
+
+          for i in range(0, len(all_files), 3000):
+              name = f'files_{i//3000:04d}.txt'
+              chunk = all_files[i:i+3000]
+              (repo_index / name).write_text('\n'.join(chunk) + '\n', encoding='utf-8')
+              with (repo_index / 'SUMMARY.txt').open('a', encoding='utf-8') as f:
+                  f.write(f'{name}\t{len(chunk)} lines\n')
 
           top_type_names = {
               'AccountingRegisters': 'РегистрБухгалтерии',
@@ -120,15 +126,15 @@ jobs:
                   w.writerow(header)
                   w.writerows(rows)
 
-          def split_tsv(base_name, rows, header, chunk_size=5000):
+          def split_tsv(base_name, rows, header, chunk_size=1000):
               names = []
               if not rows:
                   name = f'{base_name}_0000.tsv'
-                  write_tsv(out / name, rows, header)
+                  write_tsv(audit_index / name, rows, header)
                   return [name]
               for i in range(0, len(rows), chunk_size):
                   name = f'{base_name}_{i//chunk_size:04d}.tsv'
-                  write_tsv(out / name, rows[i:i+chunk_size], header)
+                  write_tsv(audit_index / name, rows[i:i+chunk_size], header)
                   names.append(name)
               return names
 
@@ -141,11 +147,10 @@ jobs:
               for xml in sorted(top_path.glob('*.xml')):
                   name = xml.stem
                   obj_dir = top_path / name
-                  forms_count = len(list((obj_dir / 'Forms').glob('*.xml'))) if (obj_dir / 'Forms').exists() else 0
-                  commands_count = len(list((obj_dir / 'Commands').glob('*'))) if (obj_dir / 'Commands').exists() else 0
                   objects.append([
-                      top, ru_type, name, str(xml), str(obj_dir) if obj_dir.exists() else '',
-                      forms_count, commands_count,
+                      top, ru_type, name, str(xml).replace('\\', '/'), str(obj_dir).replace('\\', '/') if obj_dir.exists() else '',
+                      len(list((obj_dir / 'Forms').glob('*.xml'))) if (obj_dir / 'Forms').exists() else 0,
+                      len(list((obj_dir / 'Commands').glob('*'))) if (obj_dir / 'Commands').exists() else 0,
                       int((obj_dir / 'Ext' / 'ManagerModule.bsl').exists()),
                       int((obj_dir / 'Ext' / 'ObjectModule.bsl').exists()),
                       int((obj_dir / 'Ext' / 'RecordSetModule.bsl').exists()),
@@ -153,8 +158,8 @@ jobs:
                   ])
                   object_counts[ru_type] += 1
 
-          write_tsv(out / 'metadata_objects.tsv', objects, ['top_folder','type','name','xml_path','object_dir','forms_count','commands_count','has_manager_module','has_object_module','has_recordset_module','has_module'])
-          write_tsv(out / 'metadata_object_counts.tsv', object_counts.most_common(), ['type','count'])
+          write_tsv(audit_index / 'metadata_objects.tsv', objects, ['top_folder','type','name','xml_path','object_dir','forms_count','commands_count','has_manager_module','has_object_module','has_recordset_module','has_module'])
+          write_tsv(audit_index / 'metadata_object_counts.tsv', object_counts.most_common(), ['type','count'])
 
           def source_from_path(path):
               parts = path.parts
@@ -163,7 +168,7 @@ jobs:
                   return top, top_type_names[top], parts[1]
               return top, top, ''
 
-          bsl_paths = sorted(p for p in root.rglob('*.bsl') if '.git' not in p.parts and 'CONFIG_AUDIT_INDEX' not in p.parts and 'REPO_INDEX' not in p.parts)
+          bsl_paths = sorted(p for p in root.rglob('*.bsl') if not is_excluded(p))
           module_rows = []
           ref_edges = set()
           move_edges = set()
@@ -174,7 +179,7 @@ jobs:
           table_pattern = re.compile(r'(?i)(?:\bИЗ\b|\bJOIN\b|\bСОЕДИНЕНИЕ\b)\s+([A-Za-zА-Яа-яЁё0-9_]+\.[A-Za-zА-Яа-яЁё0-9_]+(?:\.[A-Za-zА-Яа-яЁё0-9_]+)?)')
 
           for p in bsl_paths:
-              rel = str(p)
+              rel = str(p).replace('\\', '/')
               try:
                   text = p.read_text(encoding='utf-8-sig', errors='ignore')
               except Exception:
@@ -189,7 +194,7 @@ jobs:
                   for m in table_pattern.finditer(text):
                       query_tables.add((top, src_type, src_name, rel, m.group(1)))
 
-          write_tsv(out / 'bsl_modules.tsv', module_rows, ['path','top_folder','source_type','source_name','lines','bytes'])
+          write_tsv(audit_index / 'bsl_modules.tsv', module_rows, ['path','top_folder','source_type','source_name','lines','bytes'])
           ref_rows = sorted(ref_edges)
           move_rows = sorted(move_edges)
           query_rows = sorted(query_tables)
@@ -197,14 +202,10 @@ jobs:
           move_chunks = split_tsv('movements', move_rows, ['source_top_folder','source_type','source_name','source_path','ref_kind','register_name'])
           query_chunks = split_tsv('query_tables', query_rows, ['source_top_folder','source_type','source_name','source_path','query_table'])
 
-          ref_by_kind = Counter(row[4] for row in ref_rows)
-          move_by_name = Counter(row[5] for row in move_rows)
-          query_by_table = Counter(row[4] for row in query_rows)
-
-          with (out / 'SUMMARY.md').open('w', encoding='utf-8') as f:
+          with (audit_index / 'SUMMARY.md').open('w', encoding='utf-8') as f:
               f.write('# Configuration audit index\n\n')
-              f.write(f"Repository: {os.environ.get('GITHUB_REPOSITORY','')}\n")
-              f.write(f"Commit: {os.environ.get('GITHUB_SHA','')}\n\n")
+              f.write(f'Repository: {repo}\n')
+              f.write(f'Commit: {commit_sha}\n\n')
               f.write('## Metadata objects\n\n')
               f.write(f'Total metadata objects: {len(objects)}\n\n')
               for k, v in object_counts.most_common():
@@ -215,30 +216,67 @@ jobs:
               f.write(f'- Movement references: {len(move_rows)}\n')
               f.write(f'- Query table references: {len(query_rows)}\n\n')
               f.write('### References by kind\n\n')
-              for k, v in ref_by_kind.most_common():
+              for k, v in Counter(row[4] for row in ref_rows).most_common():
                   f.write(f'- {k}: {v}\n')
               f.write('\n### Top movement registers\n\n')
-              for k, v in move_by_name.most_common(50):
+              for k, v in Counter(row[5] for row in move_rows).most_common(50):
                   f.write(f'- {k}: {v}\n')
               f.write('\n### Top query tables\n\n')
-              for k, v in query_by_table.most_common(80):
+              for k, v in Counter(row[4] for row in query_rows).most_common(80):
                   f.write(f'- {k}: {v}\n')
               f.write('\n## Files\n\n')
               for name in ['metadata_objects.tsv', 'metadata_object_counts.tsv', 'bsl_modules.tsv'] + ref_chunks + move_chunks + query_chunks:
                   f.write(f'- {name}\n')
-          PY
 
-      - name: Commit indexes
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A REPO_INDEX REPO_INDEX.txt CONFIG_AUDIT_INDEX
-          if git diff --cached --quiet; then
-            echo "Repository indexes are already up to date"
-          else
-            git commit -m "Обновить индексы репозитория для анализа"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
-          fi
+          def request(method, path, payload=None):
+              url = 'https://api.github.com' + path
+              data = None if payload is None else json.dumps(payload).encode('utf-8')
+              req = urllib.request.Request(url, data=data, method=method)
+              req.add_header('Authorization', f'Bearer {token}')
+              req.add_header('Accept', 'application/vnd.github+json')
+              req.add_header('X-GitHub-Api-Version', '2022-11-28')
+              if payload is not None:
+                  req.add_header('Content-Type', 'application/json')
+              try:
+                  with urllib.request.urlopen(req) as resp:
+                      body = resp.read().decode('utf-8')
+                      return json.loads(body) if body else None
+              except urllib.error.HTTPError as e:
+                  if e.code == 404:
+                      return None
+                  raise
+
+          def get_sha(path):
+              quoted = urllib.parse.quote(path)
+              result = request('GET', f'/repos/{repo}/contents/{quoted}?ref={urllib.parse.quote(branch)}')
+              if isinstance(result, dict):
+                  return result.get('sha')
+              return None
+
+          def put_file(repo_path, local_path):
+              content = base64.b64encode(local_path.read_bytes()).decode('ascii')
+              payload = {
+                  'message': f'Обновить {repo_path}',
+                  'content': content,
+                  'branch': branch,
+              }
+              sha = get_sha(repo_path)
+              if sha:
+                  payload['sha'] = sha
+              request('PUT', f'/repos/{repo}/contents/{urllib.parse.quote(repo_path)}', payload)
+              print('published', repo_path)
+
+          def delete_file(repo_path):
+              sha = get_sha(repo_path)
+              if not sha:
+                  return
+              payload = {'message': f'Удалить {repo_path}', 'sha': sha, 'branch': branch}
+              request('DELETE', f'/repos/{repo}/contents/{urllib.parse.quote(repo_path)}', payload)
+              print('deleted', repo_path)
+
+          delete_file('REPO_INDEX.txt')
+          for local_path in sorted(gen.rglob('*')):
+              if local_path.is_file():
+                  repo_path = str(local_path.relative_to(gen)).replace('\\', '/')
+                  put_file(repo_path, local_path)
+          PY
