@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>AlwaysHorizontal</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаОК" id="34">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="ФормаОтмена" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНазначениеИспользования" id="24">
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНазначениеИспользованияРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<LabelField name="ОбъектПрава" id="121">
+					<DataPath>ОбъектПрава</DataPath>
+					<Hiperlink>true</Hiperlink>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ContextMenu name="ОбъектПраваКонтекстноеМеню" id="122"/>
+					<ExtendedTooltip name="ОбъектПраваРасширеннаяПодсказка" id="123"/>
+				</LabelField>
+				<UsualGroup name="ГруппаСрокИспользования" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок использования</v8:content>
+						</v8:item>
+					</Title>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаСрокИспользованияРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="СрокИспользования" id="3">
+							<DataPath>СрокИспользования</DataPath>
+							<ContextMenu name="СрокИспользованияКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="СрокИспользованияРасширеннаяПодсказка" id="5"/>
+							<Events>
+								<Event name="OnChange">СрокИспользованияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="НадписьМесяцев" id="81">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>мес.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Укажите примерный срок, в течение которого планируете пользоваться программным продуктом.
+Срок использования не должен превышать срок действия права, указанный в документах.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="НадписьМесяцевКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="НадписьМесяцевРасширеннаяПодсказка" id="83"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьДатыИспользования" id="84">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>(с 01.01.2024 по 31.12.2024)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьДатыИспользованияКонтекстноеМеню" id="85"/>
+							<ExtendedTooltip name="НадписьДатыИспользованияРасширеннаяПодсказка" id="86"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЦельИспользования" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цель использования</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<ExtendedTooltip name="ГруппаЦельИспользованияРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЦельИспользованияАналитика" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа цель использования аналитика</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа цель использования аналитика</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>41</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЦельИспользованияАналитикаРасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<InputField name="Счет" id="38">
+									<DataPath>Счет</DataPath>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ChoiceParameters>
+										<app:item name="Отбор.ЗапретитьИспользоватьВПроводках">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:boolean">false</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="СчетКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="СчетРасширеннаяПодсказка" id="40"/>
+									<Events>
+										<Event name="OnChange">СчетПриИзменении</Event>
+										<Event name="Clearing">СчетОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="Подразделение" id="6">
+									<DataPath>Подразделение</DataPath>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Организация</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ПодразделениеКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="8"/>
+								</InputField>
+								<InputField name="Субконто1" id="9">
+									<DataPath>Субконто1</DataPath>
+									<TypeLink>
+										<xr:DataPath>Счет</xr:DataPath>
+										<xr:LinkItem>1</xr:LinkItem>
+									</TypeLink>
+									<ContextMenu name="Субконто1КонтекстноеМеню" id="10"/>
+									<ExtendedTooltip name="Субконто1РасширеннаяПодсказка" id="11"/>
+									<Events>
+										<Event name="OnChange">Субконто1ПриИзменении</Event>
+										<Event name="StartChoice">Субконто1НачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="Субконто2" id="12">
+									<DataPath>Субконто2</DataPath>
+									<TypeLink>
+										<xr:DataPath>Счет</xr:DataPath>
+										<xr:LinkItem>2</xr:LinkItem>
+									</TypeLink>
+									<ContextMenu name="Субконто2КонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="Субконто2РасширеннаяПодсказка" id="14"/>
+									<Events>
+										<Event name="OnChange">Субконто2ПриИзменении</Event>
+										<Event name="StartChoice">Субконто2НачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="Субконто3" id="15">
+									<DataPath>Субконто3</DataPath>
+									<TypeLink>
+										<xr:DataPath>Счет</xr:DataPath>
+										<xr:LinkItem>3</xr:LinkItem>
+									</TypeLink>
+									<ContextMenu name="Субконто3КонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="Субконто3РасширеннаяПодсказка" id="17"/>
+									<Events>
+										<Event name="OnChange">Субконто3ПриИзменении</Event>
+										<Event name="StartChoice">Субконто3НачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДекорацияНадписьОтражениеВУчете" id="106">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДекорацияНадписьОтражениеВУчетеРасширеннаяПодсказка" id="107"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияВертикальнаяПолоса" id="100">
+					<VerticalStretch>true</VerticalStretch>
+					<PictureSize>Stretch</PictureSize>
+					<Picture>
+						<xr:Ref>CommonPicture.ВертикальныйРазделитель</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияВертикальнаяПолосаКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ДекорацияВертикальнаяПолосаРасширеннаяПодсказка" id="102"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаОтражениеВУчете" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отражение в учете</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаОтражениеВУчетеРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтражениеВУчетеДекорацияНадпись" id="26">
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Width>40</Width>
+							<Group>AlwaysHorizontal</Group>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтражениеВУчетеДекорацияНадписьРасширеннаяПодсказка" id="27"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПредупреждениеОтражения" id="95">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация предупреждение отражения</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПредупреждениеОтраженияКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ДекорацияПредупреждениеОтраженияРасширеннаяПодсказка" id="97"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьОтражениеВУчете" id="28">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Срок использования объекта права не превышает 12 месяцев.
+Затраты на приобретение в бухгалтерском учете будут списаны на расходы текущего периода, а в налоговом учете - спишутся ежемесячно равными частями в течение срока использования.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОтражениеВУчетеКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="НадписьОтражениеВУчетеРасширеннаяПодсказка" id="30"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<PictureDecoration name="ДекорацияВертикальныйОтступ" id="118">
+							<Height>1</Height>
+							<MaxHeight>1</MaxHeight>
+							<ContextMenu name="ДекорацияВертикальныйОтступКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ДекорацияВертикальныйОтступРасширеннаяПодсказка" id="120"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаПовышающийКоэффициентДекорацияНадпись" id="110">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отражение в учете</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Width>40</Width>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПовышающийКоэффициентДекорацияНадписьРасширеннаяПодсказка" id="111"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПредупреждениеПовышающийКоэффициент" id="112">
+									<Picture>
+										<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПредупреждениеПовышающийКоэффициентКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ДекорацияПредупреждениеПовышающийКоэффициентРасширеннаяПодсказка" id="114"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьПовышающийКоэффициент" id="115">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Указана статья затрат с видом "Расходы на приобретение компьютерных лицензий с повышающим коэффициентом" поэтому в налоговом учете будет применен повышающий коэффициент 2 в соответствии с подп. 26 п. 1 ст. 264 НК РФ.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПовышающийКоэффициентКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="НадписьПовышающийКоэффициентРасширеннаяПодсказка" id="117"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОбъектПрава" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект права</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НематериальныеАктивы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокИспользования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок использования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Организация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетЗатратПоПодразделениям</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Субконто1" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:Characteristic.ВидыСубконтоХозрасчетные</v8:TypeSet>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Субконто2" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:Characteristic.ВидыСубконтоХозрасчетные</v8:TypeSet>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Субконто3" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Субконто 3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:Characteristic.ВидыСубконтоХозрасчетные</v8:TypeSet>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Счет" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Дата" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоМалоценныйНМА" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это малоценный НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтражениеБУ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражение БУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыОтраженияНематериальныхАктивовБУ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтражениеНУ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отражение НУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыОтраженияНематериальныхАктивовНУ</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Стоимость" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоимость</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ДенежнаяСуммаНеотрицательная</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСуммыНалогНаПрибыль" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать суммы налог на прибыль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютаДокумента" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Валюты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КурсВзаиморасчетов" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Курс взаиморасчетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.КурсВалюты</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="КратностьВзаиморасчетов" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кратность взаиморасчетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПлательщикНДФЛ" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это плательщик НДФЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоЛицензияНаПОИзРеестраРоссийскихПрограмм" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это лицензия на ПО из реестра российских программ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатьяЗатрат" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья затрат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтатьиЗатрат</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитыРеестраЗаполненыКорректно" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты реестра заполнены корректно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачалаДействияПрава" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала действия права</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Action>КомандаОК</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ТолькоПросмотр">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НазначениеИспользования">
+			<Type/>
+		</Parameter>
+		<Parameter name="ОбъектПрава">
+			<Type>
+				<v8:Type>cfg:CatalogRef.НематериальныеАктивы</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="Стоимость">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

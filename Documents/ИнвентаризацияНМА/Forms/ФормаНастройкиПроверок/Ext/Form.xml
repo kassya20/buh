@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройка критериев контроля</v8:content>
+		</v8:item>
+	</Title>
+	<Width>50</Width>
+	<Height>17</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveWindowSettings>false</SaveWindowSettings>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="23">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="24"/>
+			</Button>
+			<Button name="ФормаОтмена" id="25">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияИнформация" id="33">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>style:ПоясняющийТекст</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Некоторые объекты учета с большой вероятностью требуют пересмотра срока использования, поэтому находятся на особом контроле.
+Например, это могут быть объекты с неограниченным сроком действия права или ранее обесценные нематериальные активы.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияИнформацияКонтекстноеМеню" id="34"/>
+			<ExtendedTooltip name="ДекорацияИнформацияРасширеннаяПодсказка" id="35"/>
+		</LabelDecoration>
+		<CheckBoxField name="РанееОбесцененные" id="1">
+			<DataPath>КонтролироватьРанееОбесцененные</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РанееОбесцененныеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="РанееОбесцененныеРасширеннаяПодсказка" id="3"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаЗаканчиваетсяСрокИспользования" id="10">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаканчиваетсяСрокИспользованияРасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<CheckBoxField name="ЗаканчиваетсяСрокИспользования" id="4">
+					<DataPath>КонтролироватьСрокИспользования</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаканчиваетсяСрокИспользованияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ЗаканчиваетсяСрокИспользованияРасширеннаяПодсказка" id="6"/>
+				</CheckBoxField>
+				<InputField name="ДатаОкончанияСрокаИспользования" id="12">
+					<DataPath>ДатаОкончанияКонтроль</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ДатаОкончанияСрокаИспользованияКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДатаОкончанияСрокаИспользованияРасширеннаяПодсказка" id="14"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="НеограниченныйСрокДействияПрава" id="7">
+			<DataPath>КонтролироватьНеограниченныйСрокДействияПрава</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеограниченныйСрокДействияПраваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НеограниченныйСрокДействияПраваРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КонтролироватьРанееОбесцененные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ранее обесцененные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КонтролироватьСрокИспользования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок использования заканчивается до:</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КонтролироватьНеограниченныйСрокДействияПрава" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неограниченный срок действия права</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДатаОкончанияКонтроль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Окончание срока использования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КритерииКонтроляИсходные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Критерии контроля исходные</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОК</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="КритерииКонтроля">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

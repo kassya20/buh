@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Group>AlwaysHorizontal</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛеваяКолонка" id="3">
+			<Width>32</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЕдиныйНалоговыйСчет" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единый налоговый счет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаЕдиныйНалоговыйСчетРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<Button name="Уведомления" id="25">
+							<Type>UsualButton</Type>
+							<CommandName>Document.УведомлениеОбИсчисленныхСуммахНалогов.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="УведомленияРасширеннаяПодсказка" id="26"/>
+						</Button>
+						<Button name="ЗаявленияОЗачете" id="107">
+							<Type>UsualButton</Type>
+							<CommandName>Document.ЗаявлениеОЗачетеВСчетПредстоящейОбязанности.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗаявленияОЗачетеРасширеннаяПодсказка" id="108"/>
+						</Button>
+						<Button name="КорректировкиЕНС" id="105">
+							<Type>UsualButton</Type>
+							<CommandName>Document.КорректировкаЕНС.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="КорректировкиЕНСРасширеннаяПодсказка" id="106"/>
+						</Button>
+						<Button name="СведенияОбУплатеНалогов" id="103">
+							<Type>UsualButton</Type>
+							<CommandName>Document.СведенияОбУплатеНалогов.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СведенияОбУплатеНалоговРасширеннаяПодсказка" id="104"/>
+						</Button>
+						<Button name="ОперацииПоСчету" id="101">
+							<Type>UsualButton</Type>
+							<CommandName>Document.ОперацияПоЕдиномуНалоговомуСчету.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОперацииПоСчетуРасширеннаяПодсказка" id="102"/>
+						</Button>
+						<Button name="РасчетыПоЕНС" id="99">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.РасчетыПоЕНС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РасчетыПоЕНСРасширеннаяПодсказка" id="100"/>
+						</Button>
+						<Button name="РасчетыПоНалогамНаЕНС" id="109">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.РасчетыПоНалогамНаЕНС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РасчетыПоНалогамНаЕНСРасширеннаяПодсказка" id="110"/>
+						</Button>
+						<Button name="ЛичныйКабинетЕНС" id="111">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЛичныйКабинетЕНС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЛичныйКабинетЕНСРасширеннаяПодсказка" id="112"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСверкиСФНС" id="113">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сверки с ФНС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаСверкиСФНСРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<Button name="СверкаНалоговыхПлатежейСФНС" id="115">
+							<Type>UsualButton</Type>
+							<CommandName>DataProcessor.СверкаНалоговСФНС.Command.СверкаНалоговСФНС_ПростойИнтерфейс</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СверкаНалоговыхПлатежейСФНСРасширеннаяПодсказка" id="116"/>
+						</Button>
+						<Button name="СверкаРасчетаНалогаНаИмущество" id="117">
+							<Type>UsualButton</Type>
+							<CommandName>Document.СверкаСФНСПоИмущественнымНалогам.Command.СверкаРасчетаНалогаНаИмущество</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СверкаРасчетаНалогаНаИмуществоРасширеннаяПодсказка" id="118"/>
+						</Button>
+						<Button name="СверкаРасчетаТранспортногоНалога" id="119">
+							<Type>UsualButton</Type>
+							<CommandName>Document.СверкаСФНСПоИмущественнымНалогам.Command.СверкаРасчетаТранспортногоНалога</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СверкаРасчетаТранспортногоНалогаРасширеннаяПодсказка" id="120"/>
+						</Button>
+						<Button name="СверкаРасчетаЗемельногоНалога" id="121">
+							<Type>UsualButton</Type>
+							<CommandName>Document.СверкаСФНСПоИмущественнымНалогам.Command.СверкаРасчетаЗемельногоНалога</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СверкаРасчетаЗемельногоНалогаРасширеннаяПодсказка" id="122"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСредняяКолонка" id="56">
+			<Width>34</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСредняяКолонкаРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУСН" id="131">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УСН</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаУСНРасширеннаяПодсказка" id="132"/>
+					<ChildItems>
+						<Button name="ЗаписиКнигиДоходовИРасходовУСН" id="133">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаписиКнигиДоходовИРасходовУСН</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗаписиКнигиДоходовИРасходовУСНРасширеннаяПодсказка" id="134"/>
+						</Button>
+						<Button name="РегистрацияСуммыУбыткаУСН" id="135">
+							<Type>UsualButton</Type>
+							<CommandName>Document.РегистрацияСуммыУбыткаУСН.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РегистрацияСуммыУбыткаУСНРасширеннаяПодсказка" id="136"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНПД" id="141">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НПД</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаНПДРасширеннаяПодсказка" id="142"/>
+					<ChildItems>
+						<Button name="СправкиПлательщикаНПД" id="145">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.СправкиПоНалогуНаПрофессиональныйДоход</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СправкиПлательщикаНПДРасширеннаяПодсказка" id="146"/>
+						</Button>
+						<Button name="ДоходыНПД" id="143">
+							<Type>UsualButton</Type>
+							<CommandName>Report.ДоходыНПД.StandardCommand.Open</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ДоходыНПДРасширеннаяПодсказка" id="144"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИП" id="147">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИПРасширеннаяПодсказка" id="148"/>
+					<ChildItems>
+						<Button name="ЗаписьКнигиУчетаДоходовИРасходовИП" id="149">
+							<Type>UsualButton</Type>
+							<CommandName>Document.ЗаписьКнигиУчетаДоходовИРасходовИП.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗаписьКнигиУчетаДоходовИРасходовИПРасширеннаяПодсказка" id="150"/>
+						</Button>
+						<Button name="ЗаписиКнигиУчетаДоходовПатент" id="151">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаписиКнигиУчетаДоходовПатент</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗаписиКнигиУчетаДоходовПатентРасширеннаяПодсказка" id="152"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНДС" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
+						<Button name="РегистрацияСчетовФактурНаАванс" id="159">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.РегистрацияСчетовФактурНаАванс</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрация счетов-фактур на аванс</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РегистрацияСчетовФактурНаАвансРасширеннаяПодсказка" id="160"/>
+						</Button>
+						<Button name="РегистрацияСчетовФактурНалоговогоАгента" id="189">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.РегистрацияСчетовФактурНалоговогоАгента</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрация счетов-фактур налогового агента</v8:content>
+								</v8:item>
+							</Title>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РегистрацияСчетовФактурНалоговогоАгентаРасширеннаяПодсказка" id="190"/>
+						</Button>
+						<Button name="ОтражениеНачисленияНДС" id="155">
+							<Type>UsualButton</Type>
+							<CommandName>Document.ОтражениеНачисленияНДС.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОтражениеНачисленияНДСРасширеннаяПодсказка" id="156"/>
+						</Button>
+						<Button name="ОтражениеНДСКВычету" id="157">
+							<Type>UsualButton</Type>
+							<CommandName>Document.ОтражениеНДСКВычету.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОтражениеНДСКВычетуРасширеннаяПодсказка" id="158"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТуристическийНалог" id="161">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Туристический налог</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаТуристическийНалогРасширеннаяПодсказка" id="162"/>
+					<ChildItems>
+						<Button name="НачислениеТуристическогоНалога" id="167">
+							<Type>UsualButton</Type>
+							<CommandName>Document.НачислениеТуристическогоНалога.StandardCommand.OpenList</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="НачислениеТуристическогоНалогаРасширеннаяПодсказка" id="168"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПраваяКолонка" id="32">
+			<Width>30</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<UsualGroup name="Группа1СОтчетность" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1С-Отчетность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сервис</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="Группа1СОтчетностьРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<Button name="КалендарьОтчетности" id="183">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.КалендарьОтчетности</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="КалендарьОтчетностиРасширеннаяПодсказка" id="184"/>
+						</Button>
+						<Button name="РегламентированныеОтчеты" id="181">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ОткрытьФорму1СОтчетностьНаОтчетах</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РегламентированныеОтчетыРасширеннаяПодсказка" id="182"/>
+						</Button>
+						<Button name="УведомленияСообщенияИЗаявления" id="179">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ОткрытьФорму1СОтчетностьНаУведомлениях</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="УведомленияСообщенияИЗаявленияРасширеннаяПодсказка" id="180"/>
+						</Button>
+						<Button name="Письма" id="177">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ОткрытьФорму1СОтчетностьНаПисьмах</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПисьмаРасширеннаяПодсказка" id="178"/>
+						</Button>
+						<Button name="Сверки" id="175">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ОткрытьФорму1СОтчетностьНаСверках</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СверкиРасширеннаяПодсказка" id="176"/>
+						</Button>
+						<Button name="ЛичныеКабинеты" id="173">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ОткрытьФорму1СОтчетностьНаСервисах</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЛичныеКабинетыРасширеннаяПодсказка" id="174"/>
+						</Button>
+						<Button name="ЕГРЮЛ" id="171">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ОткрытьФорму1СОтчетностьНаЕГРЮЛ</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЕГРЮЛРасширеннаяПодсказка" id="172"/>
+						</Button>
+						<Button name="Подключить1СОтчетность" id="169">
+							<Type>UsualButton</Type>
+							<CommandName>CommonCommand.ПредложениеОформитьЗаявлениеНаПодключение</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="Подключить1СОтчетностьРасширеннаяПодсказка" id="170"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОтчетностьВБанки" id="185">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчетность в банки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки программы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаОтчетностьВБанкиРасширеннаяПодсказка" id="186"/>
+					<ChildItems>
+						<Button name="ФинОтчетность" id="187">
+							<Type>UsualButton</Type>
+							<CommandName>InformationRegister.ЖурналСтатусовФинОтчетностиВБанки.Command.Отчеты1СФинОтчетность</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ФинОтчетностьРасширеннаяПодсказка" id="188"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ЛичныйКабинетЕНС" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет ЕНС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЛичныйКабинетЕНС</Action>
+		</Command>
+		<Command name="ЗаписиКнигиУчетаДоходовПатент" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записи книги доходов по патенту</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписиКнигиУчетаДоходовПатент</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользуетсяУСНПатент</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗаписиКнигиДоходовИРасходовУСН" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записи книги доходов и расходов УСН</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписиКнигиДоходовИРасходовУСН</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользуетсяУСН</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

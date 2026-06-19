@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<CheckBoxField name="Услуга" id="4">
+			<DataPath>Объект.Услуга</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга, работа</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>Right</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УслугаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="УслугаРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">УслугаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаТипНоменклатуры" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипНоменклатурыРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<CheckBoxField name="ПодакцизныйТовар" id="15">
+					<DataPath>Объект.ПодакцизныйТовар</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодакцизныйТоварКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="ПодакцизныйТоварРасширеннаяПодсказка" id="17"/>
+					<Events>
+						<Event name="OnChange">ПодакцизныйТоварПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ВидПодакцизногоТовара" id="12">
+					<DataPath>Объект.ВидПодакцизногоТовара</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ВидПодакцизногоТовараКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ВидПодакцизногоТовараРасширеннаяПодсказка" id="14"/>
+					<Events>
+						<Event name="OnChange">ВидПодакцизногоТовараПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИспользование" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа использование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа использование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИспользованиеРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИсточники" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источники</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаИсточникиРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<CheckBoxField name="ПолучаемОтПоставщика" id="24">
+							<DataPath>Объект.ПолучаемОтПоставщика</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучаемОтПоставщикаКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ПолучаемОтПоставщикаРасширеннаяПодсказка" id="26"/>
+						</CheckBoxField>
+						<CheckBoxField name="Производим" id="27">
+							<DataPath>Объект.Производим</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроизводимКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ПроизводимРасширеннаяПодсказка" id="29"/>
+						</CheckBoxField>
+						<CheckBoxField name="Комплектуем" id="42">
+							<DataPath>Объект.Комплектуем</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Собираем из комплектующих</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КомплектуемКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="КомплектуемРасширеннаяПодсказка" id="44"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНазначение" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа источники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаНазначениеРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<CheckBoxField name="НаПродажу" id="30">
+							<DataPath>Объект.НаПродажу</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НаПродажуКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="НаПродажуРасширеннаяПодсказка" id="32"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВПроизводство" id="33">
+							<DataPath>Объект.ВПроизводство</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВПроизводствоКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ВПроизводствоРасширеннаяПодсказка" id="35"/>
+						</CheckBoxField>
+						<CheckBoxField name="СобственныеНужды" id="36">
+							<DataPath>Объект.СобственныеНужды</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СобственныеНуждыКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="СобственныеНуждыРасширеннаяПодсказка" id="38"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВЭксплуатациюСотрудникам" id="39">
+							<DataPath>Объект.ВЭксплуатациюСотрудникам</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВЭксплуатациюСотрудникамКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ВЭксплуатациюСотрудникамРасширеннаяПодсказка" id="41"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыНоменклатуры</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Button name="ПланСчетов" id="137">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПланСчетов</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПланСчетовРасширеннаяПодсказка" id="138"/>
+		</Button>
+		<Button name="НастройкаПланаСчетов" id="135">
+			<Type>UsualButton</Type>
+			<CommandName>CommonCommand.НастройкаПланаСчетов</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкаПланаСчетовРасширеннаяПодсказка" id="136"/>
+		</Button>
+		<Button name="УчетнаяПолитика" id="133">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.УчетнаяПолитика</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="УчетнаяПолитикаРасширеннаяПодсказка" id="134"/>
+		</Button>
+		<Button name="НоменклатурныеГруппы" id="147">
+			<Type>UsualButton</Type>
+			<CommandName>Catalog.НоменклатурныеГруппы.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НоменклатурныеГруппыРасширеннаяПодсказка" id="148"/>
+		</Button>
+		<Button name="СтатьиЗатрат" id="145">
+			<Type>UsualButton</Type>
+			<CommandName>Catalog.СтатьиЗатрат.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="СтатьиЗатратРасширеннаяПодсказка" id="146"/>
+		</Button>
+		<Button name="ПрочиеДоходыИРасходы" id="143">
+			<Type>UsualButton</Type>
+			<CommandName>Catalog.ПрочиеДоходыИРасходы.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПрочиеДоходыИРасходыРасширеннаяПодсказка" id="144"/>
+		</Button>
+		<Button name="ДоходыБудущихПериодов" id="141">
+			<Type>UsualButton</Type>
+			<CommandName>Catalog.ДоходыБудущихПериодов.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ДоходыБудущихПериодовРасширеннаяПодсказка" id="142"/>
+		</Button>
+		<Button name="РасходыБудущихПериодов" id="139">
+			<Type>UsualButton</Type>
+			<CommandName>Catalog.РасходыБудущихПериодов.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="РасходыБудущихПериодовРасширеннаяПодсказка" id="140"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="УчетнаяПолитика" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная политика</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УчетнаяПолитика</Action>
+		</Command>
+		<Command name="ПланСчетов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПланСчетов</Action>
+		</Command>
+	</Commands>
+</Form>

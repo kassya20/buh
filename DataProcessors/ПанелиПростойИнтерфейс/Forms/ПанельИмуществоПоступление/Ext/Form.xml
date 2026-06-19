@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Поступление</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКолонки" id="335">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="336"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛеваяКолонка" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновныеСредства" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основные средства</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОсновныеСредстваРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<Button name="ПоступлениеОсновныхСредств" id="273">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеОсновныхСредств</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеОсновныхСредствРасширеннаяПодсказка" id="274"/>
+								</Button>
+								<Button name="ПриобретениеЗемельныхУчастков" id="271">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПриобретениеЗемельныхУчастков</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПриобретениеЗемельныхУчастковРасширеннаяПодсказка" id="272"/>
+								</Button>
+								<Button name="ПринятиеКУчетуОС" id="277">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПринятиеКУчетуОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПринятиеКУчетуОСРасширеннаяПодсказка" id="278"/>
+								</Button>
+								<Button name="МодернизацияОС" id="275">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.МодернизацияОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="МодернизацияОСРасширеннаяПодсказка" id="276"/>
+								</Button>
+								<Button name="ЗавершениеРемонтаОС" id="344">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗавершениеРемонтаОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ЗавершениеРемонтаОСРасширеннаяПодсказка" id="345"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОборудованиеИОбъектыСтроительства" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оборудование и объекты строительства</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОборудованиеИОбъектыСтроительстваРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<Button name="ПоступлениеОборудования" id="285">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеОборудования</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеОборудованияРасширеннаяПодсказка" id="286"/>
+								</Button>
+								<Button name="ПоступлениеОбъектовСтроительства" id="283">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеОбъектовСтроительства</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеОбъектовСтроительстваРасширеннаяПодсказка" id="284"/>
+								</Button>
+								<Button name="ПередачаОборудованияВМонтаж" id="281">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПередачаОборудованияВМонтаж</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПередачаОборудованияВМонтажРасширеннаяПодсказка" id="282"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОплатыРасходы" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оплаты и расходы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОплатыРасходыРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<Button name="РегистрацияОплатыОсновныхСредствДляУСН" id="291">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.РегистрацияОплатыОсновныхСредствДляУСН</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="РегистрацияОплатыОсновныхСредствДляУСНРасширеннаяПодсказка" id="292"/>
+								</Button>
+								<Button name="РегистрацияОплатыОсновныхСредствДляИП" id="289">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.РегистрацияОплатыОсновныхСредствДляИП</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="РегистрацияОплатыОсновныхСредствДляИПРасширеннаяПодсказка" id="290"/>
+								</Button>
+								<Button name="ПоступлениеДопРасходов" id="287">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеДопРасходов</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеДопРасходовРасширеннаяПодсказка" id="288"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраваяКолонка" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАрендаЛизинг" id="162">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аренда и лизинг</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАрендаЛизингРасширеннаяПодсказка" id="163"/>
+							<ChildItems>
+								<Button name="ПоступлениеВАренду" id="333">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеВАренду</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеВАрендуРасширеннаяПодсказка" id="334"/>
+								</Button>
+								<Button name="ПоступлениеВЛизинг" id="331">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеВЛизинг</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеВЛизингРасширеннаяПодсказка" id="332"/>
+								</Button>
+								<Button name="Заявки1СЛизингОСиНМА" id="329">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Заявки1СЛизингОСиНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="Заявки1СЛизингОСиНМАРасширеннаяПодсказка" id="330"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНематериальныеАктивы" id="346">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нематериальные активы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНематериальныеАктивыРасширеннаяПодсказка" id="347"/>
+							<ChildItems>
+								<Button name="ПоступлениеНМА" id="348">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоступлениеНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПоступлениеНМАРасширеннаяПодсказка" id="349"/>
+								</Button>
+								<Button name="ПринятиеКУчетуНМА" id="350">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПринятиеКУчетуНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПринятиеКУчетуНМАРасширеннаяПодсказка" id="351"/>
+								</Button>
+								<Button name="ПриобретениеПрав" id="352">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПриобретениеПрав</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПриобретениеПравРасширеннаяПодсказка" id="353"/>
+								</Button>
+								<Button name="НачалоСтадииРазработокНМА" id="354">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.НачалоСтадииРазработокНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="НачалоСтадииРазработокНМАРасширеннаяПодсказка" id="355"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоступлениеОсновныхСредств" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление основных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеОсновныхСредств</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПриобретениеЗемельныхУчастков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приобретение земельных участков</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПриобретениеЗемельныхУчастков</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПринятиеКУчетуОС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятие к учету ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПринятиеКУчетуОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="МодернизацияОС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модернизация ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>МодернизацияОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗавершениеРемонтаОС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершение ремонта ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗавершениеРемонтаОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.КомпонентыАмортизацииОС</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеОборудования" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеОборудования</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеОбъектовСтроительства" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление объектов строительства</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеОбъектовСтроительства</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПередачаОборудованияВМонтаж" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача оборудования в монтаж</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПередачаОборудованияВМонтаж</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="РегистрацияОплатыОсновныхСредствДляУСН" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация оплаты ОС и НМА УСН</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РегистрацияОплатыОсновныхСредствДляУСН</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="РегистрацияОплатыОсновныхСредствДляИП" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация оплаты ОС и НМА ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РегистрацияОплатыОсновныхСредствДляИП</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеДопРасходов" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление доп расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеДопРасходов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеВАренду" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление в аренду</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеВАренду</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетПредметовАренды</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеВЛизинг" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление в лизинг</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеВЛизинг</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЛизинговогоИмущества</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Заявки1СЛизингОСиНМА" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>1С: Лизинг</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Заявки1СЛизингОСиНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеНМА" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПринятиеКУчетуНМА" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятие к учету НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПринятиеКУчетуНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПриобретениеПрав" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приобретение прав</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПриобретениеПрав</Action>
+		</Command>
+		<Command name="НачалоСтадииРазработокНМА" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало стадии разработок НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НачалоСтадииРазработокНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

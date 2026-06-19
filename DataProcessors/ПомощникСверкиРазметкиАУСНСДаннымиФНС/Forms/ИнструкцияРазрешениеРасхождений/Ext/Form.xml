@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Как исправить расхождения при сверке разметки АУСН</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ПереченьНеИнтегрированныхБанков" id="10">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;b&gt;Если банк не интегрирован с сервисом АУСН&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПереченьНеИнтегрированныхБанковКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПереченьНеИнтегрированныхБанковРасширеннаяПодсказка" id="12"/>
+		</LabelDecoration>
+		<LabelDecoration name="ИнструкцияНеИнтегрированныеБанки" id="13">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;• &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;Убедитесь, что банковские операции в 1С размечены верно.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;• &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;Перейдите в личный кабинет банка, по операциям которого обнаружены расхождения.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;• &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;Откорректируйте разметку, чтобы суммы и признаки налоговой базы соответствовали той информации, которая отображается в программе.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;• &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;Дождитесь, когда банк передаст скорректированные данные в ФНС.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;• &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;После того, как в личном кабинете ФНС отобразятся изменения, скачайте файл с разметкой и проведите повторную сверку.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнструкцияНеИнтегрированныеБанкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИнструкцияНеИнтегрированныеБанкиРасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+		<LabelDecoration name="ПереченьИнтегрированныхБанков" id="16">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;b&gt;Если банк интегрирован с сервисом АУСН&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПереченьИнтегрированныхБанковКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПереченьИнтегрированныхБанковРасширеннаяПодсказка" id="18"/>
+		</LabelDecoration>
+		<LabelDecoration name="ИнструкцияИнтегрированныеБанки" id="7">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;•&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt; Проверьте в личном кабинете банка, отображается ли в нем разметка банковских операций в том виде, в котором она представлена в программе.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;•&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt; Если данные отображаются в личном кабинете банка, но не отображаются в личном кабинете ФНС, то обратитесь в техническую поддержку банка за уточнениями.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;•&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt; Если в личном кабинете банка не отображается разметка, представленная в 1С, то выполните &lt;link Обмен&gt;Обмен с сервисом АУСН&lt;/&gt;.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;•&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt; Проверьте &lt;link ЖР&gt;Журнал регистрации&lt;/&gt; на наличие ошибок.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;•&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt; Если в процессе обмена с сервисом АУСН обнаружились ошибки, &lt;link Техподдержка&gt;Обратитесь в техническую поддержку&lt;/&gt; фирмы 1С.
+&lt;font -apple-system&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;•&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt; Если обмен выполнен успешно, уточните в поддержке банка, в какой срок разметка будет передана в ФНС.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнструкцияИнтегрированныеБанкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИнструкцияИнтегрированныеБанкиРасширеннаяПодсказка" id="9"/>
+		</LabelDecoration>
+		<LabelDecoration name="ИнструкцияБанкиНеНайдены" id="19">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;b&gt;У организации %1 нет банковских счетов в программе.&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнструкцияБанкиНеНайденыКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИнструкцияБанкиНеНайденыРасширеннаяПодсказка" id="21"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Банки">
+			<Type/>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

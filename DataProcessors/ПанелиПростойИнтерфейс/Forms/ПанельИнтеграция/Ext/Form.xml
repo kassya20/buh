@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Интеграции</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ЗагрузкаПродажBNovo" id="3">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗагрузкаПродажBNovo</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ЗагрузкаПродажBNovoРасширеннаяПодсказка" id="4"/>
+		</Button>
+		<Button name="ЗагрузкаПродажYclients" id="5">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗагрузкаПродажYclients</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ЗагрузкаПродажYclientsРасширеннаяПодсказка" id="6"/>
+		</Button>
+		<Button name="СписокЗаказовДеловыеЛинии" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СписокЗаказовДеловыеЛинии</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="СписокЗаказовДеловыеЛинииРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="СписокЗаказов1ССДЭК" id="11">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СписокЗаказов1ССДЭК</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="СписокЗаказов1ССДЭКРасширеннаяПодсказка" id="12"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузкаПродажBNovo" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи из Bnovo</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузкаПродажBNovo</Action>
+		</Command>
+		<Command name="ЗагрузкаПродажYclients" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи из YCLIENTS</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузкаПродажYclients</Action>
+		</Command>
+		<Command name="СписокЗаказовДеловыеЛинии" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Деловые линии</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СписокЗаказовДеловыеЛинии</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСервис1СДоставка</Item>
+				<Item>FunctionalOption.ИспользоватьСервис1СДоставкаБП</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СписокЗаказов1ССДЭК" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СДЭК</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СписокЗаказов1ССДЭК</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСервис1ССДЭК</Item>
+				<Item>FunctionalOption.ИспользоватьСервис1ССДЭКБП</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

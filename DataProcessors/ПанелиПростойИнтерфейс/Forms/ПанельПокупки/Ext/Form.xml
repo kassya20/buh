@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Покупки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДокументыПоставщиков" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы поставщиков</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДокументыПоставщиковРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Button name="СчетаОтПоставщиков" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СчетаОтПоставщиков</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="СчетаОтПоставщиковРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="Поступление" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Поступление</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ПоступлениеРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="ПоступлениеДопРасходов" id="25">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПоступлениеДопРасходов</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ПоступлениеДопРасходовРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="СчетаФактурыПолученные" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СчетаФактурыПолученные</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="СчетаФактурыПолученныеРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="ВозвратыПоставщикам" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВозвратыПоставщикам</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ВозвратыПоставщикамРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="КорректировкаПоступления" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КорректировкаПоступления</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="КорректировкаПоступленияРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="АктыОРасхождениях" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.АктыОРасхождениях</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="АктыОРасхожденияхРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="ПередачаТоваров" id="41">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПередачаТоваров</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ПередачаТоваровРасширеннаяПодсказка" id="42"/>
+				</Button>
+				<Button name="ОтчетКомитентуОПродажах" id="43">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОтчетКомитентуОПродажах</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетКомитентуОПродажахРасширеннаяПодсказка" id="44"/>
+				</Button>
+				<Button name="РеестрыВыплатСамозанятым" id="45">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.РеестрыВыплатСамозанятым</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="РеестрыВыплатСамозанятымРасширеннаяПодсказка" id="46"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВнешняяТорговля" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешняя торговля</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВнешняяТорговляРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="ДокументОПредстоящейПоставке" id="53">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДокументОПредстоящейПоставке</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы о предстоящей поставке товаров (ДОПП)</v8:content>
+						</v8:item>
+					</Title>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ДокументОПредстоящейПоставкеРасширеннаяПодсказка" id="54"/>
+				</Button>
+				<Button name="ЗаявлениеОВвозеТоваров" id="49">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаявлениеОВвозеТоваров</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ЗаявлениеОВвозеТоваровРасширеннаяПодсказка" id="50"/>
+				</Button>
+				<Button name="ТаможеннаяДекларацияИмпорт" id="51">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ТаможеннаяДекларацияИмпорт</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ТаможеннаяДекларацияИмпортРасширеннаяПодсказка" id="52"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонтроль" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль документов</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтрольРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Button name="ОригиналыПервичныхДокументовПоставщики" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОригиналыПервичныхДокументовПоставщики</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОригиналыПервичныхДокументовПоставщикиРасширеннаяПодсказка" id="30"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СчетаОтПоставщиков" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета от поставщиков</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СчетаОтПоставщиков</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыПоступления</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Поступление" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление (акты, накладные, УПД)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Поступление</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыПоступления</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СчетаФактурыПолученные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета-фактуры полученные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СчетаФактурыПолученные</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользуетсяНДФЛИП</Item>
+				<Item>FunctionalOption.ИспользуетсяОСНО</Item>
+				<Item>FunctionalOption.ОсуществляетсяЗакупкаТоваровУслугДляКомитентов</Item>
+				<Item>FunctionalOption.ОсуществляетсяРеализацияТоваровУслугКомитентов</Item>
+				<Item>FunctionalOption.ИсполняютсяОбязанностиНалоговогоАгентаПоНДС</Item>
+				<Item>FunctionalOption.РегистрироватьСчетаФактурыСпецРежимы</Item>
+				<Item>FunctionalOption.ИспользуетсяУСНСНДС</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="КорректировкаПоступления" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КорректировкаПоступления</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьКорректировочныеДокументы</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ВозвратыПоставщикам" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возвраты поставщикам</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВозвратыПоставщикам</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыПоступления</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПоступлениеДопРасходов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поступление доп. расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоступлениеДопРасходов</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыПоступления</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="АктыОРасхождениях" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акты о расхождениях</v8:content>
+				</v8:item>
+			</Title>
+			<Action>АктыОРасхождениях</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьКорректировочныеДокументы</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПередачаТоваров" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача товаров комитенту</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПередачаТоваров</Action>
+		</Command>
+		<Command name="ОтчетКомитентуОПродажах" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчеты комитенту</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтчетКомитентуОПродажах</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ОсуществляетсяЗакупкаТоваровУслугДляКомитентов</Item>
+				<Item>FunctionalOption.ОсуществляетсяРеализацияТоваровУслугКомитентов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="РеестрыВыплатСамозанятым" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестры выплат самозанятым</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РеестрыВыплатСамозанятым</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьВыплатыСамозанятым</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗаявлениеОВвозеТоваров" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявления о ввозе товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаявлениеОВвозеТоваров</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетИмпортаТоваров</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ТаможеннаяДекларацияИмпорт" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таможенная декларации (импорт)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ТаможеннаяДекларацияИмпорт</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетИмпортаТоваров</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОригиналыПервичныхДокументовПоставщики" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оригиналы первичных документов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОригиналыПервичныхДокументовПоставщики</Action>
+		</Command>
+		<Command name="ДокументОПредстоящейПоставке" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ о предстоящей поставке</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДокументОПредстоящейПоставке</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетИмпортаТоваров</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЭтоТовары">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоКонтрагенты">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

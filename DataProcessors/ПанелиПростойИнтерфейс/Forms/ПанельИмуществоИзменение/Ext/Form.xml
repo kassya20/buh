@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Изменение</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКолонки" id="335">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="336"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛеваяКолонка" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновныеСредства" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основные средства</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОсновныеСредстваРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<Button name="ПеремещениеОС" id="273">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПеремещениеОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПеремещениеОСРасширеннаяПодсказка" id="274"/>
+								</Button>
+								<Button name="МодернизацияОС" id="275">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.МодернизацияОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="МодернизацияОСРасширеннаяПодсказка" id="276"/>
+								</Button>
+								<Button name="ЗавершениеРемонтаОС" id="344">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗавершениеРемонтаОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ЗавершениеРемонтаОСРасширеннаяПодсказка" id="345"/>
+								</Button>
+								<Button name="ПереводОСВМалоценноеОборудование" id="277">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПереводОСВМалоценноеОборудование</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПереводОСВМалоценноеОборудованиеРасширеннаяПодсказка" id="278"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАмортизация" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Амортизация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАмортизацияРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<Button name="ПараметрыАмортизацииОС" id="285">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПараметрыАмортизацииОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПараметрыАмортизацииОСРасширеннаяПодсказка" id="286"/>
+								</Button>
+								<Button name="ПараметрыАмортизацииНМА" id="283">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПараметрыАмортизацииНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПараметрыАмортизацииНМАРасширеннаяПодсказка" id="284"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраваяКолонка" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАрендаЛизинг" id="162">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аренда и лизинг</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАрендаЛизингРасширеннаяПодсказка" id="163"/>
+							<ChildItems>
+								<Button name="ПередачаОСВАренду" id="333">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПередачаОСВАренду</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПередачаОСВАрендуРасширеннаяПодсказка" id="334"/>
+								</Button>
+								<Button name="ВозвратОСОтАрендатора" id="331">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВозвратОСОтАрендатора</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ВозвратОСОтАрендатораРасширеннаяПодсказка" id="332"/>
+								</Button>
+								<Button name="ИзменениеУсловийАренды" id="329">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ИзменениеУсловийАренды</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ИзменениеУсловийАрендыРасширеннаяПодсказка" id="330"/>
+								</Button>
+								<Button name="ИзменениеУсловийЛизинга" id="360">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ИзменениеУсловийЛизинга</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ИзменениеУсловийЛизингаРасширеннаяПодсказка" id="361"/>
+								</Button>
+								<Button name="ВыкупПредметовЛизинга" id="362">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыкупПредметовЛизинга</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ВыкупПредметовЛизингаРасширеннаяПодсказка" id="363"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеремещениеОС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перемещение ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПеремещениеОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="МодернизацияОС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модернизация ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>МодернизацияОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗавершениеРемонтаОС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершение ремонта ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗавершениеРемонтаОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.КомпонентыАмортизацииОС</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПереводОСВМалоценноеОборудование" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевод ОС в малоценное оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПереводОСВМалоценноеОборудование</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПараметрыАмортизацииОС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры амортизации ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПараметрыАмортизацииОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПараметрыАмортизацииНМА" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры амортизации НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПараметрыАмортизацииНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПередачаОСВАренду" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача ОС в аренду</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПередачаОСВАренду</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетСдачиИмуществаВАренду</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ВозвратОСОтАрендатора" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат ОС от арендатора</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВозвратОСОтАрендатора</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетСдачиИмуществаВАренду</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИзменениеУсловийАренды" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменение условий аренды</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменениеУсловийАренды</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетПредметовАренды</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИзменениеУсловийЛизинга" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменение условий лизинга</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменениеУсловийЛизинга</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЛизинговогоИмущества</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ВыкупПредметовЛизинга" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выкуп предметов лизинга</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыкупПредметовЛизинга</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЛизинговогоИмущества</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

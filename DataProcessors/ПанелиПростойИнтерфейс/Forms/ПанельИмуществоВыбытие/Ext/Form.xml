@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбытие</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКолонки" id="335">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="336"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛеваяКолонка" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОсновныеСредства" id="22">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основные средства</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОсновныеСредстваРасширеннаяПодсказка" id="23"/>
+							<ChildItems>
+								<Button name="СчетПокупателюОС" id="273">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СчетПокупателюОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="СчетПокупателюОСРасширеннаяПодсказка" id="274"/>
+								</Button>
+								<Button name="СписаниеОС" id="275">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СписаниеОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="СписаниеОСРасширеннаяПодсказка" id="276"/>
+								</Button>
+								<Button name="ПодготовкаКПередачеОС" id="344">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПодготовкаКПередачеОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПодготовкаКПередачеОСРасширеннаяПодсказка" id="345"/>
+								</Button>
+								<Button name="ПередачаОС" id="277">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПередачаОС</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПередачаОСРасширеннаяПодсказка" id="278"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраваяКолонка" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Width>32</Width>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаАрендаЛизинг" id="162">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Аренда и лизинг</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаАрендаЛизингРасширеннаяПодсказка" id="163"/>
+							<ChildItems>
+								<Button name="ПрекращениеАренды" id="333">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПрекращениеАренды</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПрекращениеАрендыРасширеннаяПодсказка" id="334"/>
+								</Button>
+								<Button name="ПрекращениеЛизинга" id="331">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПрекращениеЛизинга</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПрекращениеЛизингаРасширеннаяПодсказка" id="332"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНематериальныеАктивы" id="346">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Нематериальные активы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНематериальныеАктивыРасширеннаяПодсказка" id="347"/>
+							<ChildItems>
+								<Button name="СписаниеНМА" id="348">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СписаниеНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="СписаниеНМАРасширеннаяПодсказка" id="349"/>
+								</Button>
+								<Button name="ПередачаНМА" id="350">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПередачаНМА</CommandName>
+									<TextColor>style:ЦветГиперссылки</TextColor>
+									<ShapeRepresentation>None</ShapeRepresentation>
+									<ExtendedTooltip name="ПередачаНМАРасширеннаяПодсказка" id="351"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СчетПокупателюОС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета покупателям ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СчетПокупателюОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СписаниеОС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списание ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СписаниеОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПодготовкаКПередачеОС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка к передаче ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодготовкаКПередачеОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПередачаОС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПередачаОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПрекращениеАренды" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прекращение аренды</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПрекращениеАренды</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетПредметовАренды</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПрекращениеЛизинга" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прекращение лизинга</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПрекращениеЛизинга</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЛизинговогоИмущества</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СписаниеНМА" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списание НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СписаниеНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПередачаНМА" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передача НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПередачаНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мобильное приложение</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщая" id="219">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общая</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="220"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОтступЛево" id="180">
+					<Width>4</Width>
+					<ContextMenu name="ДекорацияОтступЛевоКонтекстноеМеню" id="181"/>
+					<ExtendedTooltip name="ДекорацияОтступЛевоРасширеннаяПодсказка" id="182"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаЦентр" id="217">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа центр</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа центр</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЦентрРасширеннаяПодсказка" id="218"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаТекстовоеОписание" id="154">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа текстовое описание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа текстовое описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстовоеОписаниеРасширеннаяПодсказка" id="155"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияЗаголовок" id="171">
+									<Width>300</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Font ref="style:ExtraLargeTextFont" height="28" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Мобильное приложение 1C:БизнесСтарт</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+									<ContextMenu name="ДекорацияЗаголовокКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="ДекорацияЗаголовокРасширеннаяПодсказка" id="173"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияОтступВертикальный1" id="227">
+							<Height>1</Height>
+							<ContextMenu name="ДекорацияОтступВертикальный1КонтекстноеМеню" id="228"/>
+							<ExtendedTooltip name="ДекорацияОтступВертикальный1РасширеннаяПодсказка" id="229"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОписание" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа описание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="62"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаШапкаПравая" id="150">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шапка правая</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа шапка правая</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаШапкаПраваяРасширеннаяПодсказка" id="151"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаУстановка" id="188">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа установка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа установка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаУстановкаРасширеннаяПодсказка" id="189"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияСлоган" id="208">
+													<Font faceName="Arial" height="11" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Всё самое важное у вас под рукой:</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Top</GroupVerticalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияСлоганКонтекстноеМеню" id="209"/>
+													<ExtendedTooltip name="ДекорацияСлоганРасширеннаяПодсказка" id="210"/>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияСлоган1" id="221">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Font faceName="Arial" height="11" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content> • Добавить новый контакт во время встречи
+ • Быстро найти телефон контрагента и сразу ему позвонить
+ • Выставить счет или коммерческое предложение
+ • Узнать задолженность или остаток на счетах
+ • Загрузить выписку и отправить платежи в банк
+ • Проверить, что вся отчетность сдана, а налоги уплачены</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Top</GroupVerticalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияСлоган1КонтекстноеМеню" id="222"/>
+													<ExtendedTooltip name="ДекорацияСлоган1РасширеннаяПодсказка" id="223"/>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияСлоган2" id="224">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<Font faceName="Arial" height="11" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Работайте эффективно в любое время и в любом месте!</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Top</GroupVerticalAlign>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияСлоган2КонтекстноеМеню" id="225"/>
+													<ExtendedTooltip name="ДекорацияСлоган2РасширеннаяПодсказка" id="226"/>
+												</LabelDecoration>
+												<LabelDecoration name="ДекорацияОтступВертикальный" id="177">
+													<ContextMenu name="ДекорацияОтступВертикальныйКонтекстноеМеню" id="178"/>
+													<ExtendedTooltip name="ДекорацияОтступВертикальныйРасширеннаяПодсказка" id="179"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаСсылкиВМагазинах" id="152">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ссылки в магазинах</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ссылки в магазинах</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Width>32</Width>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСсылкиВМагазинахРасширеннаяПодсказка" id="153"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаСтрока1" id="193">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа строка1</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа строка1</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаСтрока1РасширеннаяПодсказка" id="194"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаПриложениеВGooglePlay" id="48">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Android</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа приложение в google play</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Width>12</Width>
+																	<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПриложениеВGooglePlayРасширеннаяПодсказка" id="49"/>
+																	<ChildItems>
+																		<PictureDecoration name="QRGplay" id="45">
+																			<Width>12</Width>
+																			<Height>5</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>QRGplay</v8:content>
+																				</v8:item>
+																			</Title>
+																			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																			<Hyperlink>true</Hyperlink>
+																			<PictureSize>Proportionally</PictureSize>
+																			<Picture>
+																				<xr:Ref>CommonPicture.QR_mcstartbusiness_GPlay</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="QRGplayКонтекстноеМеню" id="46"/>
+																			<ExtendedTooltip name="QRGplayРасширеннаяПодсказка" id="47"/>
+																		</PictureDecoration>
+																		<PictureDecoration name="ЛоготипМагазинаAndroid" id="42">
+																			<Width>12</Width>
+																			<Height>2</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Логотип магазина android</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<PictureSize>Proportionally</PictureSize>
+																			<Picture>
+																				<xr:Ref>CommonPicture.GooglePlay</xr:Ref>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="ЛоготипМагазинаAndroidКонтекстноеМеню" id="43"/>
+																			<ExtendedTooltip name="ЛоготипМагазинаAndroidРасширеннаяПодсказка" id="44"/>
+																		</PictureDecoration>
+																	</ChildItems>
+																</UsualGroup>
+																<LabelDecoration name="ДекорацияОтступГоризонтальныйМежду" id="162">
+																	<Width>3</Width>
+																	<ContextMenu name="ДекорацияОтступГоризонтальныйМеждуКонтекстноеМеню" id="163"/>
+																	<ExtendedTooltip name="ДекорацияОтступГоризонтальныйМеждуРасширеннаяПодсказка" id="164"/>
+																</LabelDecoration>
+																<UsualGroup name="ГруппаПриложениеВAppStore" id="108">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>iOS</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа приложение в google фреш</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Width>12</Width>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПриложениеВAppStoreРасширеннаяПодсказка" id="109"/>
+																	<ChildItems>
+																		<PictureDecoration name="QRAppStore" id="110">
+																			<Width>12</Width>
+																			<Height>5</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>QR</v8:content>
+																				</v8:item>
+																			</Title>
+																			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																			<Hyperlink>true</Hyperlink>
+																			<PictureSize>Proportionally</PictureSize>
+																			<Picture>
+																				<xr:Ref>CommonPicture.QR_mcstartbusiness_AppStore</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="QRAppStoreКонтекстноеМеню" id="111"/>
+																			<ExtendedTooltip name="QRAppStoreРасширеннаяПодсказка" id="112"/>
+																		</PictureDecoration>
+																		<PictureDecoration name="ЛоготипМагазинаiOS" id="113">
+																			<Width>12</Width>
+																			<Height>2</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Логотип магазина</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<PictureSize>Proportionally</PictureSize>
+																			<Picture>
+																				<xr:Ref>CommonPicture.AppStore</xr:Ref>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="ЛоготипМагазинаiOSКонтекстноеМеню" id="114"/>
+																			<ExtendedTooltip name="ЛоготипМагазинаiOSРасширеннаяПодсказка" id="115"/>
+																		</PictureDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<LabelDecoration name="ДекорацияОтступВертикальный2" id="205">
+															<Width>3</Width>
+															<ContextMenu name="ДекорацияОтступВертикальный2КонтекстноеМеню" id="206"/>
+															<ExtendedTooltip name="ДекорацияОтступВертикальный2РасширеннаяПодсказка" id="207"/>
+														</LabelDecoration>
+														<UsualGroup name="ГруппаСтрока2" id="195">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа строка2</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа строка2</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаСтрока2РасширеннаяПодсказка" id="196"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаПриложениеВRuStore" id="197">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Android</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа приложение в google фреш</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Width>12</Width>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПриложениеВRuStoreРасширеннаяПодсказка" id="198"/>
+																	<ChildItems>
+																		<PictureDecoration name="QRRuStore" id="199">
+																			<Width>12</Width>
+																			<Height>5</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>QRGplay</v8:content>
+																				</v8:item>
+																			</Title>
+																			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+																			<Hyperlink>true</Hyperlink>
+																			<PictureSize>Proportionally</PictureSize>
+																			<Picture>
+																				<xr:Ref>CommonPicture.QR_mcstartbusiness_RuStore</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="QRRuStoreКонтекстноеМеню" id="200"/>
+																			<ExtendedTooltip name="QRRuStoreРасширеннаяПодсказка" id="201"/>
+																		</PictureDecoration>
+																		<PictureDecoration name="ЛоготипМагазинаRuStore" id="202">
+																			<Width>12</Width>
+																			<Height>2</Height>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Логотип магазина</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Hyperlink>true</Hyperlink>
+																			<PictureSize>Proportionally</PictureSize>
+																			<Picture>
+																				<xr:Ref>CommonPicture.RuStore</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="ЛоготипМагазинаRuStoreКонтекстноеМеню" id="203"/>
+																			<ExtendedTooltip name="ЛоготипМагазинаRuStoreРасширеннаяПодсказка" id="204"/>
+																		</PictureDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ДекорацияОтступБоковой" id="168">
+									<Width>3</Width>
+									<ContextMenu name="ДекорацияОтступБоковойКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ДекорацияОтступБоковойРасширеннаяПодсказка" id="170"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаСкриншот" id="102">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа скриншот</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа скриншот</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСкриншотРасширеннаяПодсказка" id="103"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияСкриншот" id="122">
+											<Width>22</Width>
+											<Height>16</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация скриншот</v8:content>
+												</v8:item>
+											</Title>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияСкриншотКонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="ДекорацияСкриншотРасширеннаяПодсказка" id="124"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

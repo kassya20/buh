@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Интеграции</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="НастройкаКлиентБанка" id="98">
+			<Type>UsualButton</Type>
+			<CommandName>DataProcessor.КлиентБанк.Command.НастройкаКлиентБанка</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкаКлиентБанкаРасширеннаяПодсказка" id="99"/>
+		</Button>
+		<Button name="ОбменСБанками" id="90">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОбменСБанками</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ОбменСБанкамиРасширеннаяПодсказка" id="91"/>
+		</Button>
+		<Button name="СинхронизацияДанных" id="78">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СинхронизацияДанных</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="СинхронизацияДанныхРасширеннаяПодсказка" id="79"/>
+		</Button>
+		<Button name="ПодключениеАУСН" id="80">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПодключениеАУСН</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПодключениеАУСНРасширеннаяПодсказка" id="81"/>
+		</Button>
+		<Button name="МойНалог" id="82">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.МойНалог</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="МойНалогРасширеннаяПодсказка" id="83"/>
+		</Button>
+		<Button name="ИнтернетМагазин" id="84">
+			<Type>UsualButton</Type>
+			<CommandName>DataProcessor.ОбменСИнтернетМагазином.Command.ОткрытьНастройкиОбменСИнтернетМагазином</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнтернетМагазинРасширеннаяПодсказка" id="85"/>
+		</Button>
+		<Button name="ИнтеграцияSmartway" id="86">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ИнтеграцияSmartway</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнтеграцияSmartwayРасширеннаяПодсказка" id="87"/>
+		</Button>
+		<Button name="ИнтеграцияBNovo" id="96">
+			<Type>UsualButton</Type>
+			<CommandName>InformationRegister.НастройкиИнтеграцииBnovo.Command.НастройкаИнтеграцииBnovo</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнтеграцияBNovoРасширеннаяПодсказка" id="97"/>
+		</Button>
+		<Button name="ИнтеграцияСервисыДоставки" id="100">
+			<Type>UsualButton</Type>
+			<CommandName>DataProcessor.ПанельАдминистрированияБП.Command.ИнтеграцияСервисыДоставки</CommandName>
+			<TextColor>style:ГиперссылкаЦвет</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнтеграцияСервисыДоставкиРасширеннаяПодсказка" id="101"/>
+		</Button>
+		<Button name="ОбменИСМП" id="88">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОбменИСМП</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ОбменИСМПРасширеннаяПодсказка" id="89"/>
+		</Button>
+		<Button name="УстановитьРасширениеМаг1С" id="92">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.УстановитьРасширениеМаг1С</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="УстановитьРасширениеМаг1СРасширеннаяПодсказка" id="93"/>
+		</Button>
+		<Button name="РегистрСведенийНастройкиYclientsОбменСYclients" id="94">
+			<Type>UsualButton</Type>
+			<CommandName>InformationRegister.НастройкиYclients.Command.ОбменСYclients</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="РегистрСведенийНастройкиYclientsОбменСYclientsРасширеннаяПодсказка" id="95"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ОбменИСМП" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен с ИС МП (обувь, одежда, табак...)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбменИСМП</Action>
+		</Command>
+		<Command name="СинхронизацияДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизация данных с программами 1С</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизация данных с другими программами
+и организация совместной работы в распределенной информационной базе.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СинхронизацияДанных</Action>
+		</Command>
+		<Command name="ПодключениеАУСН" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение к сервису АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодключениеАУСН</Action>
+		</Command>
+		<Command name="МойНалог" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение к сервису Мой налог</v8:content>
+				</v8:item>
+			</Title>
+			<Action>МойНалог</Action>
+		</Command>
+		<Command name="ИнтеграцияSmartway" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интеграция со Smartway</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИнтеграцияSmartway</Action>
+		</Command>
+		<Command name="ОбменСБанками" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен через 1С:ДиректБанк</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбменСБанками</Action>
+		</Command>
+		<Command name="УстановитьРасширениеМаг1С" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб-витрина mag1c</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УстановитьРасширениеМаг1С</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.Функциональность</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

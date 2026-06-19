@@ -1,0 +1,40 @@
+﻿<ValueTable xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ValueTable">
+	<column>
+		<Name xsi:type="xs:string">Код</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<Type>Null</Type>
+			<StringQualifiers>
+				<Length>8</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+		<Title>Код</Title>
+		<Width xsi:type="xs:decimal">8</Width>
+	</column>
+	<column>
+		<Name xsi:type="xs:string">Наименование</Name>
+		<ValueType>
+			<Type>xs:string</Type>
+			<Type>Null</Type>
+			<StringQualifiers>
+				<Length>150</Length>
+				<AllowedLength>Variable</AllowedLength>
+			</StringQualifiers>
+		</ValueType>
+		<Title>Наименование</Title>
+		<Width xsi:type="xs:decimal">150</Width>
+	</column>
+	<row>
+		<Value xsi:type="xs:string">66.11</Value>
+		<Value xsi:type="xs:string">Управление финансовыми рынками</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:string">66.12</Value>
+		<Value xsi:type="xs:string">Деятельность брокерская по сделкам с ценными бумагами и товарами</Value>
+	</row>
+	<row>
+		<Value xsi:type="xs:string">66.30</Value>
+		<Value xsi:type="xs:string">Деятельность по управлению фондами</Value>
+	</row>
+</ValueTable>

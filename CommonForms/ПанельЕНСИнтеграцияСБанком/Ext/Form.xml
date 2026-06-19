@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ЛичныйКабинетЕНС" id="5">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.ЛичныйКабинетЕНС</CommandName>
+			<ExtendedTooltip name="ЛичныйКабинетЕНСРасширеннаяПодсказка" id="6"/>
+		</Button>
+		<Button name="УведомлениеОбИсчисленныхСуммахНалогов" id="13">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.УведомлениеОбИсчисленныхСуммахНалогов</CommandName>
+			<ExtendedTooltip name="УведомлениеОбИсчисленныхСуммахНалоговРасширеннаяПодсказка" id="14"/>
+		</Button>
+		<Button name="ЗаявленияОЗачетеВСчетПредстоящейОбязанности" id="1">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.ЗаявленияОЗачетеВСчетПредстоящейОбязанности</CommandName>
+			<ExtendedTooltip name="ЗаявленияОЗачетеВСчетПредстоящейОбязанностиРасширеннаяПодсказка" id="2"/>
+		</Button>
+		<Button name="СведенияОбУплатеНалогов" id="11">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.СведенияОбУплатеНалогов</CommandName>
+			<ExtendedTooltip name="СведенияОбУплатеНалоговРасширеннаяПодсказка" id="12"/>
+		</Button>
+		<Button name="КорректировкиЕНС" id="3">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.КорректировкиЕНС</CommandName>
+			<ExtendedTooltip name="КорректировкиЕНСРасширеннаяПодсказка" id="4"/>
+		</Button>
+		<Button name="ОтчетРасчетыПоЕНС" id="7">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.ОтчетРасчетыПоЕНС</CommandName>
+			<ExtendedTooltip name="ОтчетРасчетыПоЕНСРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="ОтчетРасчетыПоНалогамНаЕНС" id="9">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.ОтчетРасчетыПоНалогамНаЕНС</CommandName>
+			<ExtendedTooltip name="ОтчетРасчетыПоНалогамНаЕНСРасширеннаяПодсказка" id="10"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Организация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяДата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаявленияОЗачетеВСчетПредстоящейОбязанности" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявления о зачете</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаявленияОЗачетеВСчетПредстоящейОбязанности</Action>
+		</Command>
+		<Command name="КорректировкиЕНС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КорректировкиЕНС</Action>
+		</Command>
+		<Command name="ЛичныйКабинетЕНС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Личный кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЛичныйКабинетЕНС</Action>
+		</Command>
+		<Command name="ОтчетРасчетыПоЕНС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчеты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтчетРасчетыПоЕНС</Action>
+		</Command>
+		<Command name="ОтчетРасчетыПоНалогамНаЕНС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчеты по налогам</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтчетРасчетыПоНалогамНаЕНС</Action>
+		</Command>
+		<Command name="СведенияОбУплатеНалогов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения об уплате налогов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СведенияОбУплатеНалогов</Action>
+		</Command>
+		<Command name="УведомлениеОбИсчисленныхСуммахНалогов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомление об исчисленных суммах налогов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>УведомлениеОбИсчисленныхСуммахНалогов</Action>
+		</Command>
+	</Commands>
+</Form>

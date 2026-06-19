@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Продажи</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДокументыПокупателю" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы покупателю</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДокументыПокупателюРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Button name="КоммерческиеПредложения" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КоммерческиеПредложения</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="КоммерческиеПредложенияРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="СчетаПокупателям" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СчетаПокупателям</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="СчетаПокупателямРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="Реализация" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Реализация</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="РеализацияРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="СчетаФактурыВыданные" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СчетаФактурыВыданные</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="СчетаФактурыВыданныеРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="ВозвратыОтПокупателей" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВозвратыОтПокупателей</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ВозвратыОтПокупателейРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="КорректировкаРеализации" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КорректировкаРеализации</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="КорректировкаРеализацииРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="АктыОРасхожденияхПолученные" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.АктыОРасхожденияхПолученные</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="АктыОРасхожденияхПолученныеРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="РеализацияОтгруженныхТоваров" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.РеализацияОтгруженныхТоваров</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="РеализацияОтгруженныхТоваровРасширеннаяПодсказка" id="36"/>
+				</Button>
+				<Button name="ОказаниеУслуг" id="57">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОказаниеУслуг</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОказаниеУслугРасширеннаяПодсказка" id="58"/>
+				</Button>
+				<Button name="РозничныеПродажи" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.РозничныеПродажи</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="РозничныеПродажиРасширеннаяПодсказка" id="24"/>
+				</Button>
+				<Button name="ОтчетыКомиссионераОПродажах" id="59">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОтчетыКомиссионераОПродажах</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетыКомиссионераОПродажахРасширеннаяПодсказка" id="60"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВнешняяТорговля" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внешняя торговля</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВнешняяТорговляРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<Button name="ЗаявлениеОВвозеТоваровПолученное" id="53">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаявлениеОВвозеТоваровПолученное</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ЗаявлениеОВвозеТоваровПолученноеРасширеннаяПодсказка" id="54"/>
+				</Button>
+				<Button name="ТаможеннаяДекларацияЭкспорт" id="55">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ТаможеннаяДекларацияЭкспорт</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ТаможеннаяДекларацияЭкспортРасширеннаяПодсказка" id="56"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКонтроль" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль документов</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтрольРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<Button name="ВсеНеоплаченныеСчета" id="25">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВсеНеоплаченныеСчета</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ВсеНеоплаченныеСчетаРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="ОригиналыПервичныхДокументовПокупатели" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОригиналыПервичныхДокументовПокупатели</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОригиналыПервичныхДокументовПокупателиРасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СчетаПокупателям" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета покупателям</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СчетаПокупателям</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыРеализации</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Реализация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализация (акты, накладные, УПД)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Реализация</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыРеализации</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СчетаФактурыВыданные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета-фактуры выданные</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СчетаФактурыВыданные</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетИмпортныхТоваров</Item>
+				<Item>FunctionalOption.ВыписыватьСчетаФактурыСпецРежимы</Item>
+				<Item>FunctionalOption.ИспользуетсяНДФЛИП</Item>
+				<Item>FunctionalOption.ИспользуетсяОСНО</Item>
+				<Item>FunctionalOption.ОсуществляетсяЗакупкаТоваровУслугДляКомитентов</Item>
+				<Item>FunctionalOption.ОсуществляетсяРеализацияТоваровУслугКомитентов</Item>
+				<Item>FunctionalOption.УплачиватьНДСспецРежимы</Item>
+				<Item>FunctionalOption.ИсполняютсяОбязанностиНалоговогоАгентаПоНДС</Item>
+				<Item>FunctionalOption.ИспользуетсяУСНСНДС</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="КорректировкаРеализации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корректировка реализации</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КорректировкаРеализации</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьКорректировочныеДокументы</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ВозвратыОтПокупателей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возвраты от покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВозвратыОтПокупателей</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыРеализации</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="РозничныеПродажи" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Розничные продажи</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РозничныеПродажи</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяРозничнаяТорговля</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ВсеНеоплаченныеСчета" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все неоплаченные счета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВсеНеоплаченныеСчета</Action>
+		</Command>
+		<Command name="КоммерческиеПредложения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коммерческие предложения</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КоммерческиеПредложения</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьДокументыРеализации</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="АктыОРасхожденияхПолученные" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акты о расхождениях (полученные)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>АктыОРасхожденияхПолученные</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьКорректировочныеДокументы</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="РеализацияОтгруженныхТоваров" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализация отгруженных товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РеализацияОтгруженныхТоваров</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяОтгрузкаБезПереходаПраваСобственности</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЗаявлениеОВвозеТоваровПолученное" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявления о ввозе товаров (полученное)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаявлениеОВвозеТоваровПолученное</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетТаможенныхДекларацийЭкспорт</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ТаможеннаяДекларацияЭкспорт" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таможенные декларации (экспорт)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ТаможеннаяДекларацияЭкспорт</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетТаможенныхДекларацийЭкспорт</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОказаниеУслуг" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оказание услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОказаниеУслуг</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьПакетноеВыставлениеАктов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОтчетыКомиссионераОПродажах" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчеты комиссионера о продажах</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтчетыКомиссионераОПродажах</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ОсуществляетсяРеализацияТоваровУслугЧерезКомиссионеров</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ОригиналыПервичныхДокументовПокупатели" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оригиналы первичных документов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОригиналыПервичныхДокументовПокупатели</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ЭтоТовары">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоКонтрагенты">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

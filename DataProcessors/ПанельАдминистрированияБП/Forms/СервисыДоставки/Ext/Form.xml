@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Интеграция с сервисами доставки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ПанельОшибки" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ToolTipBackColor</BackColor>
+			<ExtendedTooltip name="ПанельОшибкиРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<LabelDecoration name="ТекстЗаголовкаОшибки" id="31">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для интеграции с сервисами доставки, включите сервис "1С:Бизнес сеть" </v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТекстЗаголовкаОшибкиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ТекстЗаголовкаОшибкиРасширеннаяПодсказка" id="33"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНастройкиБизнесСетьОбщиеНастройки" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки бизнес сеть общие настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиБизнесСетьОбщиеНастройкиРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкиБизнесСетьОбщиеНастройкиЛевая" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки бизнес сеть общие настройки левая</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиБизнесСетьОбщиеНастройкиЛеваяРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<Button name="ОткрытьПомощникПодключенияКСервисуБизнесСеть" id="48">
+							<Type>Hyperlink</Type>
+							<Width>43</Width>
+							<CommandName>Form.Command.ПомощникПодключенияБизнесСеть</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подключиться к сервису 1С:Бизнес-сеть</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ExtendedTooltip name="ОткрытьПомощникПодключенияКСервисуБизнесСетьРасширеннаяПодсказка" id="49">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подключить новую организацию для работы с сервисами доставки</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация1" id="56">
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="58"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаСписокСервисовДоставки" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список сервисов доставки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список сервисов доставки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокСервисовДоставкиРасширеннаяПодсказка" id="60"/>
+			<ChildItems>
+				<Table name="СервисыДоставки" id="61">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СервисыДоставки</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СервисыДоставкиКонтекстноеМеню" id="62"/>
+					<AutoCommandBar name="СервисыДоставкиКоманднаяПанель" id="63">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СервисыДоставкиРасширеннаяПодсказка" id="64"/>
+					<SearchStringAddition name="СервисыДоставкиСтрокаПоиска" id="65">
+						<AdditionSource>
+							<Item>СервисыДоставки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СервисыДоставкиСтрокаПоискаКонтекстноеМеню" id="66"/>
+						<ExtendedTooltip name="СервисыДоставкиСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СервисыДоставкиСостояниеПросмотра" id="68">
+						<AdditionSource>
+							<Item>СервисыДоставки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СервисыДоставкиСостояниеПросмотраКонтекстноеМеню" id="69"/>
+						<ExtendedTooltip name="СервисыДоставкиСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СервисыДоставкиУправлениеПоиском" id="71">
+						<AdditionSource>
+							<Item>СервисыДоставки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СервисыДоставкиУправлениеПоискомКонтекстноеМеню" id="72"/>
+						<ExtendedTooltip name="СервисыДоставкиУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">СервисыДоставкиВыбор</Event>
+						<Event name="OnChange">СервисыДоставкиПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<ColumnGroup name="ГруппаКолонок" id="100">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонок</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа колонок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаКолонокРасширеннаяПодсказка" id="101"/>
+							<ChildItems>
+								<CheckBoxField name="СервисыДоставкиИспользоватьСервисДоставки" id="102">
+									<DataPath>СервисыДоставки.ИспользоватьСервисДоставки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СервисыДоставкиИспользоватьСервисДоставкиКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СервисыДоставкиИспользоватьСервисДоставкиРасширеннаяПодсказка" id="104"/>
+								</CheckBoxField>
+								<InputField name="СервисыДоставкиСервисДоставки" id="108">
+									<DataPath>СервисыДоставки.СервисДоставки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ShowInHeader>false</ShowInHeader>
+									<ShowInFooter>false</ShowInFooter>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СервисыДоставкиСервисДоставкиКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="СервисыДоставкиСервисДоставкиРасширеннаяПодсказка" id="110"/>
+								</InputField>
+								<PictureField name="СервисыДоставкиИнформация" id="97">
+									<DataPath>СервисыДоставки.Информация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<ShowInHeader>false</ShowInHeader>
+									<ShowInFooter>false</ShowInFooter>
+									<Hyperlink>true</Hyperlink>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.ИнформацияБЭД</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="СервисыДоставкиИнформацияКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="СервисыДоставкиИнформацияРасширеннаяПодсказка" id="99"/>
+								</PictureField>
+							</ChildItems>
+						</ColumnGroup>
+						<LabelField name="СервисыДоставкиНастройкаПодключения" id="94">
+							<DataPath>СервисыДоставки.НастройкаПодключения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CellHyperlink>true</CellHyperlink>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="СервисыДоставкиНастройкаПодключенияКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="СервисыДоставкиНастройкаПодключенияРасширеннаяПодсказка" id="96"/>
+						</LabelField>
+						<LabelField name="СервисыДоставкиОбщиеНастройки" id="111">
+							<DataPath>СервисыДоставки.ОбщиеНастройки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CellHyperlink>true</CellHyperlink>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="СервисыДоставкиОбщиеНастройкиКонтекстноеМеню" id="112"/>
+							<ExtendedTooltip name="СервисыДоставкиОбщиеНастройкиРасширеннаяПодсказка" id="113"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ВалютаРегламентированногоУчета</Field>
+				<Field>НаборКонстант.ОтключитьКонтрольОтрицательныхОстатков</Field>
+				<Field>НаборКонстант.СрокОплатыПокупателей</Field>
+				<Field>НаборКонстант.СрокОплатыПоставщикам</Field>
+				<Field>НаборКонстант.ТипЦенПлановойСебестоимостиНоменклатуры</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="Организация" id="2">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СервисыДоставки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервисы доставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СервисДоставки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьСервисДоставки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать сервис доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Подсказка" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подсказка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НастройкаПодключения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка подключения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Информация" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипГрузоперевозки" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип грузоперевозки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбщиеНастройки" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка доставки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПомощникПодключенияБизнесСеть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник подключения бизнес сеть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник подключения бизнес сеть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПомощникПодключенияБизнесСеть</Action>
+		</Command>
+	</Commands>
+</Form>

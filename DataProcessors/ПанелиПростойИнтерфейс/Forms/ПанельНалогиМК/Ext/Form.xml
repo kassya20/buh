@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Налоги</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНалоги" id="310">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Налоги и отчеты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа налоги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНалогиРасширеннаяПодсказка" id="311"/>
+			<ChildItems>
+				<LabelDecoration name="МониторНалоговОтчетности" id="335">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.ПанелиПростойИнтерфейс.Команда.ГлавноеМониторНалоговИОтчетности&gt;Налоги&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="МониторНалоговОтчетностиКонтекстноеМеню" id="336"/>
+					<ExtendedTooltip name="МониторНалоговОтчетностиРасширеннаяПодсказка" id="337"/>
+				</LabelDecoration>
+				<LabelDecoration name="СписокЗадач" id="261">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.ПанелиПростойИнтерфейс.Команда.СписокЗадач&gt;Задачи организации&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СписокЗадачКонтекстноеМеню" id="262"/>
+					<ExtendedTooltip name="СписокЗадачРасширеннаяПодсказка" id="263"/>
+				</LabelDecoration>
+				<LabelDecoration name="КалендарьОтчетности" id="312">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.КалендарьОтчетности.Команда.ОткрытьКалендарьОтчетности&gt;Календарь отчетности&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КалендарьОтчетностиКонтекстноеМеню" id="313"/>
+					<ExtendedTooltip name="КалендарьОтчетностиРасширеннаяПодсказка" id="314"/>
+				</LabelDecoration>
+				<LabelDecoration name="СравнениеНалоговыхРежимов" id="315">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/ОбщаяКоманда.СравнениеРежимовНалогообложения&gt;Сравнение налоговых режимов&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СравнениеНалоговыхРежимовКонтекстноеМеню" id="316"/>
+					<ExtendedTooltip name="СравнениеНалоговыхРежимовРасширеннаяПодсказка" id="317"/>
+				</LabelDecoration>
+				<LabelDecoration name="Настройки" id="332">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link #1&gt;Настройки&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НастройкиКонтекстноеМеню" id="333"/>
+					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="334"/>
+					<Events>
+						<Event name="URLProcessing">НастройкиОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПСН" id="302">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПСН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа АУСН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПСНРасширеннаяПодсказка" id="303"/>
+			<ChildItems>
+				<LabelDecoration name="Патенты" id="264">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Документ.ОперацияСПатентом.Команда.Патенты_ПростойИнтерфейс&gt;Патенты&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПатентыКонтекстноеМеню" id="265"/>
+					<ExtendedTooltip name="ПатентыРасширеннаяПодсказка" id="266"/>
+				</LabelDecoration>
+				<LabelDecoration name="ЗаписиКнигиУчетаДоходовПатент" id="201">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link ЗаписиКнигиУчетаДоходовПатент&gt;Записи книги доходов по патенту&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаписиКнигиУчетаДоходовПатентКонтекстноеМеню" id="202"/>
+					<ExtendedTooltip name="ЗаписиКнигиУчетаДоходовПатентРасширеннаяПодсказка" id="203"/>
+					<Events>
+						<Event name="URLProcessing">ЗаписиКнигиУчетаДоходовПатентОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="КнигаДоходовПСН" id="291">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Отчет.КнигаУчетаДоходовПатент.Команда.КнигаУчетаДоходовПатентПростойИнтерфейс&gt;Книга учета доходов ПСН&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КнигаДоходовПСНКонтекстноеМеню" id="292"/>
+					<ExtendedTooltip name="КнигаДоходовПСНРасширеннаяПодсказка" id="293"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАУСН" id="300">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа АУСН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаАУСНРасширеннаяПодсказка" id="301"/>
+			<ChildItems>
+				<LabelDecoration name="БанковскиеОперацииАУСН" id="297">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Отчет.БанковскиеОперацииАУСН.Команда.БанковскиеОперацииАУСН&gt;Банковские операции&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="БанковскиеОперацииАУСНКонтекстноеМеню" id="298"/>
+					<ExtendedTooltip name="БанковскиеОперацииАУСНРасширеннаяПодсказка" id="299"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУСН" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УСН</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаУСНРасширеннаяПодсказка" id="98"/>
+			<ChildItems>
+				<LabelDecoration name="ЗаписиКнигиДоходовИРасходовУСН" id="99">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link ЗаписиКнигиДоходовИРасходовУСН&gt;Записи книги доходов и расходов УСН&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаписиКнигиДоходовИРасходовУСНКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="ЗаписиКнигиДоходовИРасходовУСНРасширеннаяПодсказка" id="101"/>
+					<Events>
+						<Event name="URLProcessing">ЗаписиКнигиДоходовИРасходовУСНОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="КнигаУчетаДоходовРасходовУСН" id="288">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link #1&gt;Книга учета доходов и расходов&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КнигаУчетаДоходовРасходовУСНКонтекстноеМеню" id="289"/>
+					<ExtendedTooltip name="КнигаУчетаДоходовРасходовУСНРасширеннаяПодсказка" id="290"/>
+					<Events>
+						<Event name="URLProcessing">КнигаУчетаДоходовРасходовУСНОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИП" id="185">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаИПРасширеннаяПодсказка" id="186"/>
+			<ChildItems>
+				<LabelDecoration name="ЗаписьКнигиУчетаДоходовИРасходовИП" id="193">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/list/Документ.ЗаписьКнигиУчетаДоходовИРасходовИП&gt;Записи книги доходов и расходов ИП&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЗаписьКнигиУчетаДоходовИРасходовИПКонтекстноеМеню" id="194"/>
+					<ExtendedTooltip name="ЗаписьКнигиУчетаДоходовИРасходовИПРасширеннаяПодсказка" id="195"/>
+				</LabelDecoration>
+				<LabelDecoration name="КнигаДоходовПредпринимателя" id="276">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Отчет.КнигаУчетаДоходовИРасходовПредпринимателя.Команда.КнигаДоходовИРасходовПредпринимателяПростойИнтерфейс&gt;Книга доходов и расходов предпринимателя&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КнигаДоходовПредпринимателяКонтекстноеМеню" id="277"/>
+					<ExtendedTooltip name="КнигаДоходовПредпринимателяРасширеннаяПодсказка" id="278"/>
+				</LabelDecoration>
+				<LabelDecoration name="ПомощникЗаполнения3НДФЛ" id="273">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.ПомощникЗаполнения3НДФЛ.Команда.ПомощникЗаполнения3НДФЛПростойИнтерфейс&gt;3-НДФЛ&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПомощникЗаполнения3НДФЛКонтекстноеМеню" id="274"/>
+					<ExtendedTooltip name="ПомощникЗаполнения3НДФЛРасширеннаяПодсказка" id="275"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНПД" id="135">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НПД</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНПДРасширеннаяПодсказка" id="136"/>
+			<ChildItems>
+				<LabelDecoration name="СправкиПлательщикаНПД" id="137">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/ОбщаяКоманда.СправкиПоНалогуНаПрофессиональныйДоход&gt;Справки по налогу на профессиональный доход&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СправкиПлательщикаНПДКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="СправкиПлательщикаНПДРасширеннаяПодсказка" id="139"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДоходыНПД" id="140">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/app/Отчет.ДоходыНПД&gt;&lt;u&gt;Доходы НПД&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДоходыНПДКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="ДоходыНПДРасширеннаяПодсказка" id="142"/>
+				</LabelDecoration>
+				<LabelDecoration name="ПомощникУплатыНПД" id="267">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.ПомощникУплатыНПД.Команда.НалогНаПрофессиональныйДоходПростойИнтерфейс&gt;Помощник уплаты НПД&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПомощникУплатыНПДКонтекстноеМеню" id="268"/>
+					<ExtendedTooltip name="ПомощникУплатыНПДРасширеннаяПодсказка" id="269"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЕдиныйНалоговыйСчет" id="226">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Единый налоговый счет</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЕдиныйНалоговыйСчетРасширеннаяПодсказка" id="227"/>
+			<ChildItems>
+				<LabelDecoration name="Уведомления" id="304">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/list/Документ.УведомлениеОбИсчисленныхСуммахНалогов&gt;Уведомления&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="УведомленияКонтекстноеМеню" id="305"/>
+					<ExtendedTooltip name="УведомленияРасширеннаяПодсказка" id="306"/>
+				</LabelDecoration>
+				<LabelDecoration name="СведенияОбУплатеНалогов" id="307">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/list/Документ.СведенияОбУплатеНалогов&gt;Сведения об уплате налогов&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СведенияОбУплатеНалоговКонтекстноеМеню" id="308"/>
+					<ExtendedTooltip name="СведенияОбУплатеНалоговРасширеннаяПодсказка" id="309"/>
+				</LabelDecoration>
+				<LabelDecoration name="РасчетыПоЕНС" id="246">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/ОбщаяКоманда.РасчетыПоЕНС&gt;Расчеты по ЕНС&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РасчетыПоЕНСКонтекстноеМеню" id="247"/>
+					<ExtendedTooltip name="РасчетыПоЕНСРасширеннаяПодсказка" id="248"/>
+				</LabelDecoration>
+				<LabelDecoration name="РасчетыПоНалогамНаЕНС" id="249">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/ОбщаяКоманда.РасчетыПоНалогамНаЕНС&gt;Расчеты по налогам на ЕНС&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РасчетыПоНалогамНаЕНСКонтекстноеМеню" id="250"/>
+					<ExtendedTooltip name="РасчетыПоНалогамНаЕНСРасширеннаяПодсказка" id="251"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНДС" id="143">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>НДС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа НДС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="144"/>
+			<ChildItems>
+				<LabelDecoration name="РегистрацияСчетовФактурНаАванс" id="159">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/app/Обработка.РегистрацияСчетовФактурНаАванс&gt;Регистрация счетов-фактур на аванс&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РегистрацияСчетовФактурНаАвансКонтекстноеМеню" id="160"/>
+					<ExtendedTooltip name="РегистрацияСчетовФактурНаАвансРасширеннаяПодсказка" id="161"/>
+				</LabelDecoration>
+				<LabelDecoration name="ОтчетностьПоНДС" id="279">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.ПомощникРасчетаНДС.Команда.ОтчетностьПоНДСПростойИнтерфейс&gt;Отчетность по НДС&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОтчетностьПоНДСКонтекстноеМеню" id="280"/>
+					<ExtendedTooltip name="ОтчетностьПоНДСРасширеннаяПодсказка" id="281"/>
+				</LabelDecoration>
+				<LabelDecoration name="ОтражениеНачисленияНДС" id="145">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/list/Документ.ОтражениеНачисленияНДС&gt;Отражение начисления НДС&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОтражениеНачисленияНДСКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="ОтражениеНачисленияНДСРасширеннаяПодсказка" id="147"/>
+				</LabelDecoration>
+				<LabelDecoration name="ОтражениеНДСКВычету" id="148">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/list/Документ.ОтражениеНДСКВычету&gt;&lt;u&gt;Отражение&lt;/&gt;&lt;/&gt;&lt;link e1cib/list/Документ.ОтражениеНДСКВычету&gt; НДС к вычету&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОтражениеНДСКВычетуКонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="ОтражениеНДСКВычетуРасширеннаяПодсказка" id="150"/>
+				</LabelDecoration>
+				<LabelDecoration name="КнигаПродаж" id="285">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Отчет.КнигаПродаж.Команда.КнигаПродажПростойИнтерфейс&gt;Книга продаж&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КнигаПродажКонтекстноеМеню" id="286"/>
+					<ExtendedTooltip name="КнигаПродажРасширеннаяПодсказка" id="287"/>
+				</LabelDecoration>
+				<LabelDecoration name="КнигаПокупок" id="282">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Отчет.КнигаПокупок.Команда.КнигаПокупокПростойИнтерфейс&gt;Книга покупок&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КнигаПокупокКонтекстноеМеню" id="283"/>
+					<ExtendedTooltip name="КнигаПокупокРасширеннаяПодсказка" id="284"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСверкиСФНС" id="318">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сверки с ФНС</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСверкиСФНСРасширеннаяПодсказка" id="319"/>
+			<ChildItems>
+				<LabelDecoration name="СверкаНалоговыхПлатежейСФНС" id="320">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.СверкаНалоговСФНС.Команда.СверкаНалоговСФНС_ПростойИнтерфейс&gt;Сверка налоговых платежей с ФНС&lt;/&gt;
+</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СверкаНалоговыхПлатежейСФНСКонтекстноеМеню" id="321"/>
+					<ExtendedTooltip name="СверкаНалоговыхПлатежейСФНСРасширеннаяПодсказка" id="322"/>
+				</LabelDecoration>
+				<LabelDecoration name="СверкаРасчетаНалогаНаИмущество" id="323">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Документ.СверкаСФНСПоИмущественнымНалогам.Команда.СверкаРасчетаНалогаНаИмущество&gt;Сверка расчета налога на имущество&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СверкаРасчетаНалогаНаИмуществоКонтекстноеМеню" id="324"/>
+					<ExtendedTooltip name="СверкаРасчетаНалогаНаИмуществоРасширеннаяПодсказка" id="325"/>
+				</LabelDecoration>
+				<LabelDecoration name="СверкаРасчетаТранспортногоНалога" id="326">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Документ.СверкаСФНСПоИмущественнымНалогам.Команда.СверкаРасчетаТранспортногоНалога&gt;Сверка расчета транспортного налога&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СверкаРасчетаТранспортногоНалогаКонтекстноеМеню" id="327"/>
+					<ExtendedTooltip name="СверкаРасчетаТранспортногоНалогаРасширеннаяПодсказка" id="328"/>
+				</LabelDecoration>
+				<LabelDecoration name="СверкаРасчетаЗемельногоНалога" id="329">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Документ.СверкаСФНСПоИмущественнымНалогам.Команда.СверкаРасчетаЗемельногоНалога&gt;Сверка расчета земельного налога&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СверкаРасчетаЗемельногоНалогаКонтекстноеМеню" id="330"/>
+					<ExtendedTooltip name="СверкаРасчетаЗемельногоНалогаРасширеннаяПодсказка" id="331"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1СОтчетность" id="107">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчетность</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="Группа1СОтчетностьРасширеннаяПодсказка" id="108"/>
+			<ChildItems>
+				<LabelDecoration name="РегламентированныеОтчеты" id="109">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;link e1cib/command/Обработка.ПанелиПростойИнтерфейс.Команда.Отчетность&gt;1С-Отчетность&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="РегламентированныеОтчетыКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="РегламентированныеОтчетыРасширеннаяПодсказка" id="111"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

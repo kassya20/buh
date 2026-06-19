@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Инвентаризация</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ИнвентаризацияОС" id="273">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ИнвентаризацияОС</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияОСРасширеннаяПодсказка" id="274"/>
+		</Button>
+		<Button name="ПечатьИнвентарныхЭтикеток" id="331">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПечатьИнвентарныхЭтикеток</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПечатьИнвентарныхЭтикетокРасширеннаяПодсказка" id="332"/>
+		</Button>
+		<Button name="ИнвентаризацияНМА" id="275">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ИнвентаризацияНМА</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияНМАРасширеннаяПодсказка" id="276"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИнвентаризацияОС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация ОС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИнвентаризацияОС</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИнвентаризацияНМА" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инвентаризация НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИнвентаризацияНМА</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетНМА</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ПечатьИнвентарныхЭтикеток" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать инвентарных этикеток</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПечатьИнвентарныхЭтикеток</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетОсновныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

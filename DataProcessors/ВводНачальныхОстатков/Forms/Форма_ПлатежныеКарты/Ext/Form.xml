@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Платежные карты</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="26">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="27"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Записать</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПлатежныеКарты" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПлатежныеКарты</DataPath>
+			<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПлатежныеКартыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПлатежныеКартыКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ПлатежныеКартыРасширеннаяПодсказка" id="4">
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<Title formatted="false">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Укажите сумму оплат по картам, находящихся в обработке у банка.
+Эту информацию можно посмотреть в личном кабинете банка или уточнить в службе поддержки банка.</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+			<SearchStringAddition name="ПлатежныеКартыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ПлатежныеКарты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлатежныеКартыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ПлатежныеКартыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПлатежныеКартыСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ПлатежныеКарты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлатежныеКартыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПлатежныеКартыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПлатежныеКартыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ПлатежныеКарты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлатежныеКартыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПлатежныеКартыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПлатежныеКартыНомерСтроки" id="14">
+					<DataPath>Объект.ПлатежныеКарты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежныеКартыНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПлатежныеКартыНомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="ПлатежныеКартыВидОплаты" id="17">
+					<DataPath>Объект.ПлатежныеКарты.ВидОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПлатежныеКартыВидОплатыКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПлатежныеКартыВидОплатыРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="Creating">ПлатежныеКартыВидОплатыСоздание</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПлатежныеКартыСумма" id="20">
+					<DataPath>Объект.ПлатежныеКарты.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПлатежныеКартыСуммаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПлатежныеКартыСуммаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ПлатежныеКартыОтступ" id="23">
+					<DataPath>Объект.ПлатежныеКарты.Отступ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПлатежныеКартыОтступКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПлатежныеКартыОтступРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ВводНачальныхОстатков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.ВалютаРегламентированногоУчета</Field>
+				<Field>Объект.Деньги</Field>
+				<Field>Объект.Запасы</Field>
+				<Field>Объект.Зарплата</Field>
+				<Field>Объект.Капитал</Field>
+				<Field>Объект.Капитал_Вспомогательная</Field>
+				<Field>Объект.Комиссионеры</Field>
+				<Field>Объект.КредитыИЗаймы</Field>
+				<Field>Объект.МакетПомощника</Field>
+				<Field>Объект.НалогиИВзносы</Field>
+				<Field>Объект.НематериальныеАктивы</Field>
+				<Field>Объект.ОсновныеСредства</Field>
+				<Field>Объект.Подотчет</Field>
+				<Field>Объект.ПодразделениеОрганизации</Field>
+				<Field>Объект.Покупатели</Field>
+				<Field>Объект.Поставщики</Field>
+				<Field>Объект.РазделыВводаОстатков</Field>
+				<Field>Объект.Топливо</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.ПлатежныеКарты">
+					<Column name="Отступ" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отступ</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>1</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Записать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДатаВводаОстатков">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="62">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="64"/>
+			<Events>
+				<Event name="OnChange">ОрганизацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<LabelField name="ОрганизацияПредставление" id="65">
+			<DataPath>ОрганизацияПредставление</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Hiperlink>true</Hiperlink>
+			<ContextMenu name="ОрганизацияПредставлениеКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="ОрганизацияПредставлениеРасширеннаяПодсказка" id="67"/>
+		</LabelField>
+		<LabelDecoration name="Пояснение" id="8">
+			<Width>70</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Font ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник формирует список документов с 1 января 2025 года, в которых был установлен переключатель в положение "Без закрывающих документов" и не указана ставка НДС.
+
+Чтобы в учете на УСН «Доходы» с НДС не было ошибок, во всех документах, связанных с денежными средствами, должен быть установлен параметр «По актам и накладным» и указана корректная ставка.
+
+Исправить документы можно вручную, выбрав нужный из списка.
+
+При нажатии «Исправить документы», автоматически у всех документов из списков будет установлен переключатель «По актам и накладным». Для документов поступления денег и оплаты платежной картой ставка НДС будет установлена из настроек налогообложения. Для документов списания денег будет установлена выбранная ставка НДС. Для документов оплаты платежной картой будет установлен выбранный вид оплаты.
+
+Подробнее в статье &lt;link https://buh.ru/articles/1s-bukhgalteriya-8-kak-pri-usn-dokhody-vosstanovit-uchet-nds-s-2025-goda.html&gt;Как восстановить учет НДС с 2025 года при УСН "доходы", если вы его не вели&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПояснениеКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="ПояснениеРасширеннаяПодсказка" id="10"/>
+		</LabelDecoration>
+		<CommandBar name="КоманднаяПанель" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="КоманднаяПанельРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<Button name="ОбновитьСписок" id="3">
+					<Type>CommandBarButton</Type>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.СформироватьСписки</CommandName>
+					<ExtendedTooltip name="ОбновитьСписокРасширеннаяПодсказка" id="4"/>
+				</Button>
+				<Button name="ИсправитьДокументы" id="37">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ИсправитьДокументы</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исправить документы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ИсправитьДокументыРасширеннаяПодсказка" id="38"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Pages name="Документы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы</v8:content>
+				</v8:item>
+			</Title>
+			<Width>70</Width>
+			<ExtendedTooltip name="ДокументыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<Page name="ДокументыПоступления" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы поступления денег</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>КоличествоДокументовПоступления</TitleDataPath>
+					<ExtendedTooltip name="ДокументыПоступленияРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<UsualGroup name="ПараметрыИсправленияПлатежнаяКарта" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры исправления платежная карта</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПараметрыИсправленияПлатежнаяКартаРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<InputField name="ВидОплаты" id="59">
+									<DataPath>ВидОплаты</DataPath>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Организация</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Организация</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВидОплатыКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ВидОплатыРасширеннаяПодсказка" id="61"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<SpreadSheetDocumentField name="РезультатПоступления" id="19">
+							<DataPath>РезультатПоступления</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<ViewScalingMode>Normal</ViewScalingMode>
+							<ContextMenu name="РезультатПоступленияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="РезультатПоступленияРасширеннаяПодсказка" id="21"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="ДокументыСписания" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы списания денег</v8:content>
+						</v8:item>
+					</Title>
+					<TitleDataPath>КоличествоДокументовСписания</TitleDataPath>
+					<ExtendedTooltip name="ДокументыСписанияРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<UsualGroup name="ПараметрыИсправленияСписания" id="44">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры исправления списания</v8:content>
+								</v8:item>
+							</Title>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПараметрыИсправленияСписанияРасширеннаяПодсказка" id="45"/>
+							<ChildItems>
+								<InputField name="СтавкаНДС" id="46">
+									<DataPath>СтавкаНДС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Установить ставку НДС</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СтавкаНДСКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="СтавкаНДСРасширеннаяПодсказка" id="48"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<SpreadSheetDocumentField name="РезультатСписания" id="22">
+							<DataPath>РезультатСписания</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<ViewScalingMode>Normal</ViewScalingMode>
+							<ContextMenu name="РезультатСписанияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="РезультатСписанияРасширеннаяПодсказка" id="24"/>
+						</SpreadSheetDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ИсправлениеРеквизитаБезЗакрывающихДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РезультатПоступления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатСписания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат списания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЦветПодсветки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет подсветки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДокументовПоступления" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество документов поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДокументовСписания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество документов поступления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресВременногоХранилища" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СтавкаНДС" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СтавкиНДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидОплаты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид оплаты для платежной карты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыОплатОрганизаций</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОплатПлатежнойКартой" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество документов оплата платежной картой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияПредставление" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьНесколькоОрганизацийБухгалтерскийУчет" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать несколько организаций бухгалтерский учет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьСписки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьСписки</Action>
+		</Command>
+		<Command name="ИсправитьДокументы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсправитьДокументы</Action>
+		</Command>
+	</Commands>
+</Form>

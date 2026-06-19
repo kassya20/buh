@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Система</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ОбщиеНастройки" id="116">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОбщиеНастройки</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ОбщиеНастройкиРасширеннаяПодсказка" id="117"/>
+		</Button>
+		<Button name="ПараметрыУчета" id="118">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПараметрыУчета</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПараметрыУчетаРасширеннаяПодсказка" id="119"/>
+		</Button>
+		<Button name="ПечатныеФормыОтчетыИОбработки" id="120">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПечатныеФормыОтчетыИОбработки</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПечатныеФормыОтчетыИОбработкиРасширеннаяПодсказка" id="121"/>
+		</Button>
+		<Button name="ПроведениеДокументов" id="122">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПроведениеДокументов</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПроведениеДокументовРасширеннаяПодсказка" id="123"/>
+		</Button>
+		<Button name="НастройкиПользователейИПрав" id="124">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкиПользователейИПрав</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкиПользователейИПравРасширеннаяПодсказка" id="125"/>
+		</Button>
+		<Button name="НастройкиРаботыСФайлами" id="126">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкиРаботыСФайлами</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкиРаботыСФайламиРасширеннаяПодсказка" id="127"/>
+		</Button>
+		<Button name="НастройкиРегистровУчета" id="130">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкиРегистровУчета</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкиРегистровУчетаРасширеннаяПодсказка" id="131"/>
+		</Button>
+		<Button name="НастройкиОтправкиPushУведомлений" id="128">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкиОтправкиPushУведомлений</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкиОтправкиPushУведомленийРасширеннаяПодсказка" id="129"/>
+		</Button>
+		<Button name="Производительность" id="132">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Производительность</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПроизводительностьРасширеннаяПодсказка" id="133"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ОбщиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменение заголовка программы, настройка версионирования объектов, дополнительных реквизитов и других общих настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбщиеНастройки</Action>
+		</Command>
+		<Command name="ПараметрыУчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры учета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПараметрыУчета</Action>
+		</Command>
+		<Command name="ПечатныеФормыОтчетыИОбработки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печатные формы, отчеты и обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка печатных форм, вариантов отчетов, рассылок отчетов, дополнительных отчетов и обработок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПечатныеФормыОтчетыИОбработки</Action>
+		</Command>
+		<Command name="ПроведениеДокументов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проведение документов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроведениеДокументов</Action>
+		</Command>
+		<Command name="НастройкиПользователейИПрав" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки пользователей и прав</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Администрирование пользователей, настройка групп доступа, предоставление доступа для внешних пользователей, управление пользовательскими настройками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиПользователейИПрав</Action>
+		</Command>
+		<Command name="НастройкиРаботыСФайлами" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки работы с файлами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка параметров загрузки, хранения и обработки файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиРаботыСФайлами</Action>
+		</Command>
+		<Command name="НастройкиОтправкиPushУведомлений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка отправки push-уведомлений</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиОтправкиPushУведомлений</Action>
+		</Command>
+		<Command name="НастройкиРегистровУчета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки регистров учета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиРегистровУчета</Action>
+		</Command>
+		<Command name="Производительность" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производительность</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Производительность</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.Функциональность</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

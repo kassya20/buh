@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ставка налога УСН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>ChangeHistory</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="Организация" id="4">
+			<DataPath>НастройкиУчетаУСН.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="6"/>
+		</LabelField>
+		<Pages name="СтраницыИстория" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы история</v8:content>
+				</v8:item>
+			</Title>
+			<Height>1</Height>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыИсторияРасширеннаяПодсказка" id="122"/>
+			<ChildItems>
+				<Page name="СтраницаПериоды" id="123">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница периоды</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаПериодыРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<Button name="ИсторияИзменений" id="125">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.История</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>История изменений</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ИсторияИзмененийРасширеннаяПодсказка" id="126"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаИзменение" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница изменение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<BackColor>style:ОценкаРискаНалоговойПроверкиФонЕстьОснованияЦвет</BackColor>
+					<ExtendedTooltip name="СтраницаИзменениеРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<InputField name="ДатаИзмененияСтрокой" id="129">
+							<DataPath>ДатаИзмененияСтрокой</DataPath>
+							<Width>12</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<TextEdit>false</TextEdit>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Квартал</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ДатаИзмененияСтрокойКонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="ДатаИзмененияСтрокойРасширеннаяПодсказка" id="131"/>
+							<Events>
+								<Event name="StartChoice">ДатаИзмененияСтрокойНачалоВыбора</Event>
+								<Event name="Clearing">ДатаИзмененияСтрокойОчистка</Event>
+							</Events>
+						</InputField>
+						<Button name="ОК" id="132">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОК</CommandName>
+							<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="133"/>
+						</Button>
+						<Button name="ОтменитьИзмененияИстории" id="134">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОтменитьИзмененияИстории</CommandName>
+							<ExtendedTooltip name="ОтменитьИзмененияИсторииРасширеннаяПодсказка" id="135"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаОсновныеРеквизиты" id="110">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеРеквизитыРасширеннаяПодсказка" id="111"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОсновнаяСтавкаУСН" id="64">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная ставка налога УСН</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновнаяСтавкаУСНРасширеннаяПодсказка" id="65"/>
+					<ChildItems>
+						<CheckBoxField name="НалоговыеКаникулы" id="66">
+							<DataPath>НастройкиУчетаУСН.НалоговыеКаникулы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Применяются налоговые каникулы</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НалоговыеКаникулыКонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="НалоговыеКаникулыРасширеннаяПодсказка" id="68">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Налоговые каникулы предоставляются индивидуальным предпринимателям, которые:
+- Зарегистрированы впервые;
+- Ведут деятельность, связанную с услугами населению, производственной, социальной или научной сферой.
+Региональные власти могут определять конкретные виды деятельности, которые попадают под налоговые каникулы.
+При налоговых каникулах отчетность сдавать нужно.
+&lt;link https://its.1c.ru/db/bizlegsup/content/134/1&gt;Подробнее на ИТС&lt;/&gt;</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">НалоговыеКаникулыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаОсновнаяСтавкаУСНРазмер" id="69">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Размер основной ставки налога УСН</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОсновнаяСтавкаУСНРазмерРасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<InputField name="СтавкаНалогаУСН" id="71">
+									<DataPath>НастройкиУчетаУСН.СтавкаНалога</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основная ставка</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СтавкаНалогаУСНКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="СтавкаНалогаУСНРасширеннаяПодсказка" id="73"/>
+									<Events>
+										<Event name="OnChange">СтавкаНалогаУСНПриИзменении</Event>
+										<Event name="EditTextChange">СтавкаНалогаУСНИзменениеТекстаРедактирования</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ДекорацияПроцент" id="74">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>%</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПроцентКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ДекорацияПроцентРасширеннаяПодсказка" id="76"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияСтавкаУСНЛьготная" id="77">
+									<Visible>false</Visible>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>(льготная)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСтавкаУСНЛьготнаяКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ДекорацияСтавкаУСНЛьготнаяРасширеннаяПодсказка" id="79"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияОсновнаяСтавкаУСН" id="80">
+							<Width>45</Width>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Действует до достижения суммы доходов 150 млн. руб. при средней численности наемных работников не более 100 человек</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОсновнаяСтавкаУСНКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ДекорацияОсновнаяСтавкаУСНРасширеннаяПодсказка" id="82"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаЛьготнаяСтавкаУСН" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Льготная ставка УСН</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛьготнаяСтавкаУСНРасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОснованиеЛьготыУСН" id="85">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Льгота применяется на основании статьи &lt;link https://its.1c.ru/db/taxusn#content:486:hdoc&gt;закона субъекта РФ&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияОснованиеЛьготыУСНКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ДекорацияОснованиеЛьготыУСНРасширеннаяПодсказка" id="87"/>
+									<Events>
+										<Event name="URLProcessing">ДекорацияОснованиеЛьготыУСНОбработкаНавигационнойСсылки</Event>
+									</Events>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаОснованиеЛьготыУСН" id="88">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Основание льготы УСН</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОснованиеЛьготыУСНРасширеннаяПодсказка" id="89"/>
+									<ChildItems>
+										<InputField name="ОснованиеЛьготыНомерСтатьи" id="90">
+											<DataPath>ОснованиеЛьготыУСННомерСтатьи</DataPath>
+											<ContextMenu name="ОснованиеЛьготыНомерСтатьиКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ОснованиеЛьготыНомерСтатьиРасширеннаяПодсказка" id="92"/>
+											<Events>
+												<Event name="OnChange">ОснованиеЛьготыНомерСтатьиПриИзменении</Event>
+												<Event name="EditTextChange">ОснованиеЛьготыНомерСтатьиИзменениеТекстаРедактирования</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОснованиеЛьготыПункт" id="93">
+											<DataPath>ОснованиеЛьготыУСНПункт</DataPath>
+											<ContextMenu name="ОснованиеЛьготыПунктКонтекстноеМеню" id="94"/>
+											<ExtendedTooltip name="ОснованиеЛьготыПунктРасширеннаяПодсказка" id="95"/>
+											<Events>
+												<Event name="OnChange">ОснованиеЛьготыПунктПриИзменении</Event>
+												<Event name="EditTextChange">ОснованиеЛьготыПунктИзменениеТекстаРедактирования</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОснованиеЛьготыПодпункт" id="96">
+											<DataPath>ОснованиеЛьготыУСНПодпункт</DataPath>
+											<ContextMenu name="ОснованиеЛьготыПодпунктКонтекстноеМеню" id="97"/>
+											<ExtendedTooltip name="ОснованиеЛьготыПодпунктРасширеннаяПодсказка" id="98"/>
+											<Events>
+												<Event name="OnChange">ОснованиеЛьготыПодпунктПриИзменении</Event>
+												<Event name="EditTextChange">ОснованиеЛьготыПодпунктИзменениеТекстаРедактирования</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ДекорацияОснованиеЛьготыПримерЗаполнения" id="99">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пример заполнения</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ДекорацияОснованиеЛьготыПримерЗаполненияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ДекорацияОснованиеЛьготыПримерЗаполненияРасширеннаяПодсказка" id="101"/>
+									<Events>
+										<Event name="Click">ДекорацияОснованиеЛьготыПримерЗаполненияНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСтавкиУСНВВашемРегионе" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставки УСН в вашем регионе</v8:content>
+						</v8:item>
+					</Title>
+					<Width>35</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<BackColor>style:ИнформацияОСтавкахНалогаЦветФона</BackColor>
+					<ExtendedTooltip name="ГруппаСтавкиУСНВВашемРегионеРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияСтавкиУСНДлительнаяОперация" id="104">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ставки УСН (длительная операция)</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияСтавкиУСНДлительнаяОперацияКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="ДекорацияСтавкиУСНДлительнаяОперацияРасширеннаяПодсказка" id="106"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДекорацияСтавкиУСНВВашемРегионе" id="107">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В вашем регионе могут применяться льготные ставки.
+Для получения информации о них необходимо подключить Интернет-поддержку.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСтавкиУСНВВашемРегионеКонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="ДекорацияСтавкиУСНВВашемРегионеРасширеннаяПодсказка" id="109"/>
+							<Events>
+								<Event name="URLProcessing">ДекорацияСтавкиУСНВВашемРегионеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкиУчетаУСН" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки учета УСН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиУчетаУСН</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПрименяетсяС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>30</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОснованиеЛьготыУСННомерСтатьи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер статьи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОснованиеЛьготыУСНПодпункт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подпункт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОснованиеЛьготыУСНПункт" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пункт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>4</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодРегиона" id="6">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>2</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяСервисРегиональныеСтавкиНалогов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется сервис "Региональные ставки налогов"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоЮрЛицо" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это юр лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяДата" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаИзменения" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаИзмененияСтрокой" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить с</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>70</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяСтавкаНалога" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая ставка налога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрименяетсяУСНДоходы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется УСН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрименяетсяУСНДоходыМинусРасходы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применяется УСН доходы минус расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="История" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История изменений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>История</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменитьИзмененияИстории" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить изменения истории</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьИзмененияИстории</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="Период">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

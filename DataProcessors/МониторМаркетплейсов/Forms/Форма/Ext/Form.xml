@@ -1,0 +1,1659 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Монитор маркетплейсов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="133">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="134"/>
+			<ChildItems>
+				<InputField name="Организация" id="130">
+					<DataPath>Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="131"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="132"/>
+					<Events>
+						<Event name="OnChange">ОрганизацияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Период" id="135">
+					<DataPath>ПредставлениеПериода</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Width>20</Width>
+					<ChoiceButton>true</ChoiceButton>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="137"/>
+					<Events>
+						<Event name="StartChoice">ПериодНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">ПериодОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<Button name="Обновить" id="299">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Обновить</CommandName>
+					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="300"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМаркетплейсы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа маркетплейсы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа маркетплейсы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМаркетплейсыРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаWB" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Wildberries</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа WB</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаWBРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<Pages name="ГруппаНеделиWB" id="203">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа недели WB</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа недели WB</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаНеделиWBРасширеннаяПодсказка" id="204"/>
+							<Events>
+								<Event name="OnCurrentPageChange">ГруппаНеделиWBПриСменеСтраницы</Event>
+							</Events>
+							<ChildItems>
+								<Page name="ГруппаНеделя1" id="205">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа неделя1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНеделя1РасширеннаяПодсказка" id="206"/>
+									<ChildItems>
+										<LabelField name="РеализованоWB1" id="224">
+											<DataPath>РеализованоWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="РеализованоWB1КонтекстноеМеню" id="225"/>
+											<ExtendedTooltip name="РеализованоWB1РасширеннаяПодсказка" id="226"/>
+										</LabelField>
+										<LabelField name="ВознаграждениеWB1" id="227">
+											<DataPath>ВознаграждениеWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ВознаграждениеWB1КонтекстноеМеню" id="228"/>
+											<ExtendedTooltip name="ВознаграждениеWB1РасширеннаяПодсказка" id="229"/>
+										</LabelField>
+										<LabelField name="КПеречислениюWB1" id="230">
+											<DataPath>КПеречислениюWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="КПеречислениюWB1КонтекстноеМеню" id="231"/>
+											<ExtendedTooltip name="КПеречислениюWB1РасширеннаяПодсказка" id="232"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНеделя2" id="207">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа неделя2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНеделя2РасширеннаяПодсказка" id="208"/>
+									<ChildItems>
+										<LabelField name="РеализованоWB2" id="233">
+											<DataPath>РеализованоWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="РеализованоWB2КонтекстноеМеню" id="234"/>
+											<ExtendedTooltip name="РеализованоWB2РасширеннаяПодсказка" id="235"/>
+										</LabelField>
+										<LabelField name="ВознаграждениеWB2" id="236">
+											<DataPath>ВознаграждениеWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ВознаграждениеWB2КонтекстноеМеню" id="237"/>
+											<ExtendedTooltip name="ВознаграждениеWB2РасширеннаяПодсказка" id="238"/>
+										</LabelField>
+										<LabelField name="КПеречислениюWB2" id="239">
+											<DataPath>КПеречислениюWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="КПеречислениюWB2КонтекстноеМеню" id="240"/>
+											<ExtendedTooltip name="КПеречислениюWB2РасширеннаяПодсказка" id="241"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНеделя3" id="209">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа неделя3</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНеделя3РасширеннаяПодсказка" id="210"/>
+									<ChildItems>
+										<LabelField name="РеализованоWB3" id="242">
+											<DataPath>РеализованоWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="РеализованоWB3КонтекстноеМеню" id="243"/>
+											<ExtendedTooltip name="РеализованоWB3РасширеннаяПодсказка" id="244"/>
+										</LabelField>
+										<LabelField name="ВознаграждениеWB3" id="245">
+											<DataPath>ВознаграждениеWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ВознаграждениеWB3КонтекстноеМеню" id="246"/>
+											<ExtendedTooltip name="ВознаграждениеWB3РасширеннаяПодсказка" id="247"/>
+										</LabelField>
+										<LabelField name="КПеречислениюWB3" id="248">
+											<DataPath>КПеречислениюWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="КПеречислениюWB3КонтекстноеМеню" id="249"/>
+											<ExtendedTooltip name="КПеречислениюWB3РасширеннаяПодсказка" id="250"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНеделя4" id="211">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа неделя4</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНеделя4РасширеннаяПодсказка" id="212"/>
+									<ChildItems>
+										<LabelField name="РеализованоWB4" id="251">
+											<DataPath>РеализованоWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="РеализованоWB4КонтекстноеМеню" id="252"/>
+											<ExtendedTooltip name="РеализованоWB4РасширеннаяПодсказка" id="253"/>
+										</LabelField>
+										<LabelField name="ВознаграждениеWB4" id="254">
+											<DataPath>ВознаграждениеWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ВознаграждениеWB4КонтекстноеМеню" id="255"/>
+											<ExtendedTooltip name="ВознаграждениеWB4РасширеннаяПодсказка" id="256"/>
+										</LabelField>
+										<LabelField name="КПеречислениюWB4" id="257">
+											<DataPath>КПеречислениюWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="КПеречислениюWB4КонтекстноеМеню" id="258"/>
+											<ExtendedTooltip name="КПеречислениюWB4РасширеннаяПодсказка" id="259"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНеделя5" id="213">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа неделя5</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНеделя5РасширеннаяПодсказка" id="214"/>
+									<ChildItems>
+										<LabelField name="РеализованоWB5" id="260">
+											<DataPath>РеализованоWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="РеализованоWB5КонтекстноеМеню" id="261"/>
+											<ExtendedTooltip name="РеализованоWB5РасширеннаяПодсказка" id="262"/>
+										</LabelField>
+										<LabelField name="ВознаграждениеWB5" id="263">
+											<DataPath>ВознаграждениеWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ВознаграждениеWB5КонтекстноеМеню" id="264"/>
+											<ExtendedTooltip name="ВознаграждениеWB5РасширеннаяПодсказка" id="265"/>
+										</LabelField>
+										<LabelField name="КПеречислениюWB5" id="266">
+											<DataPath>КПеречислениюWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="КПеречислениюWB5КонтекстноеМеню" id="267"/>
+											<ExtendedTooltip name="КПеречислениюWB5РасширеннаяПодсказка" id="268"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНеделя6" id="269">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Всего</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа неделя5</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНеделя6РасширеннаяПодсказка" id="270"/>
+									<ChildItems>
+										<LabelField name="РеализованоWB6" id="271">
+											<DataPath>РеализованоWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="РеализованоWB6КонтекстноеМеню" id="272"/>
+											<ExtendedTooltip name="РеализованоWB6РасширеннаяПодсказка" id="273"/>
+										</LabelField>
+										<LabelField name="ВознаграждениеWB6" id="274">
+											<DataPath>ВознаграждениеWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="ВознаграждениеWB6КонтекстноеМеню" id="275"/>
+											<ExtendedTooltip name="ВознаграждениеWB6РасширеннаяПодсказка" id="276"/>
+										</LabelField>
+										<LabelField name="КПеречислениюWB6" id="277">
+											<DataPath>КПеречислениюWB</DataPath>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2; ЧН=</v8:content>
+												</v8:item>
+											</Format>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+											<ContextMenu name="КПеречислениюWB6КонтекстноеМеню" id="278"/>
+											<ExtendedTooltip name="КПеречислениюWB6РасширеннаяПодсказка" id="279"/>
+										</LabelField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Button name="ДокументыWB" id="85">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ДокументыWB</CommandName>
+							<ExtendedTooltip name="ДокументыWBРасширеннаяПодсказка" id="86"/>
+						</Button>
+						<UsualGroup name="ГруппаДействияWB" id="171">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Действия</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа действия WB</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаДействияWBРасширеннаяПодсказка" id="172"/>
+							<ChildItems>
+								<Button name="ВыгрузитьОстаткиWB" id="173">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВыгрузитьОстаткиWB</CommandName>
+									<ExtendedTooltip name="ВыгрузитьОстаткиWBРасширеннаяПодсказка" id="174"/>
+								</Button>
+								<Button name="ЗагрузитьОтчетыAPIWB" id="169">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузитьОтчетыAPIWB</CommandName>
+									<ExtendedTooltip name="ЗагрузитьОтчетыAPIWBРасширеннаяПодсказка" id="170"/>
+								</Button>
+								<Button name="ЗагрузитьОтчетыИзФайлаWB" id="167">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузитьОтчетыИзФайлаWB</CommandName>
+									<ExtendedTooltip name="ЗагрузитьОтчетыИзФайлаWBРасширеннаяПодсказка" id="168"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаOzon" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ozon</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа w b2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаOzonРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОтступ1" id="301">
+							<Height>1</Height>
+							<Font ref="style:NormalTextFont" height="16" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ДекорацияОтступ1КонтекстноеМеню" id="302"/>
+							<ExtendedTooltip name="ДекорацияОтступ1РасширеннаяПодсказка" id="303"/>
+						</LabelDecoration>
+						<LabelField name="РеализованоOzon" id="200">
+							<DataPath>РеализованоOzon</DataPath>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="РеализованоOzonКонтекстноеМеню" id="201"/>
+							<ExtendedTooltip name="РеализованоOzonРасширеннаяПодсказка" id="202"/>
+						</LabelField>
+						<LabelField name="ВознаграждениеOzon" id="194">
+							<DataPath>ВознаграждениеOzon</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>15</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ВознаграждениеOzonКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="ВознаграждениеOzonРасширеннаяПодсказка" id="196"/>
+						</LabelField>
+						<LabelField name="КПеречислениюOzon" id="197">
+							<DataPath>КПеречислениюOzon</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>15</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="КПеречислениюOzonКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="КПеречислениюOzonРасширеннаяПодсказка" id="199"/>
+						</LabelField>
+						<UsualGroup name="Группа1" id="307">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="308"/>
+							<ChildItems>
+								<Button name="ДокументыOzon" id="93">
+									<Type>Hyperlink</Type>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<CommandName>Form.Command.ДокументыOzon</CommandName>
+									<ExtendedTooltip name="ДокументыOzonРасширеннаяПодсказка" id="94"/>
+								</Button>
+								<LabelDecoration name="ДекорацияОтступ3" id="309">
+									<Height>1</Height>
+									<Font ref="style:NormalTextFont" height="18" kind="StyleItem" scale="100"/>
+									<ContextMenu name="ДекорацияОтступ3КонтекстноеМеню" id="310"/>
+									<ExtendedTooltip name="ДекорацияОтступ3РасширеннаяПодсказка" id="311"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДействияOzon" id="175">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Действия</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа действия WB</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаДействияOzonРасширеннаяПодсказка" id="176"/>
+							<ChildItems>
+								<Button name="ВыгрузитьОстаткиOzon" id="177">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВыгрузитьОстаткиOzon</CommandName>
+									<ExtendedTooltip name="ВыгрузитьОстаткиOzonРасширеннаяПодсказка" id="178"/>
+								</Button>
+								<Button name="ЗагрузитьОтчетыAPIOzon" id="179">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузитьОтчетыAPIOzon</CommandName>
+									<ExtendedTooltip name="ЗагрузитьОтчетыAPIOzonРасширеннаяПодсказка" id="180"/>
+								</Button>
+								<Button name="ЗагрузитьОтчетыИзФайлаOzon" id="181">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузитьОтчетыИзФайлаOzon</CommandName>
+									<ExtendedTooltip name="ЗагрузитьОтчетыИзФайлаOzonРасширеннаяПодсказка" id="182"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЯндекс" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Яндекс.Маркет</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа w b2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаЯндексРасширеннаяПодсказка" id="106"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОтступ2" id="304">
+							<Height>1</Height>
+							<Font ref="style:NormalTextFont" height="16" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ДекорацияОтступ2КонтекстноеМеню" id="305"/>
+							<ExtendedTooltip name="ДекорацияОтступ2РасширеннаяПодсказка" id="306"/>
+						</LabelDecoration>
+						<LabelField name="РеализованоЯндекс" id="286">
+							<DataPath>РеализованоЯндекс</DataPath>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="РеализованоЯндексКонтекстноеМеню" id="287"/>
+							<ExtendedTooltip name="РеализованоЯндексРасширеннаяПодсказка" id="288"/>
+						</LabelField>
+						<LabelField name="ВознаграждениеЯндекс" id="280">
+							<DataPath>ВознаграждениеЯндекс</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>15</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" bold="false" italic="false" underline="true" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="ВознаграждениеЯндексКонтекстноеМеню" id="281"/>
+							<ExtendedTooltip name="ВознаграждениеЯндексРасширеннаяПодсказка" id="282"/>
+						</LabelField>
+						<LabelField name="КПеречислениюЯндекс" id="283">
+							<DataPath>КПеречислениюЯндекс</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Width>15</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2; ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+							<ContextMenu name="КПеречислениюЯндексКонтекстноеМеню" id="284"/>
+							<ExtendedTooltip name="КПеречислениюЯндексРасширеннаяПодсказка" id="285"/>
+						</LabelField>
+						<UsualGroup name="Группа2" id="312">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="313"/>
+							<ChildItems>
+								<Button name="ДокументыЯндекс" id="297">
+									<Type>Hyperlink</Type>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<CommandName>Form.Command.ДокументыЯндекс</CommandName>
+									<ExtendedTooltip name="ДокументыЯндексРасширеннаяПодсказка" id="298"/>
+								</Button>
+								<LabelDecoration name="ДекорацияОтступ4" id="314">
+									<Height>1</Height>
+									<Font ref="style:NormalTextFont" height="18" kind="StyleItem" scale="100"/>
+									<ContextMenu name="ДекорацияОтступ4КонтекстноеМеню" id="315"/>
+									<ExtendedTooltip name="ДекорацияОтступ4РасширеннаяПодсказка" id="316"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДействияЯндекс" id="289">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Действия</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа действия WB</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаДействияЯндексРасширеннаяПодсказка" id="290"/>
+							<ChildItems>
+								<Button name="ВыгрузитьОстаткиЯндекс" id="291">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ВыгрузитьОстаткиЯндекс</CommandName>
+									<ExtendedTooltip name="ВыгрузитьОстаткиЯндексРасширеннаяПодсказка" id="292"/>
+								</Button>
+								<Button name="ЗагрузитьОтчетыAPIЯндекс" id="340">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузитьОтчетыAPIЯндекс</CommandName>
+									<ExtendedTooltip name="ЗагрузитьОтчетыAPIЯндексРасширеннаяПодсказка" id="341"/>
+								</Button>
+								<Button name="ЗагрузитьОтчетыИзФайлаЯндекс" id="295">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.ЗагрузитьОтчетыИзФайлаЯндекс</CommandName>
+									<ExtendedTooltip name="ЗагрузитьОтчетыИзФайлаЯндексРасширеннаяПодсказка" id="296"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСравнение" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сравнение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сравнение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСравнениеРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<ChartField name="ДиаграммаСравнение" id="41">
+					<DataPath>ДиаграммаСравнение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результаты продаж (вся выручка - комиссия - возвраты - потери)</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="12" bold="false" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+					<TitleLocation>Top</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>80</MaxWidth>
+					<Height>7</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="ДиаграммаСравнениеКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДиаграммаСравнениеРасширеннаяПодсказка" id="43"/>
+				</ChartField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Графики" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Графики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Графики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГрафикиРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<InputField name="Показатель" id="82">
+					<DataPath>Показатель</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>График</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+					<ListChoiceMode>true</ListChoiceMode>
+					<TextEdit>false</TextEdit>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Продажи (без учета выкупа)</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Продажи</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Поступление денег</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Деньги</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Возвраты от покупателей</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Возвраты</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Комиссия</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Комиссия</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Списания</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Списания</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выкупы</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Выкупы</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отгрузки товаров</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">Отгрузки</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<Font ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+					<ContextMenu name="ПоказательКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ПоказательРасширеннаяПодсказка" id="84"/>
+					<Events>
+						<Event name="OnChange">ПоказательПриИзменении</Event>
+					</Events>
+				</InputField>
+				<ChartField name="ДиаграммаПоМесяцам" id="74">
+					<DataPath>ДиаграммаПоМесяцам</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продажи по месяцам</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:NormalTextFont" height="12" kind="StyleItem" scale="100"/>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>80</MaxWidth>
+					<Height>7</Height>
+					<VerticalStretch>false</VerticalStretch>
+					<ContextMenu name="ДиаграммаПоМесяцамКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ДиаграммаПоМесяцамРасширеннаяПодсказка" id="76"/>
+				</ChartField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ОбратнаяСвязь" id="336">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обратная связь</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОбратнаяСвязьРасширеннаяПодсказка" id="337"/>
+			<ChildItems>
+				<Button name="НаписатьРазработчикам" id="338">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.НаписатьРазработчикам</CommandName>
+					<Font ref="style:SmallTextFont" kind="StyleItem"/>
+					<ExtendedTooltip name="НаписатьРазработчикамРасширеннаяПодсказка" id="339"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МониторМаркетплейсов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДиаграммаСравнение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диаграмма сравнение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьWB" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть WB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьOzon" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть WB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьЯндекс" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть WB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДиаграммаПоМесяцам" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диаграмма сравнение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Показатель" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНесколькоОрганизацийБухгалтерскийУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="Период" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентWB" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент WB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентOzon" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент Ozon</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтрагентЯндекс" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент Яндекс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеПериода" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>70</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкладЯндекс" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад яндекс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаДанных" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Показатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Организация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Маркетплейс" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маркетплейс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыМаркетплейсов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Период" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаWB" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица WB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Период" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Реализовано" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реализовано</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Вознаграждение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вознаграждение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КПеречислению" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К перечислению</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РеализованоOzon" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализовано</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВознаграждениеOzon" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вознаграждение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КПеречислениюOzon" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К перечислению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеализованоWB" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализовано</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВознаграждениеWB" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вознаграждение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КПеречислениюWB" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К перечислению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВознаграждениеЯндекс" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вознаграждение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КПеречислениюЯндекс" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>К перечислению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеализованоЯндекс" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализовано</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаЯндекс" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка яндекс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.НастройкиИнтеграцииМаркетплейс</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилища" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДокументыWB" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал документов Wildberries</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы Wildberries</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДокументыWB</Action>
+		</Command>
+		<Command name="ЗагрузитьОтчетыИзФайлаWB" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОтчетыИзФайлаWB</Action>
+		</Command>
+		<Command name="ВыгрузитьОстаткиWB" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить остатки товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить остатки товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьОстаткиWB</Action>
+		</Command>
+		<Command name="ЗагрузитьОтчетыAPIWB" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты по API</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты по API</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОтчетыAPIWB</Action>
+		</Command>
+		<Command name="ДокументыOzon" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал документов Ozon</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы Ozon</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДокументыOzon</Action>
+		</Command>
+		<Command name="ДокументыЯндекс" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал документов Яндекс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы Яндекс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДокументыЯндекс</Action>
+		</Command>
+		<Command name="Обновить" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ВыгрузитьОстаткиOzon" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить остатки товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить остатки товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьОстаткиOzon</Action>
+		</Command>
+		<Command name="ВыгрузитьОстаткиЯндекс" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить остатки товаров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить остатки товаров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьОстаткиЯндекс</Action>
+		</Command>
+		<Command name="ЗагрузитьОтчетыAPIOzon" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты по API</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты по API</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОтчетыAPIOzon</Action>
+		</Command>
+		<Command name="ЗагрузитьОтчетыИзФайлаOzon" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОтчетыИзФайлаOzon</Action>
+		</Command>
+		<Command name="ЗагрузитьОтчетыИзФайлаЯндекс" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОтчетыИзФайлаЯндекс</Action>
+		</Command>
+		<Command name="НаписатьРазработчикам" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать отзыв о мониторе маркетплейсов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать отзыв о мониторе маркетплейсов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Message</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НаписатьРазработчикам</Action>
+		</Command>
+		<Command name="ЗагрузитьОтчетыAPIЯндекс" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты по API</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить отчеты по API</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьОтчетыAPIЯндекс</Action>
+		</Command>
+	</Commands>
+</Form>

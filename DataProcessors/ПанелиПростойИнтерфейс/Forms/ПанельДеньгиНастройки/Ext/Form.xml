@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>HorizontalIfPossible</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛеваяКолонка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа левая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<Width>32</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Button name="Валюты" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Валюты</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ВалютыРасширеннаяПодсказка" id="16"/>
+				</Button>
+				<Button name="Банки" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Банки</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="БанкиРасширеннаяПодсказка" id="24"/>
+				</Button>
+				<Button name="БанковскиеСчета" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.БанковскиеСчета</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="БанковскиеСчетаРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="ГосударственныеКонтракты" id="65">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ГосударственныеКонтракты</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ГосударственныеКонтрактыРасширеннаяПодсказка" id="66"/>
+				</Button>
+				<Button name="СтатьиДвиженияДенежныхСредств" id="61">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СтатьиДвиженияДенежныхСредств</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="СтатьиДвиженияДенежныхСредствРасширеннаяПодсказка" id="62"/>
+				</Button>
+				<Button name="ВидыОплат" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВидыОплат</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ВидыОплатРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="ДенежныеДокументы" id="63">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДенежныеДокументы</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ДенежныеДокументыРасширеннаяПодсказка" id="64"/>
+				</Button>
+				<Button name="ЛимитОстаткаКассы" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЛимитОстаткаКассы</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ЛимитОстаткаКассыРасширеннаяПодсказка" id="22"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПраваяКолонка" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа правая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<Button name="НастройкаКлиентБанка" id="51">
+					<Type>UsualButton</Type>
+					<CommandName>DataProcessor.КлиентБанк.Command.НастройкаКлиентБанка</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="НастройкаКлиентБанкаРасширеннаяПодсказка" id="52"/>
+				</Button>
+				<Button name="НастройкиДиректБанка" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.НастройкиДиректБанка</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="НастройкиДиректБанкаРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="ПодключенныеКассы" id="53">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПодключенныеКассы</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ПодключенныеКассыРасширеннаяПодсказка" id="54"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВидыОплат" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды оплат</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВидыОплат</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьПлатежиПоРеестрам</Item>
+				<Item>FunctionalOption.ИспользуютсяПодарочныеСертификаты</Item>
+				<Item>FunctionalOption.ИспользоватьОплатуПоПлатежнымКартам</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Валюты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Валюты</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВестиУчетРасчетовСКонтрагентами</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="БанковскиеСчета" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковские счета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>БанковскиеСчета</Action>
+		</Command>
+		<Command name="ЛимитОстаткаКассы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимиты остатка кассы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЛимитОстаткаКассы</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИнтерфейсТаксиПростойИПиЮрЛица</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Банки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Банки</Action>
+		</Command>
+		<Command name="ПодключенныеКассы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключенные кассы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодключенныеКассы</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяРозничнаяТорговля</Item>
+				<Item>FunctionalOption.ИспользоватьФискальныйРегистратор</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СтатьиДвиженияДенежныхСредств" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статьи движения денежных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СтатьиДвиженияДенежныхСредств</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьСтатьиДвиженияДенежныхСредств</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ДенежныеДокументы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура денежных документов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДенежныеДокументы</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетДенежныхДокументов</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="НастройкиДиректБанка" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен через 1С:ДиректБанк</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиДиректБанка</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьОбменСБанкамиБП</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ГосударственныеКонтракты" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Государственные контракты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ГосударственныеКонтракты</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользуетсяГособоронзаказ</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

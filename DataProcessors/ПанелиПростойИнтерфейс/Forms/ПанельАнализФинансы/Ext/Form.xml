@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщиеПоказатели" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие показатели</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщиеПоказателиРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Button name="ОтчетАнализФинансовыхРезультатовКомандаАнализФинансовыхРезультатов" id="1">
+					<Type>UsualButton</Type>
+					<CommandName>Report.АнализФинансовыхРезультатов.Command.АнализФинансовыхРезультатов</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетАнализФинансовыхРезультатовКомандаАнализФинансовыхРезультатовРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<Button name="ОтчетДоходыРасходыКомандаДоходыРасходы" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ДоходыРасходы.Command.ДоходыРасходы</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетДоходыРасходыКомандаДоходыРасходыРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="ОтчетОборотныеСредстваКомандаОборотныеСредства" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ОборотныеСредства.Command.ОборотныеСредства</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетОборотныеСредстваКомандаОборотныеСредстваРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="ОбщаяКомандаПлатежныйКалендарь" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>CommonCommand.ПлатежныйКалендарь</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОбщаяКомандаПлатежныйКалендарьРасширеннаяПодсказка" id="24"/>
+				</Button>
+				<Button name="ОтчетРасчетыСПокупателямиИПоставщикамиКомандаРасчетыСПокупателямиИПоставщиками" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Report.РасчетыСПокупателямиИПоставщиками.Command.РасчетыСПокупателямиИПоставщиками</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетРасчетыСПокупателямиИПоставщикамиКомандаРасчетыСПокупателямиИПоставщикамиРасширеннаяПодсказка" id="22"/>
+				</Button>
+				<Button name="ОбщаяКомандаФинансовыйАнализ" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>CommonCommand.ФинансовыйАнализ</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОбщаяКомандаФинансовыйАнализРасширеннаяПодсказка" id="4"/>
+				</Button>
+				<Button name="ОбщаяКомандаФинансыОрганизации" id="5">
+					<Type>UsualButton</Type>
+					<CommandName>CommonCommand.ФинансыОрганизации</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОбщаяКомандаФинансыОрганизацииРасширеннаяПодсказка" id="6"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДенежныеСредства" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Денежные средства</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДенежныеСредстваРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<Button name="ОтчетАнализДвиженийДенежныхСредствКомандаАнализДвиженийДенежныхСредств" id="9">
+					<Type>UsualButton</Type>
+					<CommandName>Report.АнализДвиженийДенежныхСредств.Command.АнализДвиженийДенежныхСредств</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетАнализДвиженийДенежныхСредствКомандаАнализДвиженийДенежныхСредствРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<Button name="ОтчетОстаткиДенежныхСредствКомандаОстаткиДенежныхСредств" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ОстаткиДенежныхСредств.Command.ОстаткиДенежныхСредств</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетОстаткиДенежныхСредствКомандаОстаткиДенежныхСредствРасширеннаяПодсказка" id="12"/>
+				</Button>
+				<Button name="ОтчетПоступленияДенежныхСредствКомандаПоступленияДенежныхСредств" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ПоступленияДенежныхСредств.Command.ПоступленияДенежныхСредств</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетПоступленияДенежныхСредствКомандаПоступленияДенежныхСредствРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="ОтчетРасходыДенежныхСредствКомандаРасходыДенежныхСредств" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Report.РасходыДенежныхСредств.Command.РасходыДенежныхСредств</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетРасходыДенежныхСредствКомандаРасходыДенежныхСредствРасширеннаяПодсказка" id="16"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

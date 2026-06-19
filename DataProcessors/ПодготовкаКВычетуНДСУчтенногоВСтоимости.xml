@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<DataProcessor uuid="b27ab220-b226-4718-a1e4-adc50efd098e">
+		<InternalInfo>
+			<xr:GeneratedType name="DataProcessorObject.ПодготовкаКВычетуНДСУчтенногоВСтоимости" category="Object">
+				<xr:TypeId>dbf83e9b-ece1-4898-8cb1-b7168a898dc8</xr:TypeId>
+				<xr:ValueId>018eb164-c126-44ed-93a8-d521ca8dea01</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DataProcessorManager.ПодготовкаКВычетуНДСУчтенногоВСтоимости" category="Manager">
+				<xr:TypeId>13d0f41c-a3ba-46d1-be1e-7902e096fcc6</xr:TypeId>
+				<xr:ValueId>f03e51c8-465c-4cec-9245-44bcaa54acd9</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПодготовкаКВычетуНДСУчтенногоВСтоимости</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка к вычету НДС, учтенного в стоимости</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>true</UseStandardCommands>
+			<DefaultForm>DataProcessor.ПодготовкаКВычетуНДСУчтенногоВСтоимости.Form.ОсновнаяФорма</DefaultForm>
+			<AuxiliaryForm/>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<ExtendedPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Form>ОсновнаяФорма</Form>
+			<Form>ФормаДозаполненияДанных</Form>
+			<Form>ФормаГрупповогоЗаполненияДанных</Form>
+			<Form>ДокументыВводНачальныхОстатков</Form>
+			<Form>СписокСчетовПоискаОстатков</Form>
+			<Form>ФормаИзмененияПериода</Form>
+			<Template>МакетСчетаПоиска</Template>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>

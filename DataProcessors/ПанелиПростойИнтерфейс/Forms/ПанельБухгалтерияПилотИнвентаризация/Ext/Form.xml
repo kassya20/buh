@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ПомощникИнвентаризации" id="123">
+			<Type>UsualButton</Type>
+			<CommandName>CommonCommand.ПомощникИнвентаризации</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ПомощникИнвентаризацииРасширеннаяПодсказка" id="124"/>
+		</Button>
+		<Button name="ИнвентаризацияРасчетовСКонтрагентами" id="137">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияРасчетовСКонтрагентами.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияРасчетовСКонтрагентамиРасширеннаяПодсказка" id="138"/>
+		</Button>
+		<Button name="ИнвентаризацияКассы" id="135">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияКассы.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияКассыРасширеннаяПодсказка" id="136"/>
+		</Button>
+		<Button name="ИнвентаризацияНЗП" id="133">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияНЗП.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияНЗПРасширеннаяПодсказка" id="134"/>
+		</Button>
+		<Button name="ИнвентаризацияНМА" id="131">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияНМА.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияНМАРасширеннаяПодсказка" id="132"/>
+		</Button>
+		<Button name="ИнвентаризацияОС" id="129">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияОС.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияОСРасширеннаяПодсказка" id="130"/>
+		</Button>
+		<Button name="ИнвентаризацияТоваровНаСкладе" id="127">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияТоваровНаСкладе.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияТоваровНаСкладеРасширеннаяПодсказка" id="128"/>
+		</Button>
+		<Button name="ИнвентаризацияОбъектовУчета" id="125">
+			<Type>UsualButton</Type>
+			<CommandName>Document.ИнвентаризацияОбъектовУчета.StandardCommand.OpenList</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ИнвентаризацияОбъектовУчетаРасширеннаяПодсказка" id="126"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+</Form>

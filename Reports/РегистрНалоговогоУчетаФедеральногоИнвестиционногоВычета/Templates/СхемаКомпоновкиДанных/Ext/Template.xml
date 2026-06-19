@@ -1,0 +1,1217 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВычетаНачало</dataPath>
+			<field>СуммаВычетаНачало</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаНУ</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=''</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВычетаНачислено</dataPath>
+			<field>СуммаВычетаНачислено</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=''</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВычетаИспользовано</dataPath>
+			<field>СуммаВычетаИспользовано</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=''</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВычетаКонец</dataPath>
+			<field>СуммаВычетаКонец</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаНУ</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=''</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументВычета</dataPath>
+			<field>ДокументВычета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ расходов</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ПринятиеКУчетуОС</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ПоступлениеТоваровУслуг</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.МодернизацияОС</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ОперацияСИнвестиционнымВычетом</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ПринятиеКУчетуНМА</v8:Type>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">30</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРасходов</dataPath>
+			<field>ВидРасходов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид расходов</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.ВидыРасходовПоИнвестиционномуВычету</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектВычета</dataPath>
+			<field>ОбъектВычета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект вычета</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ОсновныеСредства</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.НематериальныеАктивы</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПринятияКУчету</dataPath>
+			<field>ДатаПринятияКУчету</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата принятия к учету</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИнвентарныйНомер</dataPath>
+			<field>ИнвентарныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инв. №</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">12</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПоОКОФ</dataPath>
+			<field>КодПоОКОФ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код по ОКОФ</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АмортизационнаяГруппа</dataPath>
+			<field>АмортизационнаяГруппа</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">23</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияОсуществившаяРасходы</dataPath>
+			<field>ОрганизацияОсуществившаяРасходы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация, осуществившая расходы</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Строка(ОрганизацияОсуществившаяРасходы) + "," + "
+ИНН " + Строка(ИННОрганизацииОсуществившейРасходы)
+</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">23</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОрганизацияПрименяющаяВычет</dataPath>
+			<field>ОрганизацияПрименяющаяВычет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация, применяющая вычет</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Строка(ОрганизацияПрименяющаяВычет) + ", 
+ИНН " + Строка(ИННОрганизацииПрименяющейВычет)
+</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">23</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВычетаПолучено</dataPath>
+			<field>СуммаВычетаПолучено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма вычета начисленная</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Auto</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВычетаПередано</dataPath>
+			<field>СуммаВычетаПередано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма вычета переданная</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=0</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентРасходов</dataPath>
+			<field>ПроцентРасходов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент расходов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ=''; ЧН=' '; ЧФ='Ч"%"'</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРасходов</dataPath>
+			<field>СуммаРасходов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма расходов</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ЧДЦ='2'</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">17</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">17</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбособленноеПодразделение</dataPath>
+			<field>ОбособленноеПодразделение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обособленное подразделение, выделенное на отдельный баланс</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<group>true</group>
+			</useRestriction>
+			<attributeUseRestriction>
+				<group>true</group>
+			</attributeUseRestriction>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">20</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектВычетаДопПоле</dataPath>
+			<field>ОбъектВычетаДопПоле</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект вычета (дополнительные поля)</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<condition>true</condition>
+			</useRestriction>
+			<attributeUseRestriction>
+				<condition>true</condition>
+			</attributeUseRestriction>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ОсновныеСредства</v8:Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.НематериальныеАктивы</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументВычетаОтбор</dataPath>
+			<field>ДокументВычетаОтбор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ расходов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИННОрганизацииОсуществившейРасходы</dataPath>
+			<field>ИННОрганизацииОсуществившейРасходы</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИННОрганизацииПрименяющейВычет</dataPath>
+			<field>ИННОрганизацииПрименяющейВычет</field>
+			<useRestriction>
+				<field>true</field>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Организации.Ссылка КАК Организация
+ПОМЕСТИТЬ ГоловныеОрганизации
+ИЗ
+	Справочник.Организации КАК Организации
+ГДЕ
+	Организации.ГоловнаяОрганизация = Организации.Ссылка
+{ГДЕ
+	(Организации.Ссылка В (&amp;Организация))}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	&amp;ПроцентРасходов КАК ПроцентРасходов
+ПОМЕСТИТЬ ВеличинаВычетаВПроцентах
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ХозрасчетныйДвиженияССубконто.Организация КАК Организация,
+	ХозрасчетныйДвиженияССубконто.Регистратор КАК Регистратор,
+	ХозрасчетныйДвиженияССубконто.СубконтоДт1 КАК ВидРасходов,
+	ХозрасчетныйДвиженияССубконто.СубконтоДт2 КАК ОбъектВычета,
+	ХозрасчетныйДвиженияССубконто.СубконтоДт3 КАК ДокументВычета,
+	ВЫБОР
+		КОГДА ВЫРАЗИТЬ(ХозрасчетныйДвиженияССубконто.Регистратор КАК Документ.ОперацияСИнвестиционнымВычетом).ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Получение)
+			ТОГДА ХозрасчетныйДвиженияССубконто.СуммаНУДт
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаВычетаПолучено,
+	ВЫБОР
+		КОГДА ВЫРАЗИТЬ(ХозрасчетныйДвиженияССубконто.Регистратор КАК Документ.ОперацияСИнвестиционнымВычетом).ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Передача)
+			ТОГДА -ХозрасчетныйДвиженияССубконто.СуммаНУДт
+		ИНАЧЕ 0
+	КОНЕЦ КАК СуммаВычетаПередано
+ПОМЕСТИТЬ ОперацииСВычетом
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ДвиженияССубконто(
+			{(&amp;НачалоПериода)},
+			{(&amp;КонецПериода)},
+			Регистратор ССЫЛКА Документ.ОперацияСИнвестиционнымВычетом
+				И СчетДт = &amp;СчетУчетаИнвестиционныйВычет
+				И ВидСубконтоДт1 = ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ВидыРасходовНаАмортизируемоеИмущество)
+				И ВидСубконтоДт2 = ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.АмортизируемоеИмущество)
+				И ВидСубконтоДт3 = ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ДокументыИнвестиционногоВычета) {(Организация В (&amp;ВсяОрганизация))},
+			,
+			) КАК ХозрасчетныйДвиженияССубконто
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОстаткиИОбороты.Организация КАК Организация,
+	ОстаткиИОбороты.ВидРасходов КАК ВидРасходов,
+	ОстаткиИОбороты.ОбъектВычета КАК ОбъектВычета,
+	ОстаткиИОбороты.ДокументВычета КАК ДокументВычета,
+	СУММА(ОстаткиИОбороты.СуммаВычетаНачало) КАК СуммаВычетаНачало,
+	СУММА(ОстаткиИОбороты.СуммаВычетаНачислено) КАК СуммаВычетаНачислено,
+	СУММА(ОстаткиИОбороты.СуммаВычетаИспользовано) КАК СуммаВычетаИспользовано,
+	СУММА(ОстаткиИОбороты.СуммаВычетаКонец) КАК СуммаВычетаКонец,
+	СУММА(ОстаткиИОбороты.СуммаВычетаПолучено) КАК СуммаВычетаПолучено,
+	СУММА(ОстаткиИОбороты.СуммаВычетаПередано) КАК СуммаВычетаПередано,
+	МАКСИМУМ(ОстаткиИОбороты.ДокументПередачиВычета) КАК ДокументПередачиВычета
+ПОМЕСТИТЬ ОстаткиИОбороты
+ИЗ
+	(ВЫБРАТЬ
+		ХозрасчетныйОстаткиИОбороты.Организация КАК Организация,
+		ХозрасчетныйОстаткиИОбороты.Субконто1 КАК ВидРасходов,
+		ХозрасчетныйОстаткиИОбороты.Субконто2 КАК ОбъектВычета,
+		ХозрасчетныйОстаткиИОбороты.Субконто3 КАК ДокументВычета,
+		ХозрасчетныйОстаткиИОбороты.СуммаНУНачальныйОстаток КАК СуммаВычетаНачало,
+		ХозрасчетныйОстаткиИОбороты.СуммаНУОборотДт КАК СуммаВычетаНачислено,
+		ХозрасчетныйОстаткиИОбороты.СуммаНУОборотКт КАК СуммаВычетаИспользовано,
+		ХозрасчетныйОстаткиИОбороты.СуммаНУКонечныйОстаток КАК СуммаВычетаКонец,
+		0 КАК СуммаВычетаПолучено,
+		0 КАК СуммаВычетаПередано,
+		ВЫБОР
+			КОГДА ХозрасчетныйОстаткиИОбороты.Субконто3 ССЫЛКА Документ.ОперацияСИнвестиционнымВычетом
+				ТОГДА ХозрасчетныйОстаткиИОбороты.Субконто3
+			ИНАЧЕ НЕОПРЕДЕЛЕНО
+		КОНЕЦ КАК ДокументПередачиВычета
+	ИЗ
+		РегистрБухгалтерии.Хозрасчетный.ОстаткиИОбороты(
+				{(&amp;НачалоПериода)},
+				{(&amp;КонецПериода)},
+				,
+				,
+				Счет = &amp;СчетУчетаИнвестиционныйВычет,
+				&amp;СубконтоСчетаИнвестиционныйВычет,
+				Организация В
+					(ВЫБРАТЬ
+						ГоловныеОрганизации.Организация
+					ИЗ
+						ГоловныеОрганизации КАК ГоловныеОрганизации)) КАК ХозрасчетныйОстаткиИОбороты
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ОперацииСВычетом.Организация,
+		ОперацииСВычетом.ВидРасходов,
+		ОперацииСВычетом.ОбъектВычета,
+		ОперацииСВычетом.ДокументВычета,
+		0,
+		ОперацииСВычетом.СуммаВычетаПередано - ОперацииСВычетом.СуммаВычетаПолучено,
+		0,
+		0,
+		ОперацииСВычетом.СуммаВычетаПолучено,
+		ОперацииСВычетом.СуммаВычетаПередано,
+		ОперацииСВычетом.Регистратор
+	ИЗ
+		ОперацииСВычетом КАК ОперацииСВычетом) КАК ОстаткиИОбороты
+
+СГРУППИРОВАТЬ ПО
+	ОстаткиИОбороты.Организация,
+	ОстаткиИОбороты.ДокументВычета,
+	ОстаткиИОбороты.ВидРасходов,
+	ОстаткиИОбороты.ОбъектВычета
+
+ИНДЕКСИРОВАТЬ ПО
+	ОбъектВычета
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СведенияОС.ОсновноеСредство КАК ОсновноеСредство,
+	СведенияОС.ИнвентарныйНомер КАК ИнвентарныйНомер
+ПОМЕСТИТЬ СведенияОС
+ИЗ
+	РегистрСведений.ПервоначальныеСведенияОСБухгалтерскийУчет.СрезПоследних(
+			{(&amp;КонецПериода)},
+			ОсновноеСредство В
+				(ВЫБРАТЬ
+					ТаблицаОбъектов.ОбъектВычета
+				ИЗ
+					ОстаткиИОбороты КАК ТаблицаОбъектов)) КАК СведенияОС
+
+ИНДЕКСИРОВАТЬ ПО
+	ОсновноеСредство
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ХозрасчетныйДвиженияССубконто.Организация КАК ОбособленноеПодразделение,
+	ХозрасчетныйДвиженияССубконто.Регистратор КАК Регистратор,
+	ХозрасчетныйДвиженияССубконто.СубконтоДт1 КАК ОбъектВычета,
+	СУММА(ХозрасчетныйДвиженияССубконто.СуммаНУДт) КАК СуммаРасходов
+ПОМЕСТИТЬ СтоимостьРасходов
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ДвиженияССубконто(
+			{(&amp;НачалоПериода)},
+			{(&amp;КонецПериода)},
+			СчетДт В (&amp;СчетаАмортизируемогоИмущества)
+				И ВидСубконтоДт1 В (ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ОсновныеСредства), ЗНАЧЕНИЕ(ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.НематериальныеАктивы))
+				И СубконтоДт1 В
+					(ВЫБРАТЬ
+						ОстаткиИОбороты.ОбъектВычета КАК ОбъектВычета
+					ИЗ
+						ОстаткиИОбороты КАК ОстаткиИОбороты) {(Организация В (&amp;ВсяОрганизация))},
+			,
+			) КАК ХозрасчетныйДвиженияССубконто
+
+СГРУППИРОВАТЬ ПО
+	ХозрасчетныйДвиженияССубконто.СубконтоДт1,
+	ХозрасчетныйДвиженияССубконто.Регистратор,
+	ХозрасчетныйДвиженияССубконто.Организация
+
+ИНДЕКСИРОВАТЬ ПО
+	ОбъектВычета,
+	Регистратор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Получение)
+			ТОГДА ОперацияСВычетом.Контрагент
+		ИНАЧЕ ОстаткиИОбороты.Организация
+	КОНЕЦ КАК ОрганизацияОсуществившаяРасходы,
+	ВЫБОР
+		КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Передача)
+			ТОГДА ОперацияСВычетом.Контрагент
+		ИНАЧЕ ОстаткиИОбороты.Организация
+	КОНЕЦ КАК ОрганизацияПрименяющаяВычет,
+	ОстаткиИОбороты.ВидРасходов КАК ВидРасходов,
+	ВЫБОР
+		КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Получение)
+				И (ОстаткиИОбороты.ОбъектВычета = НЕОПРЕДЕЛЕНО
+					ИЛИ ОстаткиИОбороты.ОбъектВычета = ЗНАЧЕНИЕ(Справочник.ОсновныеСредства.ПустаяСсылка)
+					ИЛИ ОстаткиИОбороты.ОбъектВычета = ЗНАЧЕНИЕ(Справочник.НематериальныеАктивы.ПустаяСсылка))
+			ТОГДА ВЫРАЗИТЬ(ОперацияСВычетом.НаименованиеОбъекта КАК СТРОКА(1000))
+		ИНАЧЕ ОстаткиИОбороты.ОбъектВычета
+	КОНЕЦ КАК ОбъектВычета,
+	ОстаткиИОбороты.ДокументВычета КАК ДокументВычета,
+	НАЧАЛОПЕРИОДА(ЕСТЬNULL(ДанныеПервичныхДокументов.ДатаРегистратора, &amp;НачалоПериода), ДЕНЬ) КАК ДатаПринятияКУчету,
+	ВЫБОР
+		КОГДА СведенияОС.ИнвентарныйНомер ЕСТЬ НЕ NULL 
+			ТОГДА СведенияОС.ИнвентарныйНомер
+		КОГДА ОсновныеСредства.Код ЕСТЬ НЕ NULL 
+			ТОГДА ОсновныеСредства.Код
+		КОГДА НМА.Код ЕСТЬ НЕ NULL 
+			ТОГДА НМА.Код
+		КОГДА ОперацияСВычетом.ИнвентарныйНомер ЕСТЬ НЕ NULL 
+			ТОГДА ОперацияСВычетом.ИнвентарныйНомер
+		ИНАЧЕ ""
+	КОНЕЦ КАК ИнвентарныйНомер,
+	ОстаткиИОбороты.СуммаВычетаНачало КАК СуммаВычетаНачало,
+	ОстаткиИОбороты.СуммаВычетаНачислено КАК СуммаВычетаНачислено,
+	ОстаткиИОбороты.СуммаВычетаИспользовано КАК СуммаВычетаИспользовано,
+	ОстаткиИОбороты.СуммаВычетаКонец КАК СуммаВычетаКонец,
+	ВЫБОР
+		КОГДА ОсновныеСредства.Ссылка ЕСТЬ НЕ NULL 
+			ТОГДА ОсновныеСредства.КодПоОКОФ.Код
+		КОГДА НМА.Ссылка ЕСТЬ НЕ NULL 
+			ТОГДА НМА.КодОКОФ.Код
+		ИНАЧЕ ""
+	КОНЕЦ КАК КодПоОКОФ,
+	ВЫБОР
+		КОГДА ОсновныеСредства.Ссылка ЕСТЬ НЕ NULL 
+			ТОГДА ОсновныеСредства.АмортизационнаяГруппа
+		КОГДА НМА.Ссылка ЕСТЬ НЕ NULL 
+			ТОГДА НМА.АмортизационнаяГруппа
+		ИНАЧЕ ""
+	КОНЕЦ КАК АмортизационнаяГруппа,
+	ОстаткиИОбороты.СуммаВычетаПолучено КАК СуммаВычетаПолучено,
+	ОстаткиИОбороты.СуммаВычетаПередано КАК СуммаВычетаПередано,
+	ВЫБОР
+		КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Получение)
+			ТОГДА 0
+		ИНАЧЕ ВеличинаВычетаВПроцентах.ПроцентРасходов
+	КОНЕЦ КАК ПроцентРасходов,
+	СтоимостьРасходов.СуммаРасходов КАК СуммаРасходов,
+	СтоимостьРасходов.ОбособленноеПодразделение КАК ОбособленноеПодразделение,
+	ЕСТЬNULL(ОсновныеСредства.Ссылка, НМА.Ссылка) КАК ОбъектВычетаДопПоле,
+	ВЫБОР
+		КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Получение)
+			ТОГДА ОперацияСВычетом.Контрагент.ИНН
+		ИНАЧЕ ОстаткиИОбороты.Организация.ИНН
+	КОНЕЦ КАК ИННОрганизацииОсуществившейРасходы,
+	ВЫБОР
+		КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Передача)
+			ТОГДА ОперацияСВычетом.Контрагент.ИНН
+		ИНАЧЕ ОстаткиИОбороты.Организация.ИНН
+	КОНЕЦ КАК ИННОрганизацииПрименяющейВычет
+{ВЫБРАТЬ
+	ОрганизацияОсуществившаяРасходы,
+	ОрганизацияПрименяющаяВычет,
+	ВидРасходов,
+	ОбъектВычета,
+	ДокументВычета.*,
+	ДатаПринятияКУчету,
+	ИнвентарныйНомер,
+	СуммаВычетаНачало,
+	СуммаВычетаНачислено,
+	СуммаВычетаИспользовано,
+	СуммаВычетаКонец,
+	КодПоОКОФ,
+	АмортизационнаяГруппа,
+	СуммаВычетаПолучено,
+	СуммаВычетаПередано,
+	ПроцентРасходов,
+	СуммаРасходов,
+	ОбособленноеПодразделение.*,
+	ОбъектВычетаДопПоле.*,
+	ИННОрганизацииОсуществившейРасходы,
+	ИННОрганизацииПрименяющейВычет}
+ИЗ
+	ОстаткиИОбороты КАК ОстаткиИОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеПервичныхДокументов КАК ДанныеПервичныхДокументов
+		ПО ОстаткиИОбороты.Организация = ДанныеПервичныхДокументов.Организация
+			И (ДанныеПервичныхДокументов.Документ = ОстаткиИОбороты.ДокументВычета)
+		ЛЕВОЕ СОЕДИНЕНИЕ СведенияОС КАК СведенияОС
+		ПО ОстаткиИОбороты.ОбъектВычета = СведенияОС.ОсновноеСредство
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.НематериальныеАктивы КАК НМА
+		ПО ОстаткиИОбороты.ОбъектВычета = НМА.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ОсновныеСредства КАК ОсновныеСредства
+		ПО ОстаткиИОбороты.ОбъектВычета = ОсновныеСредства.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ОперацияСИнвестиционнымВычетом КАК ОперацияСВычетом
+		ПО ОстаткиИОбороты.ДокументПередачиВычета = ОперацияСВычетом.Ссылка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВеличинаВычетаВПроцентах КАК ВеличинаВычетаВПроцентах
+		ПО (ИСТИНА)
+		ЛЕВОЕ СОЕДИНЕНИЕ СтоимостьРасходов КАК СтоимостьРасходов
+		ПО ОстаткиИОбороты.ОбъектВычета = СтоимостьРасходов.ОбъектВычета
+			И ОстаткиИОбороты.ДокументВычета = СтоимостьРасходов.Регистратор
+{ГДЕ
+	СтоимостьРасходов.ОбособленноеПодразделение.*,
+	(ВЫБОР
+			КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Передача)
+				ТОГДА ОперацияСВычетом.Контрагент
+			ИНАЧЕ ОстаткиИОбороты.Организация
+		КОНЕЦ) КАК ОрганизацияПрименяющаяВычет,
+	(ВЫБОР
+			КОГДА ОперацияСВычетом.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийСИнвестиционнымВычетом.Получение)
+				ТОГДА ОперацияСВычетом.Контрагент
+			ИНАЧЕ ОстаткиИОбороты.Организация
+		КОНЕЦ) КАК ОрганизацияОсуществившаяРасходы,
+	ОстаткиИОбороты.ДокументВычета.*,
+	ОстаткиИОбороты.ВидРасходов,
+	ОстаткиИОбороты.ОбъектВычета.*,
+	(ЕСТЬNULL(ОсновныеСредства.Ссылка, НМА.Ссылка)).* КАК ОбъектВычетаДопПоле,
+	ОстаткиИОбороты.ДокументВычета.* КАК ДокументВычетаОтбор}</query>
+		<autoFillFields>false</autoFillFields>
+		<useQueryGroupIfPossible>false</useQueryGroupIfPossible>
+	</dataSet>
+	<totalField>
+		<dataPath>ОрганизацияПрименяющаяВычет</dataPath>
+		<expression>Максимум(ОрганизацияПрименяющаяВычет)</expression>
+		<group>ДокументВычета</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОрганизацияОсуществившаяРасходы</dataPath>
+		<expression>Максимум(ОрганизацияОсуществившаяРасходы)</expression>
+		<group>ДокументВычета</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВычетаКонец</dataPath>
+		<expression>Сумма(СуммаВычетаКонец)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВычетаНачало</dataPath>
+		<expression>Сумма(СуммаВычетаНачало)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВычетаНачислено</dataPath>
+		<expression>Сумма(СуммаВычетаНачислено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВычетаИспользовано</dataPath>
+		<expression>Сумма(СуммаВычетаИспользовано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаПринятияКУчету</dataPath>
+		<expression>Максимум(ДатаПринятияКУчету)</expression>
+		<group>ДокументВычета</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВычетаПолучено</dataPath>
+		<expression>Сумма(СуммаВычетаПолучено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВычетаПередано</dataPath>
+		<expression>Сумма(СуммаВычетаПередано)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПроцентРасходов</dataPath>
+		<expression>Максимум(ПроцентРасходов)</expression>
+		<group>ДокументВычета</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРасходов</dataPath>
+		<expression>Сумма(СуммаРасходов)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СубконтоСчетаИнвестиционныйВычет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Субконто счета инвестиционного вычета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СчетУчетаИнвестиционныйВычет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет учета инвестиционного вычета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ВсяОрганизация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вся организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>СчетаАмортизируемогоИмущества</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счета амортизируемого имущества</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ПроцентРасходов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Процент расходов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ФедеральныйИнвестиционныйВычет</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>2.06. Федеральный инвестиционный налоговый вычет</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИнвентарныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОбъектВычета</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование объекта</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КодПоОКОФ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АмортизационнаяГруппа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОрганизацияОсуществившаяРасходы</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация, осуществившая расходы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОрганизацияПрименяющаяВычет</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация, применяющая вычет</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПринятияКУчету</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата ввода в эксплуатацию (изменения первоначальной стоимости)</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРасходов</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма расходов в текущем (отчетном) периоде</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентРасходов</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер ФИНВ в процентах от суммы расходов на кап. вложения</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВычетаНачало</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток ФИНВ на начало периода</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Величина ФИНВ текущего периода</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВычетаНачислено</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>в отношении собственных объектов[НачалоФормулы]([СуммаРасходов]) * ([ПроцентРасходов]) / 100</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВычетаПолучено</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>в отношении организаций, входящих в группу</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма использованного ФИНВ в текущем периоде</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВычетаИспользовано</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>уменьшение налога на прибыль</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаВычетаПередано</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>передано организации, входящей в группу</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+						<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаВычетаКонец</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток ФИНВ на конец периода[НачалоФормулы]([СуммаВычетаНачало]) + ([СуммаВычетаНачислено]) - ([СуммаВычетаИспользовано])</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаПринятияКУчету</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ИнвентарныйНомер</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">End</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:name>ФедеральныйИнвестиционныйВычет</dcsset:name>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидРасходов</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>ДатаПринятияКУчету</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>ОрганизацияПрименяющаяВычет</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>ОрганизацияОсуществившаяРасходы</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>ПроцентРасходов</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаВычетаИспользовано</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаВычетаКонец</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаВычетаНачало</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаВычетаПолучено</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаВычетаНачислено</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаВычетаПередано</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>СуммаРасходов</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter/>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+								<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+								<dcscor:value xsi:type="xs:decimal">16</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+						<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+						<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+						<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+						<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+						<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+						<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+						<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+						<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

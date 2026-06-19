@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Кадры</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>HorizontalIfPossible</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>false</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКадры" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадры</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКадрыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Button name="СтатистикаПерсонала" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СтатистикаПерсонала</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="СтатистикаПерсоналаРасширеннаяПодсказка" id="36"/>
+				</Button>
+				<Button name="КадровыеДокументы" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КадровыеДокументы</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="КадровыеДокументыРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="ЭлектронныеТрудовыеКнижки" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЭлектронныеТрудовыеКнижки</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ЭлектронныеТрудовыеКнижкиРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="ИсполнительныеЛисты" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ИсполнительныеЛисты</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ИсполнительныеЛистыРасширеннаяПодсказка" id="32"/>
+				</Button>
+				<Button name="ДоговорыГПХ" id="33">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ДоговорыГПХ</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ДоговорыГПХРасширеннаяПодсказка" id="34"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДоговорыГПХ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры ГПХ</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДоговорыГПХ</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачисленияПоДоговорам</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ИсполнительныеЛисты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительные листы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИсполнительныеЛисты</Action>
+		</Command>
+		<Command name="КадровыеДокументы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кадровые документы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КадровыеДокументы</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьКадровыйДокументооборотДляНебольшихОрганизаций</Item>
+				<Item>FunctionalOption.ИспользоватьКадровыйУчетПриВнешнейЗарплате</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ЭлектронныеТрудовыеКнижки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные трудовые книжки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЭлектронныеТрудовыеКнижки</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="СтатистикаПерсонала" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика персонала</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СтатистикаПерсонала</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровВоВнешнейПрограмме</Item>
+			</FunctionalOptions>
+		</Command>
+	</Commands>
+</Form>

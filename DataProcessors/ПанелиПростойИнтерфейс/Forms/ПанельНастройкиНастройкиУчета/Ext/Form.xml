@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки учета</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>AlwaysHorizontal</Group>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛеваяКолонка" id="40">
+			<Width>35</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОрганизация" id="14">
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОрганизацияРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<Button name="УчетнаяПолитика" id="18">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УчетнаяПолитика</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="УчетнаяПолитикаРасширеннаяПодсказка" id="19"/>
+						</Button>
+						<Button name="УставныйКапитал" id="44">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.УставныйКапитал</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="УставныйКапиталРасширеннаяПодсказка" id="45"/>
+						</Button>
+						<Button name="Подразделения" id="46">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Подразделения</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПодразделенияРасширеннаяПодсказка" id="47"/>
+						</Button>
+						<Button name="РегистрацииВНалоговыхОрганах" id="48">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.РегистрацииВНалоговыхОрганах</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РегистрацииВНалоговыхОрганахРасширеннаяПодсказка" id="49"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДеньги" id="50">
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДеньгиРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<Button name="Валюты" id="52">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Валюты</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ВалютыРасширеннаяПодсказка" id="53"/>
+						</Button>
+						<Button name="Банки" id="152">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Банки</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="БанкиРасширеннаяПодсказка" id="156"/>
+						</Button>
+						<Button name="БанковскиеСчета" id="56">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.БанковскиеСчета</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="БанковскиеСчетаРасширеннаяПодсказка" id="57"/>
+						</Button>
+						<Button name="ГосударственныеКонтракты" id="153">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ГосударственныеКонтракты</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ГосударственныеКонтрактыРасширеннаяПодсказка" id="157"/>
+						</Button>
+						<Button name="СтатьиДвиженияДенежныхСредств" id="154">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СтатьиДвиженияДенежныхСредств</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СтатьиДвиженияДенежныхСредствРасширеннаяПодсказка" id="158"/>
+						</Button>
+						<Button name="ВидыОплат" id="54">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВидыОплат</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ВидыОплатРасширеннаяПодсказка" id="55"/>
+						</Button>
+						<Button name="ДенежныеДокументы" id="155">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДенежныеДокументы</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ДенежныеДокументыРасширеннаяПодсказка" id="159"/>
+						</Button>
+						<Button name="ЛимитОстаткаКассы" id="58">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЛимитОстаткаКассы</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЛимитОстаткаКассыРасширеннаяПодсказка" id="59"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТовары" id="60">
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТоварыРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Button name="Склады" id="68">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Склады</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="69"/>
+						</Button>
+						<Button name="ТипыЦенНоменклатуры" id="66">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ТипыЦенНоменклатуры</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ТипыЦенНоменклатурыРасширеннаяПодсказка" id="67"/>
+						</Button>
+						<Button name="ВидыНоменклатуры" id="62">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВидыНоменклатуры</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ВидыНоменклатурыРасширеннаяПодсказка" id="63"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСотрудники" id="70">
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСотрудникиРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<Button name="НастройкиЗарплаты" id="76">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НастройкиЗарплаты</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="НастройкиЗарплатыРасширеннаяПодсказка" id="77"/>
+						</Button>
+						<Button name="Сотрудники" id="160">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Сотрудники</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="163"/>
+						</Button>
+						<Button name="ФизическиеЛица" id="74">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ФизическиеЛица</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ФизическиеЛицаРасширеннаяПодсказка" id="75"/>
+						</Button>
+						<Button name="ЗарплатныеПроекты" id="72">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗарплатныеПроекты</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ЗарплатныеПроектыРасширеннаяПодсказка" id="73"/>
+						</Button>
+						<Button name="Должности" id="161">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.Должности</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ДолжностиРасширеннаяПодсказка" id="164"/>
+						</Button>
+						<Button name="ГрафикиРаботы" id="162">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ГрафикиРаботы</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ГрафикиРаботыРасширеннаяПодсказка" id="165"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПраваяКолонка" id="78">
+			<Width>35</Width>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаБухгалтерия" id="118">
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаБухгалтерияРасширеннаяПодсказка" id="119"/>
+					<ChildItems>
+						<Button name="ПланСчетов" id="126">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПланСчетов</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПланСчетовРасширеннаяПодсказка" id="127"/>
+						</Button>
+						<Button name="НоменклатурныеГруппы" id="132">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НоменклатурныеГруппы</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="НоменклатурныеГруппыРасширеннаяПодсказка" id="133"/>
+						</Button>
+						<Button name="СтатьиЗатрат" id="134">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СтатьиЗатрат</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="СтатьиЗатратРасширеннаяПодсказка" id="135"/>
+						</Button>
+						<Button name="ПрочиеДоходыИРасходы" id="136">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПрочиеДоходыИРасходы</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ПрочиеДоходыИРасходыРасширеннаяПодсказка" id="137"/>
+						</Button>
+						<Button name="ДоходыБудущихПериодов" id="138">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ДоходыБудущихПериодов</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ДоходыБудущихПериодовРасширеннаяПодсказка" id="139"/>
+						</Button>
+						<Button name="РасходыБудущихПериодов" id="140">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.РасходыБудущихПериодов</CommandName>
+							<TextColor>style:ГиперссылкаЦвет</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="РасходыБудущихПериодовРасширеннаяПодсказка" id="141"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИмущество" id="142">
+					<Group>Vertical</Group>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИмуществоРасширеннаяПодсказка" id="143"/>
+					<ChildItems>
+						<Button name="ОбъектыСтроительства" id="144">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОбъектыСтроительства</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОбъектыСтроительстваРасширеннаяПодсказка" id="145"/>
+						</Button>
+						<Button name="ВидыРемонтовОС" id="146">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВидыРемонтовОС</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ВидыРемонтовОСРасширеннаяПодсказка" id="147"/>
+						</Button>
+						<Button name="ОбщероссийскийКлассификаторОсновныхФондов" id="148">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОбщероссийскийКлассификаторОсновныхФондов</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ОбщероссийскийКлассификаторОсновныхФондовРасширеннаяПодсказка" id="149"/>
+						</Button>
+						<Button name="ТранспортныеСредства" id="150">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ТранспортныеСредства</CommandName>
+							<TextColor>style:ЦветГиперссылки</TextColor>
+							<ShapeRepresentation>None</ShapeRepresentation>
+							<ExtendedTooltip name="ТранспортныеСредстваРасширеннаяПодсказка" id="151"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="УчетнаяПолитика" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная политика</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная политика</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УчетнаяПолитика</Action>
+		</Command>
+		<Command name="УставныйКапитал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уставный капитал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уставный капитал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УставныйКапитал</Action>
+		</Command>
+		<Command name="Подразделения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подразделения</Action>
+		</Command>
+		<Command name="РегистрацииВНалоговыхОрганах" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрации в налоговых органах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрации в налоговых органах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РегистрацииВНалоговыхОрганах</Action>
+		</Command>
+		<Command name="Валюты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Валюты</Action>
+		</Command>
+		<Command name="ВидыОплат" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды оплат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды оплат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВидыОплат</Action>
+		</Command>
+		<Command name="БанковскиеСчета" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковские счета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банковские счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>БанковскиеСчета</Action>
+		</Command>
+		<Command name="ЛимитОстаткаКассы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимиты остатка кассы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лимит остатка кассы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЛимитОстаткаКассы</Action>
+		</Command>
+		<Command name="Склады" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склады</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склады</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Склады</Action>
+		</Command>
+		<Command name="ТипыЦенНоменклатуры" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы цен номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Типы цен номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТипыЦенНоменклатуры</Action>
+		</Command>
+		<Command name="ВидыНоменклатуры" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВидыНоменклатуры</Action>
+		</Command>
+		<Command name="НастройкиЗарплаты" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки зарплаты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки зарплаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиЗарплаты</Action>
+		</Command>
+		<Command name="ФизическиеЛица" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физические лица</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физические лица</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ФизическиеЛица</Action>
+		</Command>
+		<Command name="ЗарплатныеПроекты" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплатные проекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплатные проекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарплатныеПроекты</Action>
+		</Command>
+		<Command name="ПланСчетов" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>План счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПланСчетов</Action>
+		</Command>
+		<Command name="НоменклатурныеГруппы" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатурные группы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НоменклатурныеГруппы</Action>
+		</Command>
+		<Command name="СтатьиЗатрат" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статьи затрат</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СтатьиЗатрат</Action>
+		</Command>
+		<Command name="ПрочиеДоходыИРасходы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочие доходы и расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПрочиеДоходыИРасходы</Action>
+		</Command>
+		<Command name="ДоходыБудущихПериодов" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы будущих периодов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДоходыБудущихПериодов</Action>
+		</Command>
+		<Command name="РасходыБудущихПериодов" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расходы будущих периодов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РасходыБудущихПериодов</Action>
+		</Command>
+		<Command name="ГрафикиРаботы" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Графики работы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ГрафикиРаботы</Action>
+		</Command>
+		<Command name="Должности" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должности</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Должности</Action>
+		</Command>
+		<Command name="Сотрудники" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сотрудники</Action>
+		</Command>
+		<Command name="Банки" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Банки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Банки</Action>
+		</Command>
+		<Command name="СтатьиДвиженияДенежныхСредств" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статьи движения денежных средств</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СтатьиДвиженияДенежныхСредств</Action>
+		</Command>
+		<Command name="ДенежныеДокументы" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура денежных документов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДенежныеДокументы</Action>
+		</Command>
+		<Command name="ГосударственныеКонтракты" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Государственные контракты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ГосударственныеКонтракты</Action>
+		</Command>
+		<Command name="ВидыРемонтовОС" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды ремонтов ОС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды ремонтов основных средств</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВидыРемонтовОС</Action>
+		</Command>
+		<Command name="ОбщероссийскийКлассификаторОсновныхФондов" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Классификатор ОКОФ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общероссийский классификатор основных фондов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбщероссийскийКлассификаторОсновныхФондов</Action>
+		</Command>
+		<Command name="ОбъектыСтроительства" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты строительства</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбъектыСтроительства</Action>
+		</Command>
+		<Command name="ТранспортныеСредства" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспортные средства</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ТранспортныеСредства</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.Функциональность</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

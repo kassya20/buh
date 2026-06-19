@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Автоматическая загрузка отчетов маркетплейсов через API</v8:content>
+		</v8:item>
+	</Title>
+	<Width>65</Width>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="84">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="85"/>
+			<ChildItems>
+				<Pages name="ГруппаНастройкиСтраницы" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаНастройкиСтраницыРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<Page name="ГруппаНастрокиОднаОрганизация" id="100">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроки одна организация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроки одна организация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастрокиОднаОрганизацияРасширеннаяПодсказка" id="101"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОзон" id="104">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ozon</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа озон</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОзонРасширеннаяПодсказка" id="105"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация2" id="127">
+											<Width>2</Width>
+											<Height>1</Height>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ЛоготипOzon</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="128"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="129"/>
+										</PictureDecoration>
+										<LabelDecoration name="OzonПодключен" id="136">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение настроено</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="OzonПодключенКонтекстноеМеню" id="137"/>
+											<ExtendedTooltip name="OzonПодключенРасширеннаяПодсказка" id="138"/>
+										</LabelDecoration>
+										<LabelDecoration name="OzonНеПодключен" id="112">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#807A59</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение не настроено!</v8:content>
+												</v8:item>
+											</Title>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ContextMenu name="OzonНеПодключенКонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="OzonНеПодключенРасширеннаяПодсказка" id="114"/>
+										</LabelDecoration>
+										<Button name="ДобавитьOzon" id="118">
+											<Type>Hyperlink</Type>
+											<Representation>Text</Representation>
+											<CommandName>Form.Command.ДобавитьOzon</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настроить подключение к Ozon</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ДобавитьOzonРасширеннаяПодсказка" id="119"/>
+										</Button>
+										<Button name="ДобавитьМагазинOzon" id="145">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ДобавитьМагазинOzon</CommandName>
+											<ExtendedTooltip name="ДобавитьМагазинOzonРасширеннаяПодсказка" id="146"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаWB" id="106">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Wildberries</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа WB</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаWBРасширеннаяПодсказка" id="107"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация3" id="130">
+											<Width>2</Width>
+											<Height>1</Height>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ЛоготипWB</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="132"/>
+										</PictureDecoration>
+										<LabelDecoration name="WBПодключен" id="139">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение настроено</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="WBПодключенКонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="WBПодключенРасширеннаяПодсказка" id="141"/>
+										</LabelDecoration>
+										<LabelDecoration name="WBНеПодключен" id="115">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#807A59</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение не настроено!</v8:content>
+												</v8:item>
+											</Title>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ContextMenu name="WBНеПодключенКонтекстноеМеню" id="116"/>
+											<ExtendedTooltip name="WBНеПодключенРасширеннаяПодсказка" id="117"/>
+										</LabelDecoration>
+										<Button name="ДобавитьWB" id="120">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ДобавитьWB</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настроить подключение к Wildberries</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ДобавитьWBРасширеннаяПодсказка" id="121"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЯндекс" id="108">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Яндекс.Маркет</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа яндекс</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЯндексРасширеннаяПодсказка" id="109"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация4" id="133">
+											<Width>2</Width>
+											<Height>1</Height>
+											<PictureSize>Proportionally</PictureSize>
+											<Picture>
+												<xr:Ref>CommonPicture.ЛоготипЯндексМаркет</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="135"/>
+										</PictureDecoration>
+										<LabelDecoration name="ЯМПодключен" id="142">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение настроено</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЯМПодключенКонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="ЯМПодключенРасширеннаяПодсказка" id="144"/>
+										</LabelDecoration>
+										<LabelDecoration name="ЯМНеПодключен" id="122">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>#807A59</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключение не настроено!</v8:content>
+												</v8:item>
+											</Title>
+											<BackColor>style:ToolTipBackColor</BackColor>
+											<ContextMenu name="ЯМНеПодключенКонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="ЯМНеПодключенРасширеннаяПодсказка" id="124"/>
+										</LabelDecoration>
+										<Button name="ДобавитьЯндекс" id="125">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ДобавитьЯндекс</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настроить подключение к Яндекс.Маркет</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ДобавитьЯндексРасширеннаяПодсказка" id="126"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаНастрокиНесколькоОрганизаций" id="102">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроки несколько организаций</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настроки несколько организаций</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастрокиНесколькоОрганизацийРасширеннаяПодсказка" id="103"/>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаАвтозагрузка" id="82">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАвтозагрузкаРасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<CheckBoxField name="АвтозагрузкаВключена" id="79">
+					<DataPath>АвтозагрузкаВключена</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="АвтозагрузкаВключенаКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="АвтозагрузкаВключенаРасширеннаяПодсказка" id="81">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Программа автоматически загружает свежие отчёты с маркетплейсов через API, создавая по ним новые документы. Важно, что старые документы не удаляются и не изменяются. Кроме того, сохраняется возможность загрузить отчёты повторно вручную - как через API, так и с помощью файлов.</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">АвтозагрузкаВключенаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПараметры" id="13">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="14"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЕжемесячныеОтчеты" id="53">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЕжемесячныеОтчетыРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЕжемесячныеОтчетыДеньЗагрузки" id="15">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕжемесячныеОтчетыДеньЗагрузкиРасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокЕжемесячныеОтчетыДеньЗагрузки" id="23">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загружать ежемесячные отчеты, начиная с</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаголовокЕжемесячныеОтчетыДеньЗагрузкиКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ЗаголовокЕжемесячныеОтчетыДеньЗагрузкиРасширеннаяПодсказка" id="25"/>
+								</LabelDecoration>
+								<InputField name="ДеньЗагрузкиЕжемесячныхОтчетов" id="55">
+									<DataPath>ДеньЗагрузкиЕжемесячныхОтчетов</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>2</Width>
+									<SpinButton>true</SpinButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">31</MaxValue>
+									<ContextMenu name="ДеньЗагрузкиЕжемесячныхОтчетовКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ДеньЗагрузкиЕжемесячныхОтчетовРасширеннаяПодсказка" id="57"/>
+									<Events>
+										<Event name="OnChange">ДеньЗагрузкиЕжемесячныхОтчетовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="НадписьЕжемесячныеОтчетыДеньЗагрузки" id="20">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>числа месяца</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рекомендуется загружать отчеты через несколько дней после их появления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="НадписьЕжемесячныеОтчетыДеньЗагрузкиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="НадписьЕжемесячныеОтчетыДеньЗагрузкиРасширеннаяПодсказка" id="22"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ЕжемесячныеОтчетыСледующаяЗагрузка" id="50">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#807A59</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Следующая загрузка отчетов будет выполнена ДД.ММ.ГГГГ</v8:content>
+								</v8:item>
+							</Title>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="ЕжемесячныеОтчетыСледующаяЗагрузкаКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ЕжемесячныеОтчетыСледующаяЗагрузкаРасширеннаяПодсказка" id="52"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЕженедельныеОтчеты" id="58">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЕженедельныеОтчетыРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЕженедельныеОтчетыДеньЗагрузки" id="60">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЕженедельныеОтчетыДеньЗагрузкиРасширеннаяПодсказка" id="61"/>
+							<ChildItems>
+								<LabelDecoration name="ЗаголовокЕженедельныеОтчетыДеньЗагрузки" id="62">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Загружать еженедельные отчеты по</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаголовокЕженедельныеОтчетыДеньЗагрузкиКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ЗаголовокЕженедельныеОтчетыДеньЗагрузкиРасширеннаяПодсказка" id="64"/>
+								</LabelDecoration>
+								<InputField name="ДеньЗагрузкиЕженедельныхОтчетов" id="65">
+									<DataPath>ДеньЗагрузкиЕженедельныхОтчетов</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рекомендуется загружать отчеты через несколько дней после их появления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<Width>10</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>понедельникам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>вторникам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>средам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>четвергам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">4</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>пятницам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>субботам</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">6</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>воскресеньям</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">7</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ДеньЗагрузкиЕженедельныхОтчетовКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ДеньЗагрузкиЕженедельныхОтчетовРасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">ДеньЗагрузкиЕженедельныхОтчетовПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ЕженедельныеОтчетыСледующаяЗагрузка" id="71">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>#807A59</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Следующая загрузка отчетов будет выполнена ДД.ММ.ГГГГ (День недели)</v8:content>
+								</v8:item>
+							</Title>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="ЕженедельныеОтчетыСледующаяЗагрузкаКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ЕженедельныеОтчетыСледующаяЗагрузкаРасширеннаяПодсказка" id="73"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманды" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа команды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКомандыРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<CommandBar name="КоманднаяПанельПравая" id="38">
+					<HorizontalStretch>false</HorizontalStretch>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<ExtendedTooltip name="КоманднаяПанельПраваяРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<ButtonGroup name="ГруппаОсновныеКоманды" id="42">
+							<ExtendedTooltip name="ГруппаОсновныеКомандыРасширеннаяПодсказка" id="43"/>
+							<ChildItems>
+								<Button name="ФормаЗаписатьНастройки" id="44">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<SkipOnInput>true</SkipOnInput>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Записать и закрыть</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ФормаЗаписатьНастройкиРасширеннаяПодсказка" id="45"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДеньЗагрузкиЕженедельныхОтчетов" id="2">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ДеньЗагрузкиЕжемесячныхОтчетов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>День загрузки ежемесячных отчетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АвтозагрузкаВключена" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять автоматическую загрузку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЕстьЕжемесячныеОтчеты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ежемесячные отчеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьЕженедельныеОтчеты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть еженедельные отчеты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяНесколькоОрганизаций" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется несколько организаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоOzon" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество ozon</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоWB" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество WB</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЯндекс" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество яндекс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзмененыНастройкиПодключенияМаркетплейсов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменены настройки подключения маркетплейсов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПроблемыСТокенамиWB" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьНастройки</Action>
+		</Command>
+		<Command name="ДобавитьOzon" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить подключение к Ozon</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить ozon</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЛоготипOzon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьOzon</Action>
+		</Command>
+		<Command name="ДобавитьWB" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить подключение к Wildberries</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить WB</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьWB</Action>
+		</Command>
+		<Command name="ДобавитьЯндекс" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить подключение к Яндекс.Маркет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить яндекс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьЯндекс</Action>
+		</Command>
+		<Command name="ДобавитьМагазинOzon" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить новый магазин</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить новый магазин</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьМагазинOzon</Action>
+		</Command>
+	</Commands>
+</Form>

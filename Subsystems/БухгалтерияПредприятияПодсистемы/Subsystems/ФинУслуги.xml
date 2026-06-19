@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Subsystem uuid="3b14b5c7-40aa-4b34-9a92-3a6dc752c115">
+		<Properties>
+			<Name>ФинУслуги</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фин услуги</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФинУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФинУслугиВызовСервера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФинУслугиКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ФинУслугиКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.ФинУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВправоФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ДолларФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЕвроФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НедоступнаяСтрелкаВлевоФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.НедоступнаяСтрелкаВправоФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПодменюВертикальноеФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПустаяВалютаФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РубльФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.СтрелкаВлевоФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ЮаньФинансы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ФинансыОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ФинансыОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ХарактеристикиСервисаФинУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГруппыКомпанийБанков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КотСон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КотОшибка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КэшПоказателейФинУслуги</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

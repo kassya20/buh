@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="НастройкиЗарплаты" id="13">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкиЗарплаты</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкиЗарплатыРасширеннаяПодсказка" id="14"/>
+		</Button>
+		<Button name="НастройкиВоинскогоУчета" id="29">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкиВоинскогоУчета</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкиВоинскогоУчетаРасширеннаяПодсказка" id="30"/>
+		</Button>
+		<Button name="Сотрудники" id="25">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Сотрудники</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="26"/>
+		</Button>
+		<Button name="ФизическиеЛица" id="15">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ФизическиеЛица</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ФизическиеЛицаРасширеннаяПодсказка" id="16"/>
+		</Button>
+		<Button name="Должности" id="21">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Должности</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ДолжностиРасширеннаяПодсказка" id="22"/>
+		</Button>
+		<Button name="ЗарплатныеПроекты" id="17">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗарплатныеПроекты</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ЗарплатныеПроектыРасширеннаяПодсказка" id="18"/>
+		</Button>
+		<Button name="ГрафикиРаботы" id="23">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ГрафикиРаботы</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="ГрафикиРаботыРасширеннаяПодсказка" id="24"/>
+		</Button>
+		<Button name="Сервис1СКабинетСотрудника" id="19">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Сервис1СКабинетСотрудника</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="Сервис1СКабинетСотрудникаРасширеннаяПодсказка" id="20"/>
+		</Button>
+		<Button name="НастройкаЭДОБЗК" id="27">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.НастройкаЭДОБЗК</CommandName>
+			<TextColor>style:ЦветГиперссылки</TextColor>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<ExtendedTooltip name="НастройкаЭДОБЗКРасширеннаяПодсказка" id="28"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанелиПростойИнтерфейс</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастройкиЗарплаты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки зарплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиЗарплаты</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ВедетсяУчетЗарплатыКадров</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="ФизическиеЛица" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Физические лица</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ФизическиеЛица</Action>
+		</Command>
+		<Command name="ЗарплатныеПроекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарплатные проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗарплатныеПроекты</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.ИспользоватьНачислениеЗарплаты</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Сервис1СКабинетСотрудника" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервис 1С:Кабинет сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сервис1СКабинетСотрудника</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="Должности" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должности</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Должности</Action>
+		</Command>
+		<Command name="ГрафикиРаботы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Графики работы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ГрафикиРаботы</Action>
+		</Command>
+		<Command name="Сотрудники" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сотрудники</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровВоВнешнейПрограмме</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="НастройкаЭДОБЗК" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка ЭДО</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкаЭДОБЗК</Action>
+			<FunctionalOptions>
+				<Item>FunctionalOption.УчетЗарплатыИКадровСредствамиБухгалтерии</Item>
+			</FunctionalOptions>
+		</Command>
+		<Command name="НастройкиВоинскогоУчета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки воинского учета</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкиВоинскогоУчета</Action>
+		</Command>
+	</Commands>
+</Form>

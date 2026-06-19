@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Сопоставление недостач и излишков</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНоменклатура" id="7">
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номенклатура</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНоменклатураРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelField name="Номенклатура" id="1">
+					<DataPath>Номенклатура</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="НоменклатураКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="3"/>
+				</LabelField>
+				<LabelField name="НадписьКоличество" id="44">
+					<DataPath>НадписьКоличество</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="НадписьКоличествоКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="НадписьКоличествоРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаНоменклатураОприходование" id="12">
+			<Representation>List</Representation>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаНоменклатураОприходование</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаНоменклатураОприходованиеКонтекстноеМеню" id="13"/>
+			<AutoCommandBar name="ТаблицаНоменклатураОприходованиеКоманднаяПанель" id="14">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ТаблицаНоменклатураОприходованиеВыбрать" id="39">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.Выбрать</CommandName>
+						<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеВыбратьРасширеннаяПодсказка" id="40"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеРасширеннаяПодсказка" id="15"/>
+			<SearchStringAddition name="ТаблицаНоменклатураОприходованиеСтрокаПоиска" id="16">
+				<AdditionSource>
+					<Item>ТаблицаНоменклатураОприходование</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНоменклатураОприходованиеСтрокаПоискаКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеСтрокаПоискаРасширеннаяПодсказка" id="18"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаНоменклатураОприходованиеСостояниеПросмотра" id="19">
+				<AdditionSource>
+					<Item>ТаблицаНоменклатураОприходование</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНоменклатураОприходованиеСостояниеПросмотраКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеСостояниеПросмотраРасширеннаяПодсказка" id="21"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаНоменклатураОприходованиеУправлениеПоиском" id="22">
+				<AdditionSource>
+					<Item>ТаблицаНоменклатураОприходование</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНоменклатураОприходованиеУправлениеПоискомКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеУправлениеПоискомРасширеннаяПодсказка" id="24"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТаблицаНоменклатураОприходованиеВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаНоменклатураОприходованиеНоменклатура" id="25">
+					<DataPath>ТаблицаНоменклатураОприходование.Номенклатура</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаНоменклатураОприходованиеНоменклатураКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеНоменклатураРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<ColumnGroup name="ТаблицаНоменклатураОприходованиеГруппаКоличество" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеГруппаКоличествоРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<InputField name="ТаблицаНоменклатураОприходованиеКоличество" id="28">
+							<DataPath>ТаблицаНоменклатураОприходование.Количество</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>10</Width>
+							<ContextMenu name="ТаблицаНоменклатураОприходованиеКоличествоКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеКоличествоРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<InputField name="ТаблицаНоменклатураОприходованиеНоменклатураОприходованиеЕдиницаИзмерения" id="31">
+							<DataPath>ТаблицаНоменклатураОприходование.Номенклатура.ЕдиницаИзмерения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<Width>6</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТаблицаНоменклатураОприходованиеНоменклатураОприходованиеЕдиницаИзмеренияКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеНоменклатураОприходованиеЕдиницаИзмеренияРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ТаблицаНоменклатураОприходованиеСчетУчета" id="41">
+					<DataPath>ТаблицаНоменклатураОприходование.СчетУчета</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>12</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТаблицаНоменклатураОприходованиеСчетУчетаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеСчетУчетаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТаблицаНоменклатураОприходованиеОтступ" id="36">
+					<DataPath>ТаблицаНоменклатураОприходование.Отступ</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ТаблицаНоменклатураОприходованиеОтступКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ТаблицаНоменклатураОприходованиеОтступРасширеннаяПодсказка" id="38"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Номенклатура" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура (списание)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Количество" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>3</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаНоменклатураОприходование" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица номенклатура оприходование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура (оприходование)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Отступ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СчетУчета" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет учета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СчетУчета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НадписьКоличество" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать номенклатуру (оприходование)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

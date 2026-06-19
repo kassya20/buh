@@ -1,0 +1,1134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа быстрые отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыРасширеннаяПодсказка" id="43"/>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанель" id="46">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Popup name="ПодменюПечать" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>StdPicture.Print</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Representation>PictureAndText</Representation>
+					<ExtendedTooltip name="ПодменюПечатьРасширеннаяПодсказка" id="49"/>
+				</Popup>
+				<Popup name="ПодменюЗаполнить" id="56">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнить</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Representation>PictureAndText</Representation>
+					<ExtendedTooltip name="ПодменюДополнительныхОбработокЗаполненияРасширеннаяПодсказка" id="57"/>
+				</Popup>
+				<Popup name="ПодменюОтчеты" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отчеты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подменю отчеты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Отчеты</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Representation>PictureAndText</Representation>
+					<ExtendedTooltip name="ПодменюОтчетыРасширеннаяПодсказка" id="59"/>
+				</Popup>
+				<Button name="ФормаРегистрСведенийНастройкиПрямыхВыплатФСССотрудниковФормаСписка" id="63">
+					<Type>CommandBarButton</Type>
+					<CommandName>InformationRegister.НастройкиПрямыхВыплатФСССотрудников.Command.ФормаСписка</CommandName>
+					<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ФормаРегистрСведенийНастройкиПрямыхВыплатФСССотрудниковФормаСпискаРасширеннаяПодсказка" id="64"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>ГруппаБыстрыеОтборы</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="24"/>
+			<SearchStringAddition name="СписокSearchString" id="25">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchStringContextMenu" id="26"/>
+				<ExtendedTooltip name="СписокSearchStringExtendedTooltip" id="27"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокViewStatus" id="28">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокViewStatusContextMenu" id="29"/>
+				<ExtendedTooltip name="СписокViewStatusExtendedTooltip" id="30"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокSearchControl" id="31">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокSearchControlContextMenu" id="32"/>
+				<ExtendedTooltip name="СписокSearchControlExtendedTooltip" id="33"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+				<Event name="BeforeLoadUserSettingsAtServer">СписокПередЗагрузкойПользовательскихНастроекНаСервере</Event>
+				<Event name="OnChange">СписокПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="ЕстьФайлы" id="60">
+					<DataPath>Список.ЕстьФайлы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Естьфайлы</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>None</TitleLocation>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Скрепка</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</HeaderPicture>
+					<Width>2</Width>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.КоллекцияСкрепка</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ЕстьФайлыКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ЕстьФайлыРасширеннаяПодсказка" id="62"/>
+				</PictureField>
+				<LabelField name="Дата" id="4">
+					<DataPath>Список.Дата</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Width>7</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДЛФ=D</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="34"/>
+				</LabelField>
+				<LabelField name="Номер" id="6">
+					<DataPath>Список.Номер</DataPath>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="НомерКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="35"/>
+				</LabelField>
+				<LabelField name="Сотрудник" id="10">
+					<DataPath>Список.Сотрудник</DataPath>
+					<ContextMenu name="СотрудникКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СотрудникExtendedTooltip" id="37"/>
+				</LabelField>
+				<LabelField name="ВидПособия" id="18">
+					<DataPath>Список.ВидПособия</DataPath>
+					<ContextMenu name="ВидПособияКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ВидПособияExtendedTooltip" id="38"/>
+				</LabelField>
+				<LabelField name="Организация" id="22">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="36"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="53">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="16">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КомментарийExtendedTooltip" id="40"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="20">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="41"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ИзмененыСведенияОЗастрахованномЛице</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Ссылка КАК Ссылка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Номер КАК Номер,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Дата КАК Дата,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Проведен КАК Проведен,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.АдресПолучателяРегистрации КАК АдресПолучателяРегистрации,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.АдресПолучателяФактический КАК АдресПолучателяФактический,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Банк КАК Банк,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.БИКБанка КАК БИКБанка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВерсияДокумента КАК ВерсияДокумента,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВидДокументаНаПроживание КАК ВидДокументаНаПроживание,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВидДокументаУдостоверяющегоЛичностьЗаявителя КАК ВидДокументаУдостоверяющегоЛичностьЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВидДокументаУдостоверяющегоЛичностьПолучателя КАК ВидДокументаУдостоверяющегоЛичностьПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВидОсобойЗоныПроживанияРаботы КАК ВидОсобойЗоныПроживанияРаботы,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВидПособия КАК ВидПособия,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВидРеестра КАК ВидРеестра,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВторойЗамененныйГод КАК ВторойЗамененныйГод,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ВторойРасчетныйГод КАК ВторойРасчетныйГод,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Гражданство КАК Гражданство,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаВыдачиДокументаНаПроживание КАК ДатаВыдачиДокументаНаПроживание,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаВыдачиДокументаУдостоверяющегоЛичностьЗаявителя КАК ДатаВыдачиДокументаУдостоверяющегоЛичностьЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаВыдачиДокументаУдостоверяющегоЛичностьПолучателя КАК ДатаВыдачиДокументаУдостоверяющегоЛичностьПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаДействияДокументаУдостоверяющегоЛичностьПолучателя КАК ДатаДействияДокументаУдостоверяющегоЛичностьПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаДоговораОПередачеРебенкаВПриемнуюСемью КАК ДатаДоговораОПередачеРебенкаВПриемнуюСемью,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаЗаявленияОЗаменеРасчетныхГодов КАК ДатаЗаявленияОЗаменеРасчетныхГодов,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаИногоДокументаПодтверждающегоРождение КАК ДатаИногоДокументаПодтверждающегоРождение,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаЛисткаНетрудоспособности КАК ДатаЛисткаНетрудоспособности,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаНачалаОтпускаПоУходуЗаРебенком КАК ДатаНачалаОтпускаПоУходуЗаРебенком,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаНачалаРасчетногоПериода КАК ДатаНачалаРасчетногоПериода,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаНачалаТрудовогоДоговораПолучателя КАК ДатаНачалаТрудовогоДоговораПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаОкончанияОтпускаПоУходуЗаРебенком КАК ДатаОкончанияОтпускаПоУходуЗаРебенком,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаОкончанияРасчетногоПериода КАК ДатаОкончанияРасчетногоПериода,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаОкончанияТрудовогоДоговораПолучателя КАК ДатаОкончанияТрудовогоДоговораПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаПредставленияПакетаДокументов КАК ДатаПредставленияПакетаДокументов,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаПриказаОЗаменеПослеродовогоОтпуска КАК ДатаПриказаОЗаменеПослеродовогоОтпуска,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаПриказаОПредоставленииОтпускаПоУходуЗаРебенком КАК ДатаПриказаОПредоставленииОтпускаПоУходуЗаРебенком,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаРешенияОбОпеке КАК ДатаРешенияОбОпеке,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаРешенияОбУсыновлении КАК ДатаРешенияОбУсыновлении,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаРожденияПолучателя КАК ДатаРожденияПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаРожденияРебенка КАК ДатаРожденияРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаСвидетельстваОРождении КАК ДатаСвидетельстваОРождении,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаСправкиОНеполученииПособияОтМатери КАК ДатаСправкиОНеполученииПособияОтМатери,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаСправкиОНеполученииПособияОтОтца КАК ДатаСправкиОНеполученииПособияОтОтца,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаСправкиОНеполученииПособияПоДругимМестамРаботы КАК ДатаСправкиОНеполученииПособияПоДругимМестамРаботы,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаСправкиОПостановкеНаУчетВРанниеСрокиБеременности КАК ДатаСправкиОПостановкеНаУчетВРанниеСрокиБеременности,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДатаСправкиОРожденииРебенка КАК ДатаСправкиОРожденииРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДокументОснование КАК ДокументОснование,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДолжностнойОклад КАК ДолжностнойОклад,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДолжностьПредставителяСФР КАК ДолжностьПредставителяСФР,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ДоляВремени КАК ДоляВремени,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ЗамененыКалендарныеГодыРасчетаСреднегоЗаработка КАК ЗамененыКалендарныеГодыРасчетаСреднегоЗаработка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ЗаработокВторойГодРасчета КАК ЗаработокВторойГодРасчета,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ЗаработокПервыйГодРасчета КАК ЗаработокПервыйГодРасчета,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ИдентификаторСтрокиОснования КАК ИдентификаторСтрокиОснования,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ИмяЗаявителя КАК ИмяЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ИмяПолучателя КАК ИмяПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ИмяРебенка КАК ИмяРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ИННПолучателя КАК ИННПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.КемВыданДокументУдостоверяющийЛичностьЗаявителя КАК КемВыданДокументУдостоверяющийЛичностьЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.КемВыданДокументУдостоверяющийЛичностьПолучателя КАК КемВыданДокументУдостоверяющийЛичностьПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.КодПричиныПерерасчета КАК КодПричиныПерерасчета,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.КоличествоОплаченныхДнейНетрудоспособностиИнвалида КАК КоличествоОплаченныхДнейНетрудоспособностиИнвалида,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Комментарий КАК Комментарий,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.МРОТ КАК МРОТ,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НаименованиеБанка КАК НаименованиеБанка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НаименованиеОрганизации КАК НаименованиеОрганизации,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НаименованиеТерриториальногоОрганаФСС КАК НаименованиеТерриториальногоОрганаФСС,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НаличиеОдногоИзДокументовНаПредыдущихДетей КАК НаличиеОдногоИзДокументовНаПредыдущихДетей,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НаличиеСвидетельстваОСмертиПредыдущихДетей КАК НаличиеСвидетельстваОСмертиПредыдущихДетей,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НеоплачиваемыйПериодДатаНачала КАК НеоплачиваемыйПериодДатаНачала,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НеоплачиваемыйПериодДатаОкончания КАК НеоплачиваемыйПериодДатаОкончания,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерДоговораОПередачеРебенкаВПриемнуюСемью КАК НомерДоговораОПередачеРебенкаВПриемнуюСемью,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерДокументаНаПроживание КАК НомерДокументаНаПроживание,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерДокументаУдостоверяющегоЛичностьЗаявителя КАК НомерДокументаУдостоверяющегоЛичностьЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерДокументаУдостоверяющегоЛичностьПолучателя КАК НомерДокументаУдостоверяющегоЛичностьПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерЗаявленияОЗамененРасчетныхГодов КАК НомерЗаявленияОЗамененРасчетныхГодов,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерИногоДокументаПодтверждающегоРождение КАК НомерИногоДокументаПодтверждающегоРождение,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.КартаМИР КАК КартаМИР,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерЛисткаНетрудоспособности КАК НомерЛисткаНетрудоспособности,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерЛицевогоСчета КАК НомерЛицевогоСчета,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерПриказаОЗаменеПослеродовогоОтпуска КАК НомерПриказаОЗаменеПослеродовогоОтпуска,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерПриказаОПредоставленииОтпускаПоУходуЗаРебенком КАК НомерПриказаОПредоставленииОтпускаПоУходуЗаРебенком,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерРешенияОбОпеке КАК НомерРешенияОбОпеке,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерРешенияОбУсыновлении КАК НомерРешенияОбУсыновлении,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерСвидетельстваОРождении КАК НомерСвидетельстваОРождении,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерСправкиОНеполученииПособияОтМатери КАК НомерСправкиОНеполученииПособияОтМатери,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерСправкиОНеполученииПособияОтОтца КАК НомерСправкиОНеполученииПособияОтОтца,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерСправкиОНеполученииПособияПоДругимМестамРаботы КАК НомерСправкиОНеполученииПособияПоДругимМестамРаботы,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерСправкиОПостановкеНаУчетВРанниеСрокиБеременности КАК НомерСправкиОПостановкеНаУчетВРанниеСрокиБеременности,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.НомерСправкиОРожденииРебенка КАК НомерСправкиОРожденииРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Организация КАК Организация,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ОснованиеПодписиПредставителяСФР КАК ОснованиеПодписиПредставителяСФР,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Ответственный КАК Ответственный,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ОтношениеКОсобойЗоне КАК ОтношениеКОсобойЗоне,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ОтчествоЗаявителя КАК ОтчествоЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ОтчествоПолучателя КАК ОтчествоПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ОтчествоРебенка КАК ОтчествоРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПервыйЗамененныйГод КАК ПервыйЗамененныйГод,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПервыйРасчетныйГод КАК ПервыйРасчетныйГод,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Перерасчет КАК Перерасчет,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПериодПростоя1ДатаНачала КАК ПериодПростоя1ДатаНачала,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПериодПростоя1ДатаОкончания КАК ПериодПростоя1ДатаОкончания,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПериодПростоя1СреднийЗаработок КАК ПериодПростоя1СреднийЗаработок,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПериодПростоя2ДатаНачала КАК ПериодПростоя2ДатаНачала,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПериодПростоя2ДатаОкончания КАК ПериодПростоя2ДатаОкончания,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПериодПростоя2СреднийЗаработок КАК ПериодПростоя2СреднийЗаработок,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПолучательНеЯвляетсяЗаявителем КАК ПолучательНеЯвляетсяЗаявителем,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПорядокРасчетаСреднегоЗаработка КАК ПорядокРасчетаСреднегоЗаработка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.РайонныйКоэффициент КАК РайонныйКоэффициент,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СерияДокументаНаПроживание КАК СерияДокументаНаПроживание,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СерияДокументаУдостоверяющегоЛичностьЗаявителя КАК СерияДокументаУдостоверяющегоЛичностьЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СерияДокументаУдостоверяющегоЛичностьПолучателя КАК СерияДокументаУдостоверяющегоЛичностьПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СерияСвидетельстваОРождении КАК СерияСвидетельстваОРождении,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СНИЛСПолучателя КАК СНИЛСПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.Сотрудник КАК Сотрудник,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СпособВыплатыПособия КАК СпособВыплатыПособия,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СправкаОНеполученииПособия КАК СправкаОНеполученииПособия,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СреднийЗаработокЗаРасчетныйПериод КАК СреднийЗаработокЗаРасчетныйПериод,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СтатусНалогоплательщикаПолучателя КАК СтатусНалогоплательщикаПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.СчитатьПоПравилам2010Года КАК СчитатьПоПравилам2010Года,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ТелефонПолучателя КАК ТелефонПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ТелефонУполномоченногоПредставителя КАК ТелефонУполномоченногоПредставителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ТипЗанятостиРаботника КАК ТипЗанятостиРаботника,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ПредставительСФР КАК ПредставительСФР,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ФамилияЗаявителя КАК ФамилияЗаявителя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ФамилияПолучателя КАК ФамилияПолучателя,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ФамилияРебенка КАК ФамилияРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ФизическоеЛицо КАК ФизическоеЛицо,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ФинансированиеФедеральнымБюджетом КАК ФинансированиеФедеральнымБюджетом,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ФормаСправкиОРожденииРебенка КАК ФормаСправкиОРожденииРебенка,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ЧислоКалендарныхДнейРасчетногоПериода КАК ЧислоКалендарныхДнейРасчетногоПериода,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.МоментВремени КАК МоментВремени,
+	ВЫБОР
+		КОГДА НаличиеФайлов.ЕстьФайлы ЕСТЬ NULL
+			ТОГДА 0
+		КОГДА НаличиеФайлов.ЕстьФайлы
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЕстьФайлы,
+	ДокументЗаявлениеСотрудникаНаВыплатуПособия.ИзмененыСведенияОЗастрахованномЛице КАК ИзмененыСведенияОЗастрахованномЛице
+ИЗ
+	Документ.ЗаявлениеСотрудникаНаВыплатуПособия КАК ДокументЗаявлениеСотрудникаНаВыплатуПособия
+		{ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НаличиеФайлов КАК НаличиеФайлов
+		ПО ДокументЗаявлениеСотрудникаНаВыплатуПособия.Ссылка = НаличиеФайлов.ОбъектСФайлами}</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаработокВключаяПремию</dcssch:dataPath>
+					<dcssch:field>ЗаработокВключаяПремию</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДокументаНаПроживание</dcssch:dataPath>
+					<dcssch:field>ВидДокументаНаПроживание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СреднийЗаработокЗаРасчетныйПериод</dcssch:dataPath>
+					<dcssch:field>СреднийЗаработокЗаРасчетныйПериод</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресПолучателяРегистрацииИдентификаторФИАС</dcssch:dataPath>
+					<dcssch:field>АдресПолучателяРегистрацииИдентификаторФИАС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресПолучателяРегистрацииКодКЛАДР</dcssch:dataPath>
+					<dcssch:field>АдресПолучателяРегистрацииКодКЛАДР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоррСчетБанка</dcssch:dataPath>
+					<dcssch:field>КоррСчетБанка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СреднийДневнойЗаработок</dcssch:dataPath>
+					<dcssch:field>СреднийДневнойЗаработок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресПолучателяФактическийИдентификаторФИАС</dcssch:dataPath>
+					<dcssch:field>АдресПолучателяФактическийИдентификаторФИАС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИтогоСуммаВыплат</dcssch:dataPath>
+					<dcssch:field>ИтогоСуммаВыплат</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидАдресаПочтовогоПеревода</dcssch:dataPath>
+					<dcssch:field>ВидАдресаПочтовогоПеревода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПриказаОПредоставленииОтпускаПоУходуЗаРебенком</dcssch:dataPath>
+					<dcssch:field>ДатаПриказаОПредоставленииОтпускаПоУходуЗаРебенком</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресПолучателяФактическийКодКЛАДР</dcssch:dataPath>
+					<dcssch:field>АдресПолучателяФактическийКодКЛАДР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьНеоплачиваемыйПериод2ДатаОкончания</dcssch:dataPath>
+					<dcssch:field>УдалитьНеоплачиваемыйПериод2ДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИтогоКалендарныхДней</dcssch:dataPath>
+					<dcssch:field>ИтогоКалендарныхДней</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныйКодФСС</dcssch:dataPath>
+					<dcssch:field>ДополнительныйКодФСС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИнаяИнформация</dcssch:dataPath>
+					<dcssch:field>ИнаяИнформация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресЭлектроннойПочтыСтрахователя</dcssch:dataPath>
+					<dcssch:field>АдресЭлектроннойПочтыСтрахователя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГоловнаяОрганизация</dcssch:dataPath>
+					<dcssch:field>ГоловнаяОрганизация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИзвещениеИзФССДата</dcssch:dataPath>
+					<dcssch:field>ИзвещениеИзФССДата</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаВыдачиДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:dataPath>
+					<dcssch:field>ДатаВыдачиДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодПодчиненностиФСС</dcssch:dataPath>
+					<dcssch:field>КодПодчиненностиФСС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РегистрационныйНомерФСС</dcssch:dataPath>
+					<dcssch:field>РегистрационныйНомерФСС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИзвещениеИзФССНомер</dcssch:dataPath>
+					<dcssch:field>ИзвещениеИзФССНомер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИНН</dcssch:dataPath>
+					<dcssch:field>ИНН</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИсправленныйДокумент</dcssch:dataPath>
+					<dcssch:field>ИсправленныйДокумент</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемВыданДокументНаПроживание</dcssch:dataPath>
+					<dcssch:field>КемВыданДокументНаПроживание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоДнейОтпуска</dcssch:dataPath>
+					<dcssch:field>КоличествоДнейОтпуска</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОписаниеПричиныПерерасчета</dcssch:dataPath>
+					<dcssch:field>ОписаниеПричиныПерерасчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СНИЛСРебенка</dcssch:dataPath>
+					<dcssch:field>СНИЛСРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПремияВсего</dcssch:dataPath>
+					<dcssch:field>ПремияВсего</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Банк</dcssch:dataPath>
+					<dcssch:field>Банк</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СуммаКВыплатеЗаОтпуск</dcssch:dataPath>
+					<dcssch:field>СуммаКВыплатеЗаОтпуск</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьНеоплачиваемыйПериод1ДатаОкончания</dcssch:dataPath>
+					<dcssch:field>УдалитьНеоплачиваемыйПериод1ДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФиксацияИзменений</dcssch:dataPath>
+					<dcssch:field>ФиксацияИзменений</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КартаМИР</dcssch:dataPath>
+					<dcssch:field>КартаМИР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьНеполноеРабочееВремя</dcssch:dataPath>
+					<dcssch:field>УдалитьНеполноеРабочееВремя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КонтактнаяИнформация</dcssch:dataPath>
+					<dcssch:field>КонтактнаяИнформация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьНомерКартыМИР</dcssch:dataPath>
+					<dcssch:field>УдалитьНомерКартыМИР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УдалитьФИОУполномоченного</dcssch:dataPath>
+					<dcssch:field>УдалитьФИОУполномоченного</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеТерриториальногоОрганаФСС</dcssch:dataPath>
+					<dcssch:field>НаименованиеТерриториальногоОрганаФСС</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныеРеквизиты</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСправкиОНеполученииПособияОтОтца</dcssch:dataPath>
+					<dcssch:field>ДатаСправкиОНеполученииПособияОтОтца</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Номер</dcssch:dataPath>
+					<dcssch:field>Номер</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СреднийЗаработок</dcssch:dataPath>
+					<dcssch:field>СреднийЗаработок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресПолучателяРегистрации</dcssch:dataPath>
+					<dcssch:field>АдресПолучателяРегистрации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВторойРасчетныйГод</dcssch:dataPath>
+					<dcssch:field>ВторойРасчетныйГод</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Проведен</dcssch:dataPath>
+					<dcssch:field>Проведен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресПолучателяФактический</dcssch:dataPath>
+					<dcssch:field>АдресПолучателяФактический</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаДействияДокументаУдостоверяющегоЛичностьПолучателя</dcssch:dataPath>
+					<dcssch:field>ДатаДействияДокументаУдостоверяющегоЛичностьПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>БИКБанка</dcssch:dataPath>
+					<dcssch:field>БИКБанка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВерсияДокумента</dcssch:dataPath>
+					<dcssch:field>ВерсияДокумента</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВторойЗамененныйГод</dcssch:dataPath>
+					<dcssch:field>ВторойЗамененныйГод</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидПособия</dcssch:dataPath>
+					<dcssch:field>ВидПособия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерИногоДокументаПодтверждающегоРождение</dcssch:dataPath>
+					<dcssch:field>НомерИногоДокументаПодтверждающегоРождение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЗаявленияОЗаменеРасчетныхГодов</dcssch:dataPath>
+					<dcssch:field>ДатаЗаявленияОЗаменеРасчетныхГодов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:dataPath>
+					<dcssch:field>ВидДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СНИЛСПолучателя</dcssch:dataPath>
+					<dcssch:field>СНИЛСПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидОсобойЗоныПроживанияРаботы</dcssch:dataPath>
+					<dcssch:field>ВидОсобойЗоныПроживанияРаботы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидДокументаУдостоверяющегоЛичностьПолучателя</dcssch:dataPath>
+					<dcssch:field>ВидДокументаУдостоверяющегоЛичностьПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачалаОтпускаПоУходуЗаРебенком</dcssch:dataPath>
+					<dcssch:field>ДатаНачалаОтпускаПоУходуЗаРебенком</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидРеестра</dcssch:dataPath>
+					<dcssch:field>ВидРеестра</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Гражданство</dcssch:dataPath>
+					<dcssch:field>Гражданство</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаВыдачиДокументаНаПроживание</dcssch:dataPath>
+					<dcssch:field>ДатаВыдачиДокументаНаПроживание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаВыдачиДокументаУдостоверяющегоЛичностьПолучателя</dcssch:dataPath>
+					<dcssch:field>ДатаВыдачиДокументаУдостоверяющегоЛичностьПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаДоговораОПередачеРебенкаВПриемнуюСемью</dcssch:dataPath>
+					<dcssch:field>ДатаДоговораОПередачеРебенкаВПриемнуюСемью</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаИногоДокументаПодтверждающегоРождение</dcssch:dataPath>
+					<dcssch:field>ДатаИногоДокументаПодтверждающегоРождение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФамилияЗаявителя</dcssch:dataPath>
+					<dcssch:field>ФамилияЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЛисткаНетрудоспособности</dcssch:dataPath>
+					<dcssch:field>ДатаЛисткаНетрудоспособности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачалаРасчетногоПериода</dcssch:dataPath>
+					<dcssch:field>ДатаНачалаРасчетногоПериода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачалаТрудовогоДоговораПолучателя</dcssch:dataPath>
+					<dcssch:field>ДатаНачалаТрудовогоДоговораПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОкончанияОтпускаПоУходуЗаРебенком</dcssch:dataPath>
+					<dcssch:field>ДатаОкончанияОтпускаПоУходуЗаРебенком</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОкончанияРасчетногоПериода</dcssch:dataPath>
+					<dcssch:field>ДатаОкончанияРасчетногоПериода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСправкиОРожденииРебенка</dcssch:dataPath>
+					<dcssch:field>НомерСправкиОРожденииРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаОкончанияТрудовогоДоговораПолучателя</dcssch:dataPath>
+					<dcssch:field>ДатаОкончанияТрудовогоДоговораПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПредставленияПакетаДокументов</dcssch:dataPath>
+					<dcssch:field>ДатаПредставленияПакетаДокументов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПриказаОЗаменеПослеродовогоОтпуска</dcssch:dataPath>
+					<dcssch:field>ДатаПриказаОЗаменеПослеродовогоОтпуска</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСправкиОРожденииРебенка</dcssch:dataPath>
+					<dcssch:field>ДатаСправкиОРожденииРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаРешенияОбОпеке</dcssch:dataPath>
+					<dcssch:field>ДатаРешенияОбОпеке</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяЗаявителя</dcssch:dataPath>
+					<dcssch:field>ИмяЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаРешенияОбУсыновлении</dcssch:dataPath>
+					<dcssch:field>ДатаРешенияОбУсыновлении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаРожденияПолучателя</dcssch:dataPath>
+					<dcssch:field>ДатаРожденияПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаРожденияРебенка</dcssch:dataPath>
+					<dcssch:field>ДатаРожденияРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСправкиОПостановкеНаУчетВРанниеСрокиБеременности</dcssch:dataPath>
+					<dcssch:field>НомерСправкиОПостановкеНаУчетВРанниеСрокиБеременности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСвидетельстваОРождении</dcssch:dataPath>
+					<dcssch:field>ДатаСвидетельстваОРождении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСправкиОНеполученииПособияОтМатери</dcssch:dataPath>
+					<dcssch:field>ДатаСправкиОНеполученииПособияОтМатери</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСправкиОНеполученииПособияПоДругимМестамРаботы</dcssch:dataPath>
+					<dcssch:field>ДатаСправкиОНеполученииПособияПоДругимМестамРаботы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСправкиОПостановкеНаУчетВРанниеСрокиБеременности</dcssch:dataPath>
+					<dcssch:field>ДатаСправкиОПостановкеНаУчетВРанниеСрокиБеременности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументОснование</dcssch:dataPath>
+					<dcssch:field>ДокументОснование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДолжностнойОклад</dcssch:dataPath>
+					<dcssch:field>ДолжностнойОклад</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДолжностьПредставителяСФР</dcssch:dataPath>
+					<dcssch:field>ДолжностьПредставителяСФР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДоляВремени</dcssch:dataPath>
+					<dcssch:field>ДоляВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗамененыКалендарныеГодыРасчетаСреднегоЗаработка</dcssch:dataPath>
+					<dcssch:field>ЗамененыКалендарныеГодыРасчетаСреднегоЗаработка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЧислоКалендарныхДнейРасчетногоПериода</dcssch:dataPath>
+					<dcssch:field>ЧислоКалендарныхДнейРасчетногоПериода</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаработокВторойГодРасчета</dcssch:dataPath>
+					<dcssch:field>ЗаработокВторойГодРасчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЗаработокПервыйГодРасчета</dcssch:dataPath>
+					<dcssch:field>ЗаработокПервыйГодРасчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторСтрокиОснования</dcssch:dataPath>
+					<dcssch:field>ИдентификаторСтрокиОснования</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПолучателя</dcssch:dataPath>
+					<dcssch:field>ИмяПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяРебенка</dcssch:dataPath>
+					<dcssch:field>ИмяРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИННПолучателя</dcssch:dataPath>
+					<dcssch:field>ИННПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемВыданДокументУдостоверяющийЛичностьЗаявителя</dcssch:dataPath>
+					<dcssch:field>КемВыданДокументУдостоверяющийЛичностьЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КемВыданДокументУдостоверяющийЛичностьПолучателя</dcssch:dataPath>
+					<dcssch:field>КемВыданДокументУдостоверяющийЛичностьПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КодПричиныПерерасчета</dcssch:dataPath>
+					<dcssch:field>КодПричиныПерерасчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоОплаченныхДнейНетрудоспособностиИнвалида</dcssch:dataPath>
+					<dcssch:field>КоличествоОплаченныхДнейНетрудоспособностиИнвалида</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МРОТ</dcssch:dataPath>
+					<dcssch:field>МРОТ</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеБанка</dcssch:dataPath>
+					<dcssch:field>НаименованиеБанка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеОрганизации</dcssch:dataPath>
+					<dcssch:field>НаименованиеОрганизации</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаличиеОдногоИзДокументовНаПредыдущихДетей</dcssch:dataPath>
+					<dcssch:field>НаличиеОдногоИзДокументовНаПредыдущихДетей</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаличиеСвидетельстваОСмертиПредыдущихДетей</dcssch:dataPath>
+					<dcssch:field>НаличиеСвидетельстваОСмертиПредыдущихДетей</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеоплачиваемыйПериодДатаНачала</dcssch:dataPath>
+					<dcssch:field>НеоплачиваемыйПериодДатаНачала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеоплачиваемыйПериодДатаОкончания</dcssch:dataPath>
+					<dcssch:field>НеоплачиваемыйПериодДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерДоговораОПередачеРебенкаВПриемнуюСемью</dcssch:dataPath>
+					<dcssch:field>НомерДоговораОПередачеРебенкаВПриемнуюСемью</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерДокументаНаПроживание</dcssch:dataPath>
+					<dcssch:field>НомерДокументаНаПроживание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:dataPath>
+					<dcssch:field>НомерДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерДокументаУдостоверяющегоЛичностьПолучателя</dcssch:dataPath>
+					<dcssch:field>НомерДокументаУдостоверяющегоЛичностьПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерЗаявленияОЗамененРасчетныхГодов</dcssch:dataPath>
+					<dcssch:field>НомерЗаявленияОЗамененРасчетныхГодов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерЛисткаНетрудоспособности</dcssch:dataPath>
+					<dcssch:field>НомерЛисткаНетрудоспособности</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерЛицевогоСчета</dcssch:dataPath>
+					<dcssch:field>НомерЛицевогоСчета</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерПриказаОПредоставленииОтпускаПоУходуЗаРебенком</dcssch:dataPath>
+					<dcssch:field>НомерПриказаОПредоставленииОтпускаПоУходуЗаРебенком</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерПриказаОЗаменеПослеродовогоОтпуска</dcssch:dataPath>
+					<dcssch:field>НомерПриказаОЗаменеПослеродовогоОтпуска</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерРешенияОбОпеке</dcssch:dataPath>
+					<dcssch:field>НомерРешенияОбОпеке</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерРешенияОбУсыновлении</dcssch:dataPath>
+					<dcssch:field>НомерРешенияОбУсыновлении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСвидетельстваОРождении</dcssch:dataPath>
+					<dcssch:field>НомерСвидетельстваОРождении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСправкиОНеполученииПособияОтМатери</dcssch:dataPath>
+					<dcssch:field>НомерСправкиОНеполученииПособияОтМатери</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСправкиОНеполученииПособияОтОтца</dcssch:dataPath>
+					<dcssch:field>НомерСправкиОНеполученииПособияОтОтца</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НомерСправкиОНеполученииПособияПоДругимМестамРаботы</dcssch:dataPath>
+					<dcssch:field>НомерСправкиОНеполученииПособияПоДругимМестамРаботы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Организация</dcssch:dataPath>
+					<dcssch:field>Организация</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОснованиеПодписиПредставителяСФР</dcssch:dataPath>
+					<dcssch:field>ОснованиеПодписиПредставителяСФР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ответственный</dcssch:dataPath>
+					<dcssch:field>Ответственный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФормаСправкиОРожденииРебенка</dcssch:dataPath>
+					<dcssch:field>ФормаСправкиОРожденииРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтношениеКОсобойЗоне</dcssch:dataPath>
+					<dcssch:field>ОтношениеКОсобойЗоне</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтчествоЗаявителя</dcssch:dataPath>
+					<dcssch:field>ОтчествоЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтчествоПолучателя</dcssch:dataPath>
+					<dcssch:field>ОтчествоПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодПростоя2ДатаОкончания</dcssch:dataPath>
+					<dcssch:field>ПериодПростоя2ДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтчествоРебенка</dcssch:dataPath>
+					<dcssch:field>ОтчествоРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПервыйЗамененныйГод</dcssch:dataPath>
+					<dcssch:field>ПервыйЗамененныйГод</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПервыйРасчетныйГод</dcssch:dataPath>
+					<dcssch:field>ПервыйРасчетныйГод</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Перерасчет</dcssch:dataPath>
+					<dcssch:field>Перерасчет</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодПростоя1ДатаНачала</dcssch:dataPath>
+					<dcssch:field>ПериодПростоя1ДатаНачала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодПростоя1ДатаОкончания</dcssch:dataPath>
+					<dcssch:field>ПериодПростоя1ДатаОкончания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодПростоя1СреднийЗаработок</dcssch:dataPath>
+					<dcssch:field>ПериодПростоя1СреднийЗаработок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИзмененыСведенияОЗастрахованномЛице</dcssch:dataPath>
+					<dcssch:field>ИзмененыСведенияОЗастрахованномЛице</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СпособВыплатыПособия</dcssch:dataPath>
+					<dcssch:field>СпособВыплатыПособия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодПростоя2ДатаНачала</dcssch:dataPath>
+					<dcssch:field>ПериодПростоя2ДатаНачала</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПериодПростоя2СреднийЗаработок</dcssch:dataPath>
+					<dcssch:field>ПериодПростоя2СреднийЗаработок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПолучательНеЯвляетсяЗаявителем</dcssch:dataPath>
+					<dcssch:field>ПолучательНеЯвляетсяЗаявителем</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПорядокРасчетаСреднегоЗаработка</dcssch:dataPath>
+					<dcssch:field>ПорядокРасчетаСреднегоЗаработка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РайонныйКоэффициент</dcssch:dataPath>
+					<dcssch:field>РайонныйКоэффициент</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерияДокументаНаПроживание</dcssch:dataPath>
+					<dcssch:field>СерияДокументаНаПроживание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерияДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:dataPath>
+					<dcssch:field>СерияДокументаУдостоверяющегоЛичностьЗаявителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерияДокументаУдостоверяющегоЛичностьПолучателя</dcssch:dataPath>
+					<dcssch:field>СерияДокументаУдостоверяющегоЛичностьПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СерияСвидетельстваОРождении</dcssch:dataPath>
+					<dcssch:field>СерияСвидетельстваОРождении</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Сотрудник</dcssch:dataPath>
+					<dcssch:field>Сотрудник</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СправкаОНеполученииПособия</dcssch:dataPath>
+					<dcssch:field>СправкаОНеполученииПособия</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтатусНалогоплательщикаПолучателя</dcssch:dataPath>
+					<dcssch:field>СтатусНалогоплательщикаПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СчитатьПоПравилам2010Года</dcssch:dataPath>
+					<dcssch:field>СчитатьПоПравилам2010Года</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТелефонПолучателя</dcssch:dataPath>
+					<dcssch:field>ТелефонПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТелефонУполномоченногоПредставителя</dcssch:dataPath>
+					<dcssch:field>ТелефонУполномоченногоПредставителя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипЗанятостиРаботника</dcssch:dataPath>
+					<dcssch:field>ТипЗанятостиРаботника</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПредставительСФР</dcssch:dataPath>
+					<dcssch:field>ПредставительСФР</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФамилияПолучателя</dcssch:dataPath>
+					<dcssch:field>ФамилияПолучателя</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФизическоеЛицо</dcssch:dataPath>
+					<dcssch:field>ФизическоеЛицо</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФамилияРебенка</dcssch:dataPath>
+					<dcssch:field>ФамилияРебенка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФинансированиеФедеральнымБюджетом</dcssch:dataPath>
+					<dcssch:field>ФинансированиеФедеральнымБюджетом</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МоментВремени</dcssch:dataPath>
+					<dcssch:field>МоментВремени</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЕстьФайлы</dcssch:dataPath>
+					<dcssch:field>ЕстьФайлы</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть файлы</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>Document.ЗаявлениеСотрудникаНаВыплатуПособия</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыПодключаемыхКоманд" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры подключаемых команд</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОтслеживатьПометкуУдаления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отслеживать пометку удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="МножественныйВыбор">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:2baf6d7a-12ed-4f22-ad96-92bb31b747ff</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

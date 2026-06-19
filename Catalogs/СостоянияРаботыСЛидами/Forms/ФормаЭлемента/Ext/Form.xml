@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveWindowSettings>false</SaveWindowSettings>
+	<CommandBarLocation>None</CommandBarLocation>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ШапкаЛевая" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка левая</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаЛеваяРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияНаименование" id="19">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияНаименованиеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ДекорацияНаименованиеРасширеннаяПодсказка" id="21"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияЦвет" id="22">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цвет:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияЦветКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДекорацияЦветРасширеннаяПодсказка" id="24"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияУсловиеИзменения" id="25">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условие изменения:</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияУсловиеИзмененияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДекорацияУсловиеИзмененияРасширеннаяПодсказка" id="27"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ШапкаПравая" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка правая</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаПраваяРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="Наименование" id="1">
+							<DataPath>Объект.Description</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<CommandBar name="КоманднаяПанельЦвета" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Цвета</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КоманднаяПанельЦветаРасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<ButtonGroup name="ГруппаЦвета" id="32">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цвета</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>Compact</Representation>
+									<ExtendedTooltip name="ГруппаЦветаРасширеннаяПодсказка" id="33"/>
+									<ChildItems>
+										<Button name="ЦветСерый" id="48">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветСерый</CommandName>
+											<ExtendedTooltip name="ЦветСерыйРасширеннаяПодсказка" id="49"/>
+										</Button>
+										<Button name="ЦветЗеленый" id="38">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветЗеленый</CommandName>
+											<ExtendedTooltip name="ЦветЗеленыйРасширеннаяПодсказка" id="39"/>
+										</Button>
+										<Button name="ЦветЖелтый" id="36">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветЖелтый</CommandName>
+											<ExtendedTooltip name="ЦветЖелтыйРасширеннаяПодсказка" id="37"/>
+										</Button>
+										<Button name="ЦветОранжевый" id="44">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветОранжевый</CommandName>
+											<ExtendedTooltip name="ЦветОранжевыйРасширеннаяПодсказка" id="45"/>
+										</Button>
+										<Button name="ЦветКрасный" id="40">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветКрасный</CommandName>
+											<ExtendedTooltip name="ЦветКрасныйРасширеннаяПодсказка" id="41"/>
+										</Button>
+										<Button name="ЦветФиолетовый" id="52">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветФиолетовый</CommandName>
+											<ExtendedTooltip name="ЦветФиолетовыйРасширеннаяПодсказка" id="53"/>
+										</Button>
+										<Button name="ЦветСиний" id="50">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветСиний</CommandName>
+											<ExtendedTooltip name="ЦветСинийРасширеннаяПодсказка" id="51"/>
+										</Button>
+										<Button name="ЦветЛаймовый" id="42">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветЛаймовый</CommandName>
+											<ExtendedTooltip name="ЦветЛаймовыйРасширеннаяПодсказка" id="43"/>
+										</Button>
+										<Button name="ЦветРозовый" id="46">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветРозовый</CommandName>
+											<ExtendedTooltip name="ЦветРозовыйРасширеннаяПодсказка" id="47"/>
+										</Button>
+										<Button name="ЦветГолубой" id="34">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ЦветГолубой</CommandName>
+											<ExtendedTooltip name="ЦветГолубойРасширеннаяПодсказка" id="35"/>
+										</Button>
+									</ChildItems>
+								</ButtonGroup>
+							</ChildItems>
+						</CommandBar>
+						<InputField name="УсловиеИзменения" id="4">
+							<DataPath>Объект.УсловиеИзменения</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УсловиеИзмененияКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="УсловиеИзмененияРасширеннаяПодсказка" id="6"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодвал" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<CommandBar name="ГруппаКоманднаяПанель" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<Button name="КомандаЗаписатьИЗакрыть" id="13">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ОК</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<Button name="КомандаОтмена" id="15">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Close</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КомандаОтменаРасширеннаяПодсказка" id="16"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СостоянияРаботыСЛидами</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЦветГолубой" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет голубой</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаГолубая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветГолубой</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветЖелтый" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет желтый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаЖелтая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветЖелтый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветЗеленый" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет зеленый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаЗеленая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветЗеленый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветКрасный" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет красный</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаКрасная</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветКрасный</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветЛаймовый" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет лаймовый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаЛаймовая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветЛаймовый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветОранжевый" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет оранжевый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаОранжевая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветОранжевый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветРозовый" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет розовый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаРозовая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветРозовый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветСерый" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет серый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаСерая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветСерый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветСиний" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет синий</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаСиняя</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветСиний</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="ЦветФиолетовый" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цвет фиолетовый</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.МеткаФиолетовая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЦветФиолетовый</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+	</Commands>
+</Form>

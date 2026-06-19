@@ -1,0 +1,667 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>1С:Статус самозанятого</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОписаниеСервиса" id="1" DisplayImportance="Usual">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:FormTextColor</TitleTextColor>
+			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalAlign>Center</VerticalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОписаниеСервисаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<PictureDecoration name="КартинкаСервиса" id="124">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка сервиса</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.СервисСтатусСамозанятого</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="КартинкаСервисаКонтекстноеМеню" id="125"/>
+					<ExtendedTooltip name="КартинкаСервисаРасширеннаяПодсказка" id="126"/>
+				</PictureDecoration>
+				<UsualGroup name="ГруппаКраткоеОписание" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Краткое описание</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКраткоеОписаниеРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<LabelDecoration name="ОписаниеСервисаСтатусСамозанятого" id="8">
+							<Width>75</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В момент ввода нового договора, формирования платежного поручения или акта поставщика «1С:Статус самозанятого» выполнит автоматическую проверку и покажет зарегистрировано ли физическое лицо в качестве самозанятого. Благодаря автоматической проверке вы будете уверены, что контрагент применяет режим «Налог на профессиональный доход».
+</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОписаниеСервисаСтатусСамозанятогоКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ОписаниеСервисаСтатусСамозанятогоРасширеннаяПодсказка" id="10"/>
+						</LabelDecoration>
+						<LabelDecoration name="СсылкаНаПодробноеОписание" id="13">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подробнее о сервисе и доступных тарифах на &lt;link СсылкаНаПодробноеОписание&gt;Портале 1С&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="СсылкаНаПодробноеОписаниеКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СсылкаНаПодробноеОписаниеРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="URLProcessing">СсылкаНаПодробноеОписаниеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПроверятьСтатусыСамозанятыхАвтоматически" id="121">
+			<DataPath>ПроверятьСтатусыСамозанятыхАвтоматически</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ПроверятьСтатусыСамозанятыхАвтоматическиКонтекстноеМеню" id="122"/>
+			<ExtendedTooltip name="ПроверятьСтатусыСамозанятыхАвтоматическиРасширеннаяПодсказка" id="123"/>
+			<Events>
+				<Event name="OnChange">ПроверятьСтатусыСамозанятыхАвтоматическиПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаДанныеСервиса" id="165">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДанныеСервисаРасширеннаяПодсказка" id="166"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУсловияИспользования" id="3">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Условия использования</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:FormTextColor</TitleTextColor>
+					<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ExtendedTooltip name="ГруппаУсловияИспользованияРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОписаниеУсловий" id="160">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание условий</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОписаниеУсловийРасширеннаяПодсказка" id="161"/>
+							<ChildItems>
+								<LabelField name="ОписаниеПромоТарифа" id="25">
+									<DataPath>ОписаниеПромоТарифа</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ОписаниеПромоТарифаКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ОписаниеПромоТарифаРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+								<LabelField name="ОписаниеСпособаПриобретения" id="162">
+									<DataPath>ОписаниеСпособаПриобретения</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ОписаниеСпособаПриобретенияКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ОписаниеСпособаПриобретенияРасширеннаяПодсказка" id="164"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОбслуживающаяОрганизация" id="34">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обслуживающая организация</v8:content>
+								</v8:item>
+							</Title>
+							<TitleTextColor>style:FormTextColor</TitleTextColor>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбслуживающаяОрганизацияРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<LabelField name="ОбслуживающаяОрганизацияНаименование" id="36">
+									<DataPath>ОбслуживающаяОрганизацияНаименование</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="style:NormalTextFont" bold="true" kind="StyleItem"/>
+									<ContextMenu name="ОбслуживающаяОрганизацияНаименованиеКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="ОбслуживающаяОрганизацияНаименованиеРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+								<UsualGroup name="ГруппаОбслуживающаяОрганизацияТелефон" id="63">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Телефон</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбслуживающаяОрганизацияТелефонРасширеннаяПодсказка" id="64"/>
+									<ChildItems>
+										<PictureDecoration name="ОбслуживающаяОрганизацияТелефонКартинка" id="67">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ТелефонныйЗвонок</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ОбслуживающаяОрганизацияТелефонКартинкаКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="ОбслуживающаяОрганизацияТелефонКартинкаРасширеннаяПодсказка" id="69"/>
+										</PictureDecoration>
+										<LabelField name="ОбслуживающаяОрганизацияТелефон" id="39">
+											<DataPath>ОбслуживающаяОрганизацияТелефон</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ОбслуживающаяОрганизацияТелефонКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ОбслуживающаяОрганизацияТелефонРасширеннаяПодсказка" id="41"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОбслуживающаяОрганизацияПочта" id="65">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Почта</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОбслуживающаяОрганизацияПочтаРасширеннаяПодсказка" id="66"/>
+									<ChildItems>
+										<PictureDecoration name="ОбслуживающаяОрганизацияПочтаКартинка" id="70">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Почта (картинка)</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ЭлектроннаяПочта</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ОбслуживающаяОрганизацияПочтаКартинкаКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="ОбслуживающаяОрганизацияПочтаКартинкаРасширеннаяПодсказка" id="72"/>
+										</PictureDecoration>
+										<LabelField name="ОбслуживающаяОрганизацияПочта" id="42">
+											<DataPath>ОбслуживающаяОрганизацияПочта</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ОбслуживающаяОрганизацияПочтаКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ОбслуживающаяОрганизацияПочтаРасширеннаяПодсказка" id="44"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<LabelField name="ОписаниеОстаткаОпций" id="167">
+					<DataPath>ОписаниеОстаткаОпций</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Font ref="style:LargeTextFont" kind="StyleItem"/>
+					<ContextMenu name="ОписаниеОстаткаОпцийКонтекстноеМеню" id="168"/>
+					<ExtendedTooltip name="ОписаниеОстаткаОпцийРасширеннаяПодсказка" id="169"/>
+				</LabelField>
+				<UsualGroup name="ГруппаСписокОпций" id="140">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остатки опций</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:FormTextColor</TitleTextColor>
+					<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокОпцийРасширеннаяПодсказка" id="141"/>
+					<ChildItems>
+						<LabelDecoration name="ОписаниеОпции0" id="142">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеОпции0КонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ОписаниеОпции0РасширеннаяПодсказка" id="144"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОписаниеОпции1" id="145">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеОпции1КонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ОписаниеОпции1РасширеннаяПодсказка" id="147"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОписаниеОпции2" id="148">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеОпции2КонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ОписаниеОпции2РасширеннаяПодсказка" id="150"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОписаниеОпции3" id="151">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеОпции3КонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="ОписаниеОпции3РасширеннаяПодсказка" id="153"/>
+						</LabelDecoration>
+						<LabelDecoration name="ОписаниеОпции4" id="154">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ОписаниеОпции4КонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="ОписаниеОпции4РасширеннаяПодсказка" id="156"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОшибка" id="53">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОшибкаРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗаголовокОшибки" id="55">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заголовок ошибки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаголовокОшибкиРасширеннаяПодсказка" id="56"/>
+							<ChildItems>
+								<PictureDecoration name="ОшибкаКартинка" id="57">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ошибка (картинка)</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ИнтеграцияСтатусСамозанятогоОшибка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ОшибкаКартинкаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="ОшибкаКартинкаРасширеннаяПодсказка" id="59"/>
+								</PictureDecoration>
+								<LabelDecoration name="ОшибкаЗаголовок" id="60">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>При работе с сервисом произошла ошибка</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ОшибкаЗаголовокКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ОшибкаЗаголовокРасширеннаяПодсказка" id="62"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ПредставлениеОшибки" id="45">
+							<DataPath>ПредставлениеОшибки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:ИнтеграцияСтатусСамозанятогоЦветШрифтаОшибки</TextColor>
+							<ContextMenu name="ПредставлениеОшибкиКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ПредставлениеОшибкиРасширеннаяПодсказка" id="47"/>
+						</LabelField>
+						<LabelDecoration name="ДетальнаяИнформацияОбОшибке" id="48">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Детальную информацию об ошибке можно найти в &lt;link ОткрытьЖурналРегистрации&gt;Журнале регистрации&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДетальнаяИнформацияОбОшибкеКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ДетальнаяИнформацияОбОшибкеРасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="URLProcessing">ДетальнаяИнформацияОбОшибкеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаДлительнаяОперация" id="113">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительная операция</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<VerticalAlign>Center</VerticalAlign>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДлительнаяОперацияРасширеннаяПодсказка" id="114"/>
+					<ChildItems>
+						<PictureDecoration name="ДлительнаяОперацияКартинка" id="115">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Длительная операция (картинка)</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация80</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДлительнаяОперацияКартинкаКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ДлительнаяОперацияКартинкаРасширеннаяПодсказка" id="117"/>
+						</PictureDecoration>
+						<LabelField name="ДлительнаяОперацияОписание" id="118">
+							<DataPath>ДлительнаяОперацияОписание</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ДлительнаяОперацияОписаниеКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ДлительнаяОперацияОписаниеРасширеннаяПодсказка" id="120"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанель" id="131">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="132"/>
+			<ChildItems>
+				<Button name="ПодключитьСервисИЗакрыть" id="129">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ПодключитьСервисИЗакрыть</CommandName>
+					<ExtendedTooltip name="ПодключитьСервисИЗакрытьРасширеннаяПодсказка" id="130"/>
+				</Button>
+				<Button name="Закрыть" id="133">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="134"/>
+				</Button>
+				<Button name="Обновить" id="170">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Обновить</CommandName>
+					<ShapeRepresentation>WhenActive</ShapeRepresentation>
+					<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="171"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОписаниеПромоТарифа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание промо-тарифа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбслуживающаяОрганизацияНаименование" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбслуживающаяОрганизацияТелефон" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбслуживающаяОрганизацияПочта" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Почта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеОшибки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружаетсяСписокОпций" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружается список опций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагружаютсяРеквизитыОбслуживающейОрганизации" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загружаются реквизиты обслуживающей организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительнаяОперацияОписание" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция (описание)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверятьСтатусыСамозанятыхАвтоматически" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять статусы самозанятых автоматически</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступнаЗагрузкаРеквизитовОрганизации" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступна загрузка реквизитов организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеСпособаПриобретения" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание способа приобретения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПравоНастраиватьСервис" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть право настраивать сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПравоПросмотраЖурналаРегистрации" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть право просмотра журнала регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОписаниеОстаткаОпций" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание остатка опций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодключитьСервисИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить сервис и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодключитьСервисИЗакрыть</Action>
+		</Command>
+		<Command name="Обновить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Обновить</Action>
+		</Command>
+	</Commands>
+</Form>

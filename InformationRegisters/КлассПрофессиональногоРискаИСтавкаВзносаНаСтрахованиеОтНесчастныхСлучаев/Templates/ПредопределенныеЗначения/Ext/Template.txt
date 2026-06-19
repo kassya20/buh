@@ -1,0 +1,212 @@
+﻿<Structure xmlns="http://v8.1c.ru/8.1/data/core" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Structure">
+	<Property name="Версия">
+		<Value xsi:type="xs:decimal">3</Value>
+	</Property>
+	<Property name="ОписаниеВерсии">
+		<Value xsi:type="xs:string">В соответствии с Федеральным законом от 22.12.2005 N 179-ФЗ "ФЕДЕРАЛЬНЫЙ ЗАКОН О СТРАХОВЫХ ТАРИФАХ НА ОБЯЗАТЕЛЬНОЕ СОЦИАЛЬНОЕ СТРАХОВАНИЕ ОТ НЕСЧАСТНЫХ СЛУЧАЕВ НА ПРОИЗВОДСТВЕ И ПРОФЕССИОНАЛЬНЫХ ЗАБОЛЕВАНИЙ НА 2006 ГОД"</Value>
+	</Property>
+	<Property name="ПолноеИмя">
+		<Value xsi:type="xs:string">РегистрСведений.КлассПрофессиональногоРискаИСтавкаВзносаНаСтрахованиеОтНесчастныхСлучаев</Value>
+	</Property>
+	<Property name="Данные">
+		<Value xsi:type="ValueTable">
+			<column>
+				<Name>Период</Name>
+				<ValueType>
+					<Type>xs:dateTime</Type>
+					<DateQualifiers>
+						<DateFractions>Date</DateFractions>
+					</DateQualifiers>
+				</ValueType>
+				<Title>Период</Title>
+				<Width>10</Width>
+			</column>
+			<column>
+				<Name>КлассПрофессиональногоРиска</Name>
+				<ValueType>
+					<Type>xs:decimal</Type>
+					<NumberQualifiers>
+						<Digits>2</Digits>
+						<FractionDigits>0</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</ValueType>
+				<Title>КлассПрофессиональногоРиска</Title>
+				<Width>10</Width>
+			</column>
+			<column>
+				<Name>Ставка</Name>
+				<ValueType>
+					<Type>xs:decimal</Type>
+					<NumberQualifiers>
+						<Digits>8</Digits>
+						<FractionDigits>3</FractionDigits>
+						<AllowedSign>Any</AllowedSign>
+					</NumberQualifiers>
+				</ValueType>
+				<Title>Ставка</Title>
+				<Width>10</Width>
+			</column>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">1</Value>
+				<Value xsi:type="xs:decimal">0.2</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">2</Value>
+				<Value xsi:type="xs:decimal">0.3</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">3</Value>
+				<Value xsi:type="xs:decimal">0.4</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">4</Value>
+				<Value xsi:type="xs:decimal">0.5</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">5</Value>
+				<Value xsi:type="xs:decimal">0.6</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">6</Value>
+				<Value xsi:type="xs:decimal">0.7</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">7</Value>
+				<Value xsi:type="xs:decimal">0.8</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">8</Value>
+				<Value xsi:type="xs:decimal">0.9</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">9</Value>
+				<Value xsi:type="xs:decimal">1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">10</Value>
+				<Value xsi:type="xs:decimal">1.1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">11</Value>
+				<Value xsi:type="xs:decimal">1.2</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">12</Value>
+				<Value xsi:type="xs:decimal">1.3</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">13</Value>
+				<Value xsi:type="xs:decimal">1.4</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">14</Value>
+				<Value xsi:type="xs:decimal">1.5</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">15</Value>
+				<Value xsi:type="xs:decimal">1.7</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">16</Value>
+				<Value xsi:type="xs:decimal">1.9</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">17</Value>
+				<Value xsi:type="xs:decimal">2.1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">18</Value>
+				<Value xsi:type="xs:decimal">2.3</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">19</Value>
+				<Value xsi:type="xs:decimal">2.5</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">20</Value>
+				<Value xsi:type="xs:decimal">2.8</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">21</Value>
+				<Value xsi:type="xs:decimal">3.1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">22</Value>
+				<Value xsi:type="xs:decimal">3.4</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">23</Value>
+				<Value xsi:type="xs:decimal">3.7</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">24</Value>
+				<Value xsi:type="xs:decimal">4.1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">25</Value>
+				<Value xsi:type="xs:decimal">4.5</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">26</Value>
+				<Value xsi:type="xs:decimal">5</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">27</Value>
+				<Value xsi:type="xs:decimal">5.5</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">28</Value>
+				<Value xsi:type="xs:decimal">6.1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">29</Value>
+				<Value xsi:type="xs:decimal">6.7</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">30</Value>
+				<Value xsi:type="xs:decimal">7.4</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">31</Value>
+				<Value xsi:type="xs:decimal">8.1</Value>
+			</row>
+			<row>
+				<Value xsi:type="xs:dateTime">2006-01-01T00:00:00</Value>
+				<Value xsi:type="xs:decimal">32</Value>
+				<Value xsi:type="xs:decimal">8.5</Value>
+			</row>
+		</Value>
+	</Property>
+</Structure>

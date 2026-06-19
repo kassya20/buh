@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Page name="ГруппаНачало" id="28">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНачалоРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияОписание" id="30">
+							<Width>56</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;fontsize 12&gt;&lt;b&gt;Ведете учет НКО?&lt;/&gt;&lt;/&gt;
+
+&lt;fontsize 10&gt;Переходите на &lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;1С:Бухгалтерию некоммерческой организации&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;.&lt;/&gt;
+&lt;fontsize 10&gt;Бесплатный переход простым обновлением с сохранением всех накопленных данных!&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;b&gt;Сохранены:&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;- Все принципы учета&lt;/&gt;
+&lt;fontsize 10&gt;- Все современные сервисы&lt;/&gt;
+&lt;fontsize 10&gt;- Весь интерфейс&lt;/&gt;
+
+&lt;fontsize 10&gt;&lt;b&gt;Добавлены:&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;- Отчетность в Минюст&lt;/&gt;
+&lt;fontsize 10&gt;- Учет целевого финансирования&lt;/&gt;
+- Сметы
+- Бюджет
+&lt;fontsize 10&gt;- Отчетность донорам кассовым методом&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;- Учет затрат на компенсацию волонтерам&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;- Учет питания и образовательные услуги&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;- Заполнение бухгалтерской, налоговой и статистической отчетности НКО&lt;/&gt;
+
+&lt;fontsize 10&gt;Сравнение возможностей 1С:Бухгалтерии и 1С:Бухгалтерии НКО &lt;/&gt;&lt;fontsize 11&gt;&lt;color #202122&gt;—&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt; в статье на &lt;/&gt;&lt;link СтатьяНаBUHRU&gt;&lt;fontsize 10&gt;БУХ.1С&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="32"/>
+							<Events>
+								<Event name="URLProcessing">ДекорацияОписаниеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаУзнатьБольше" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Узнать больше</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа узнать больше</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>55</Width>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУзнатьБольшеРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<Button name="УзнатьБольше" id="35">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<DefaultItem>true</DefaultItem>
+									<CommandName>Form.Command.УзнатьБольше</CommandName>
+									<ExtendedTooltip name="УзнатьБольшеРасширеннаяПодсказка" id="36"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПереходВМенеджерСервиса" id="37">
+					<Visible>false</Visible>
+					<Width>500</Width>
+					<ExtendedTooltip name="ГруппаПереходВМенеджерСервисаРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПереходВМенеджерСервисаЗаголовок" id="39">
+							<Width>56</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;fontsize 12&gt;&lt;b&gt;Переход доступен в личном кабинете сервиса&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПереходВМенеджерСервисаЗаголовокКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ДекорацияПереходВМенеджерСервисаЗаголовокРасширеннаяПодсказка" id="41"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПереходНаКопии" id="42">
+							<Width>56</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;b&gt;Переход будет выполнен на копии, текущее приложение останется неизменным&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПереходНаКопииКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ДекорацияПереходНаКопииРасширеннаяПодсказка" id="44"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаИнструкция" id="45">
+							<Group>Vertical</Group>
+							<VerticalSpacing>None</VerticalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнструкцияРасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияПереходВМенеджерСервиса1" id="47">
+									<Width>500</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1. По кнопке ниже перейдите в личный кабинет
+
+2. Двойным нажатием откройте приложение &lt;b&gt;%1&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПереходВМенеджерСервиса1КонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ДекорацияПереходВМенеджерСервиса1РасширеннаяПодсказка" id="49"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПереходВМенеджерСервиса2" id="50">
+									<Width>500</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>
+3. В карточке приложения нажмите кнопку &lt;b&gt;Перейти на новый вариант приложения:
+&lt;/&gt;
+&lt;img 0:e45c19f7-ddbc-4399-b447-195222d23a91/&gt;
+
+4. Выберите вариант приложения - &lt;b&gt;Бухгалтерия некоммерческой организации&lt;/&gt; и следуйте указаниям помощника</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияПереходВМенеджерСервиса2КонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ДекорацияПереходВМенеджерСервиса2РасширеннаяПодсказка" id="52"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="ДекорацияПочта" id="53">
+							<Width>52</Width>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>
+Есть вопрос? Напишите нам на &lt;link mailto:nko@1c.ru&gt;nko@1c.ru&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПочтаКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ДекорацияПочтаРасширеннаяПодсказка" id="55"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПерейтиВМенеджерСервиса" id="56">
+							<Width>55</Width>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПерейтиВМенеджерСервисаРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<Button name="ПерейтиВМенеджерСервиса" id="58">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПерейтиВМенеджерСервиса</CommandName>
+									<ExtendedTooltip name="ПерейтиВМенеджерСервисаРасширеннаяПодсказка" id="59"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<PictureDecoration name="КартинкаКот" id="23">
+			<Width>42</Width>
+			<Picture>
+				<xr:Ref>CommonPicture.КотВажноеСообщение</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="КартинкаКотКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КартинкаКотРасширеннаяПодсказка" id="25"/>
+		</PictureDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АдресМенеджераСервиса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес менеджера сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УзнатьБольше" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узнать больше</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узнать больше</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УзнатьБольше</Action>
+		</Command>
+		<Command name="ПерейтиВМенеджерСервиса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в личный кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в менеджер сервиса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиВМенеджерСервиса</Action>
+		</Command>
+	</Commands>
+</Form>

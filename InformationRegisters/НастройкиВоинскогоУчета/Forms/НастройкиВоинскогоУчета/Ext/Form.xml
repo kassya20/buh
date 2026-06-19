@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="9">
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="11">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки порядка ведения воинского учета</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ОписаниеРазделаРасширеннаяПодсказка" id="13"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЭлектронныйОбмен" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронный обмен с военкоматами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа электронный обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаЭлектронныйОбменРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЭлектронныйОбменЛевая" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронный обмен левая</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Width>46</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЭлектронныйОбменЛеваяРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<CheckBoxField name="НастройкиВоинскогоУчетаЗаполнятьТолькоАдресПоПрописке" id="1">
+							<DataPath>НастройкиВоинскогоУчета.ЗаполнятьТолькоАдресПоПрописке</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкиВоинскогоУчетаЗаполнятьТолькоАдресПоПропискеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НастройкиВоинскогоУчетаЗаполнятьТолькоАдресПоПропискеРасширеннаяПодсказка" id="3">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>При заполнении документов электронного обмена с военкоматами
+используются адрес по прописке, адрес места проживания и адрес
+для информирования. Если адрес места проживания и адрес для
+информирования не содержат актуальных данных, можно заполнять
+автоматически только адрес по прописке.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">НастройкиВоинскогоУчетаЗаполнятьТолькоАдресПоПропискеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЭлектронныйОбменПравая" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Электронный обмен правая</v8:content>
+						</v8:item>
+					</Title>
+					<Width>46</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЭлектронныйОбменПраваяРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<CheckBoxField name="НастройкиВоинскогоУчетаУчитыватьВнешнихСовместителей" id="4">
+							<DataPath>НастройкиВоинскогоУчета.УчитыватьВнешнихСовместителей</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкиВоинскогоУчетаУчитыватьВнешнихСовместителейКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НастройкиВоинскогоУчетаУчитыватьВнешнихСовместителейРасширеннаяПодсказка" id="6">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>При автоматическом заполнении документов электронного обмена
+с военкоматами учитываются только сотрудники по основному месту
+работы. При включенной настройке будут учитываться также внешние
+совместители.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">НастройкиВоинскогоУчетаУчитыватьВнешнихСовместителейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаФормыДокументов" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формы документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа электронный обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ExtendedTooltip name="ГруппаФормыДокументовРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаФормыДокументовЛевая" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формы документов левая</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Width>46</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФормыДокументовЛеваяРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<CheckBoxField name="НастройкиВоинскогоУчетаИспользоватьНаправлениеДляПостановкиНаВоинскийУчет2019" id="43">
+							<DataPath>НастройкиВоинскогоУчета.ИспользоватьНаправлениеДляПостановкиНаВоинскийУчет2019</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать "Направление для постановки на воинский учет"</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НастройкиВоинскогоУчетаИспользоватьНаправлениеДляПостановкиНаВоинскийУчет2019КонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="НастройкиВоинскогоУчетаИспользоватьНаправлениеДляПостановкиНаВоинскийУчет2019РасширеннаяПодсказка" id="45">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Форма направления для постановки на воинский учет, утвержденная
+Приказом Минобороны РФ, МВД РФ и Федеральной миграционной
+службы РФ от 10.09.2007 г. № 366/789/197 использовалась до 2020 г.
+Используйте данную форму, только если военкомат явно затребовал
+именно ее. С 2020 г. для постановки на воинский учет организации
+должны выдавать форму Извещения о приеме, утвержденную
+Постановлением Правительства РФ от 06.02.2020 г. № 103.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">НастройкиВоинскогоУчетаИспользоватьНаправлениеДляПостановкиНаВоинскийУчет2019ПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФормыДокументовПравая" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формы документов правая</v8:content>
+						</v8:item>
+					</Title>
+					<Width>46</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаФормыДокументовПраваяРасширеннаяПодсказка" id="39"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НастройкиВоинскогоУчета" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки воинского учета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.НастройкиВоинскогоУчета</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

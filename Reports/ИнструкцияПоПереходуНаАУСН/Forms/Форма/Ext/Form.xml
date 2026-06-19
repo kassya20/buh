@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Как перейти на АУСН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПроверкаУсловийПримененияАУСН" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа проверка условий применения АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПроверкаУсловийПримененияАУСНРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияПроверкаУсловийПримененияАУСН" id="14">
+					<Height>2</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация проверка условий применения АУСН</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Этап1</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияПроверкаУсловийПримененияАУСНКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДекорацияПроверкаУсловийПримененияАУСНРасширеннаяПодсказка" id="16"/>
+				</PictureDecoration>
+				<LabelDecoration name="ОписаниеПроверкаУсловийПримененияАУСН" id="1">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Проверьте соответствие условиям применения&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеПроверкаУсловийПримененияАУСНКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОписаниеПроверкаУсловийПримененияАУСНРасширеннаяПодсказка" id="3"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОписаниеПроверкаУсловийПримененияАУСН" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа описание проверка условий применения АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОписаниеПроверкаУсловийПримененияАУСНРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияПроверкаУсловийПримененияАУСНОтступ" id="30">
+					<Width>3</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация проверка условий применения АУСНОтступ</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.РегистрацияОтступЭтапа</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияПроверкаУсловийПримененияАУСНОтступКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ДекорацияПроверкаУсловийПримененияАУСНОтступРасширеннаяПодсказка" id="32"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДеталиОписаниеПроверкаУсловийПримененияАУСН" id="9">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;• Регистрация в субъекте РФ, в котором &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;применяется АУСН&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Годовой доход — не более 60 млн руб.&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Средняя численность сотрудников — не более 5 человек в месяц&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Расчетные счета открыты только в &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://ausn.nalog.gov.ru/#block07ancor&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #1c55ae&gt;уполномоченных банках&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Остаточная стоимость основных средств — не более 150 млн руб.&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Зарплата выплачивается в безналичной форме &lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Отсутствуют филиалы и обособленные подразделения&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;• Не применяются другие налоговые режимы&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+&lt;font Almarai&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Ограничение после перехода: в течение 12 месяцев после перехода на АУСН нельзя добровольно сменить налоговый режим.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДеталиОписаниеПроверкаУсловийПримененияАУСНКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДеталиОписаниеПроверкаУсловийПримененияАУСНРасширеннаяПодсказка" id="11"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВыборВариантаПереходаНаАУСН" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа выбор варианта перехода на АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВыборВариантаПереходаНаАУСНРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияВыборВариантаПереходаНаАУСН" id="42">
+					<Height>2</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация выбор варианта перехода на АУСН</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Этап2</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияВыборВариантаПереходаНаАУСНКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ДекорацияВыборВариантаПереходаНаАУСНРасширеннаяПодсказка" id="44"/>
+				</PictureDecoration>
+				<LabelDecoration name="ВыборВариантаПереходаНаАУСН" id="45">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Выберите вариант перехода&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВыборВариантаПереходаНаАУСНКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ВыборВариантаПереходаНаАУСНРасширеннаяПодсказка" id="47"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДеталиВыборВариантаПереходаНаАУСН" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа детали выбор варианта перехода на АУСН</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеталиВыборВариантаПереходаНаАУСНРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияДеталиВыборВариантаПереходаНаАУСНОтступ" id="50">
+					<Width>3</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация проверка условий перехода на АУСН отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.РегистрацияОтступЭтапа</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияДеталиВыборВариантаПереходаНаАУСНОтступКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ДекорацияДеталиВыборВариантаПереходаНаАУСНОтступРасширеннаяПодсказка" id="52"/>
+				</PictureDecoration>
+				<LabelDecoration name="ДеталиВыборВариантаПереходаНаАУСН" id="53">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;• С начала календарного года&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;   - подходит для всех организаций и ИП&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;   - уведомление о переходе нужно подать в ФНС не позднее 31 декабря текущего года&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;• С начала любого месяца&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;   - подходит для организации и ИП на УСН, ИП на НПД&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;   - уведомление о переходе нужно подать в ФНС не позднее последнего дня месяца, предшествующего переходу&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;• С даты постановки на учет &lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;   - подходит для новых организаций и ИП&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;fontsize 10&gt;   - уведомление о переходе нужно подать в ФНС в течение 30 календарных дней с даты постановки на учет&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 12&gt;&lt;color #000000&gt;&lt;/&gt;&lt;/&gt;
+</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДеталиВыборВариантаПереходаНаАУСНКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДеталиВыборВариантаПереходаНаАУСНРасширеннаяПодсказка" id="55"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтправкаУведомленияВФНС" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отправка уведомления ВФНС</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalAlign>Center</VerticalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтправкаУведомленияВФНСРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОтправкаУведомленияВФНС" id="22">
+					<Height>2</Height>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация отправка уведомления ВФНС</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Этап3</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ДекорацияОтправкаУведомленияВФНСКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ДекорацияОтправкаУведомленияВФНСРасширеннаяПодсказка" id="24"/>
+				</PictureDecoration>
+				<LabelDecoration name="ОписаниеОтправкаУведомленияВФНС" id="6">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Подайте уведомление в ФНС&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОписаниеОтправкаУведомленияВФНСКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОписаниеОтправкаУведомленияВФНСРасширеннаяПодсказка" id="8"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДеталиОтправкаУведомленияВФНС" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа детали отправка уведомления ВФНС</v8:content>
+				</v8:item>
+			</Title>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДеталиОтправкаУведомленияВФНСРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<PictureDecoration name="ДекорацияОтправкаУведомленияВФНСООтступ" id="35">
+					<Width>3</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декорация шаг отправка уведомления ВФНС отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.РегистрацияОтступЭтапа</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДекорацияОтправкаУведомленияВФНСООтступКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДекорацияОтправкаУведомленияВФНСООтступРасширеннаяПодсказка" id="37"/>
+				</PictureDecoration>
+				<LabelDecoration name="СпособыОтправкиУведомления" id="19">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Уведомление можно направить через:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;    • &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link ЛичныйКабинетНалогоплательщика&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Личный кабинет налогоплательщика&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;на сайте ФНС&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;    • &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Уполномоченный&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt; банк&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СпособыОтправкиУведомленияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СпособыОтправкиУведомленияРасширеннаяПодсказка" id="21"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоЮрЛицо">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

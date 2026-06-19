@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПоиск" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиск</v8:content>
+				</v8:item>
+			</Title>
+			<Height>2</Height>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоискРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="СтрокаПоиска" id="3">
+					<DataPath>СтрокаПоиска</DataPath>
+					<SkipOnInput>true</SkipOnInput>
+					<TitleLocation>None</TitleLocation>
+					<ClearButton>true</ClearButton>
+					<EditTextUpdate>DontUse</EditTextUpdate>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Найти настройку...</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="СтрокаПоискаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="СтрокаПоискаРасширеннаяПодсказка" id="5"/>
+					<Events>
+						<Event name="EditTextChange">СтрокаПоискаИзменениеТекстаРедактирования</Event>
+						<Event name="Clearing">СтрокаПоискаОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаПанели" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панели</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаПанелиРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<Page name="ГруппаКолонки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛеваяКолонка" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа левая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>32</Width>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛеваяКолонкаРасширеннаяПодсказка" id="11"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиПрограммы" id="14">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки программы</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаНастройкиПрограммыРасширеннаяПодсказка" id="15"/>
+									<ChildItems>
+										<Button name="ПерсональныеНастройки" id="18">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.ГлавноеПерсональныеНастройки</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ПерсональныеНастройкиРасширеннаяПодсказка" id="19"/>
+										</Button>
+										<Button name="Интерфейс" id="22">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.Интерфейс</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ИнтерфейсРасширеннаяПодсказка" id="23"/>
+										</Button>
+										<Button name="Обслуживание" id="24">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанельАдминистрированияБСП.Command.Обслуживание</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ОбслуживаниеРасширеннаяПодсказка" id="25"/>
+										</Button>
+										<Button name="Органайзер" id="26">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанельАдминистрированияБСП.Command.Органайзер</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ОрганайзерРасширеннаяПодсказка" id="27"/>
+										</Button>
+										<Button name="ОбменЭлектроннымиДокументами" id="28">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанельАдминистрированияБЭД.Command.ОбменЭлектроннымиДокументами</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ОбменЭлектроннымиДокументамиРасширеннаяПодсказка" id="29"/>
+										</Button>
+										<Button name="ПодключенныеКассы" id="91">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПодключенныеКассы.Command.ПодключенныеКассы</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подключенные кассы</v8:content>
+												</v8:item>
+											</Title>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ПодключенныеКассыРасширеннаяПодсказка" id="92"/>
+										</Button>
+										<Button name="ПоддержкаОборудования" id="30">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанельАдминистрированияБПО.Command.ПоддержкаОборудования</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ПоддержкаОборудованияРасширеннаяПодсказка" id="31"/>
+										</Button>
+										<Button name="ИнтернетПоддержкаИСервисы" id="32">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанельАдминистрированияБСП.Command.ИнтернетПоддержкаИСервисы</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ИнтернетПоддержкаИСервисыРасширеннаяПодсказка" id="33"/>
+										</Button>
+										<Button name="ПечатьАртикулов" id="34">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанельАдминистрированияБП.Command.ПечатьАртикулов</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ПечатьАртикуловРасширеннаяПодсказка" id="35"/>
+										</Button>
+										<Button name="НастройкаКолонтитулов" id="73">
+											<Type>UsualButton</Type>
+											<CommandName>CommonCommand.НастройкаКолонтитулов</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="НастройкаКолонтитуловРасширеннаяПодсказка" id="74"/>
+										</Button>
+										<Button name="НастройкаЭлектроннойПочты" id="36">
+											<Type>UsualButton</Type>
+											<CommandName>CommonCommand.НастройкаСистемнойУчетнойЗаписиЭлектроннойПочты</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка электронной почты</v8:content>
+												</v8:item>
+											</Title>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="НастройкаЭлектроннойПочтыРасширеннаяПодсказка" id="37"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНачальныеОстатки" id="89">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начальные остатки</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНачальныеОстаткиРасширеннаяПодсказка" id="90"/>
+									<ChildItems>
+										<Button name="НачальныеОстатки" id="87">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.НачальныеОстатки</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="НачальныеОстаткиРасширеннаяПодсказка" id="88"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСредняяКолонка" id="12">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа средняя колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>32</Width>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСредняяКолонкаРасширеннаяПодсказка" id="13"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСервис" id="16">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервис</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаСервисРасширеннаяПодсказка" id="17"/>
+									<ChildItems>
+										<Button name="ЗагрузкаДанныхИзСервиса" id="40">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.ЗагрузкаДанныхИзСервиса</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ЗагрузкаДанныхИзСервисаРасширеннаяПодсказка" id="41"/>
+										</Button>
+										<Button name="ВыгрузитьДанныеДляПереходаВСервис" id="42">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.ВыгрузитьДанныеДляПереходаВСервис</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ВыгрузитьДанныеДляПереходаВСервисРасширеннаяПодсказка" id="43"/>
+										</Button>
+										<Button name="ВыгрузитьДанныеВЛокальнуюВерсию" id="44">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.ВыгрузитьДанныеВЛокальнуюВерсию</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ВыгрузитьДанныеВЛокальнуюВерсиюРасширеннаяПодсказка" id="45"/>
+										</Button>
+										<Button name="ПомеченныеНаУдаление" id="48">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.ПомеченныеНаУдаление</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="ПомеченныеНаУдалениеРасширеннаяПодсказка" id="49"/>
+										</Button>
+										<Button name="УдалениеПомеченныхОбъектов" id="46">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.УдалениеПомеченныхОбъектов.Command.УдалениеПомеченныхОбъектов</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="УдалениеПомеченныхОбъектовРасширеннаяПодсказка" id="47"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПраваяКолонка" id="85">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правая колонка</v8:content>
+								</v8:item>
+							</Title>
+							<Width>32</Width>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПраваяКолонкаРасширеннаяПодсказка" id="86"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаМобильныеПриложения" id="75">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Мобильные приложения</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаМобильныеПриложенияРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<Button name="МобильныйКлиентБизнесСтарт" id="81">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.МобильныйКлиентБизнесСтарт</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="МобильныйКлиентБизнесСтартРасширеннаяПодсказка" id="82"/>
+										</Button>
+										<Button name="МобильныйКлиент" id="77">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.МобильныйКлиент</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="МобильныйКлиентРасширеннаяПодсказка" id="78"/>
+										</Button>
+										<Button name="СканерЧеков" id="79">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.МобильноеПриложениеСканированиеЧеков</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="СканерЧековРасширеннаяПодсказка" id="80"/>
+										</Button>
+										<Button name="СканерДокументов" id="83">
+											<Type>UsualButton</Type>
+											<CommandName>DataProcessor.ПанелиПростойИнтерфейс.Command.МобильныеПриложенияРаспознаванияДокументов</CommandName>
+											<TextColor>style:ЦветГиперссылки</TextColor>
+											<ShapeRepresentation>None</ShapeRepresentation>
+											<ExtendedTooltip name="СканерДокументовРасширеннаяПодсказка" id="84"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДлительнаяОперация" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длительная операция</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<VerticalAlign>Center</VerticalAlign>
+					<ExtendedTooltip name="ГруппаДлительнаяОперацияРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<PictureDecoration name="ДлительнаяОперация" id="67">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Длительная операция</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="ДлительнаяОперацияКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ДлительнаяОперацияРасширеннаяПодсказка" id="69"/>
+						</PictureDecoration>
+						<LabelDecoration name="ДлительнаяОперацияОписание" id="70">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идет поиск настройки...</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДлительнаяОперацияОписаниеКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ДлительнаяОперацияОписаниеРасширеннаяПодсказка" id="72"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРезультатыПоиска" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результаты поиска</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРезультатыПоискаРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<FormattedDocumentField name="РезультатыПоиска" id="62">
+							<DataPath>РезультатыПоиска</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<Font ref="style:NormalTextFont" kind="StyleItem" scale="100"/>
+							<ContextMenu name="РезультатыПоискаКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="РезультатыПоискаРасширеннаяПодсказка" id="64"/>
+						</FormattedDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CheckBoxField name="ПоказатьНастройкиКакВПолномИнтерфейсе" id="50">
+			<DataPath>ПоказатьНастройкиКакВПолномИнтерфейсе</DataPath>
+			<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+			<CheckBoxType>Switcher</CheckBoxType>
+			<ContextMenu name="ПоказатьНастройкиКакВПолномИнтерфейсеКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ПоказатьНастройкиКакВПолномИнтерфейсеРасширеннаяПодсказка" id="52"/>
+			<Events>
+				<Event name="OnChange">ПоказатьНастройкиКакВПолномИнтерфейсеПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СтрокаПоиска" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказатьНастройкиКакВПолномИнтерфейсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать настройки как в полном интерфейсе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатыПоиска" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяЗаполнениеТаблицыПоиска" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заполнение таблицы поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительнаяОперацияОбновитьТаблицуПоиска" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция обновить таблицу поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТаблицаПоискаПодготовлена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица поиска подготовлена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилищаТаблицыПоиска" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища таблицы поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НачальныеОстатки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальные остатки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НачальныеОстатки</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.Функциональность</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.НастройкиНастройкиУчета</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.НастройкиИнтеграции</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>2</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.НастройкиИнструменты</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>3</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>DataProcessor.ПанелиПростойИнтерфейс.Command.НастройкиСистема</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelImportant</CommandGroup>
+				<Index>4</Index>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ТипДокумента</presentationExpression>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">40</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">70</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДокумента</dataPath>
+			<field>ТипДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаДокумента</dataPath>
+			<field>ВалютаДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДокумента</dataPath>
+			<field>НомерДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДокумента</dataPath>
+			<field>ДатаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата документа</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаОтсутствия</dataPath>
+			<field>ПричинаОтсутствия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина отсутствия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПоступлениеТоваровУслуг.Ссылка КАК Документ,
+	ПоступлениеТоваровУслуг.Дата КАК Дата,
+	ЕСТЬNULL(ПоступлениеТоваровУслуг.НомерВходящегоДокумента, "") КАК НомерДокумента,
+	ЕСТЬNULL(ПоступлениеТоваровУслуг.ДатаВходящегоДокумента, ДАТАВРЕМЯ(1, 1, 1)) КАК ДатаДокумента,
+	ПоступлениеТоваровУслуг.СуммаДокумента КАК СуммаДокумента,
+	ВЫБОР
+		КОГДА ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.Услуги)
+			ТОГДА ВЫБОР
+					КОГДА ПоступлениеТоваровУслуг.ЭтоУниверсальныйДокумент
+						ТОГДА &amp;ПредставлениеДокументаУПДПоступлениеУслуг
+					ИНАЧЕ &amp;ПредставлениеДокументаАктПоступление
+				КОНЕЦ
+		КОГДА ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.Товары)
+			ТОГДА ВЫБОР
+					КОГДА ПоступлениеТоваровУслуг.ЭтоУниверсальныйДокумент
+						ТОГДА &amp;ПредставлениеДокументаУПДПоступлениеТоваров
+					ИНАЧЕ &amp;ПредставлениеДокументаНакладнаяПоступление
+				КОНЕЦ
+		КОГДА ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.Топливо)
+			ТОГДА ВЫБОР
+					КОГДА ПоступлениеТоваровУслуг.ЭтоУниверсальныйДокумент
+						ТОГДА &amp;ПредставлениеДокументаУПДТопливо
+					ИНАЧЕ &amp;ПредставлениеДокументаНакладнаяТопливо
+				КОНЕЦ
+		КОГДА ПоступлениеТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийПоступлениеТоваровУслуг.Права)
+			ТОГДА ВЫБОР
+					КОГДА ПоступлениеТоваровУслуг.ЭтоУниверсальныйДокумент
+						ТОГДА &amp;ПредставлениеДокументаУПДПриобретениеПрав
+					ИНАЧЕ &amp;ПредставлениеДокументаАктПередачиПрав
+				КОНЕЦ
+		ИНАЧЕ &amp;ПредставлениеДокументаПоступление
+	КОНЕЦ КАК ТипДокумента,
+	ЕСТЬNULL(Валюты.Наименование, "руб.") КАК ВалютаДокумента,
+	ВЫБОР
+		КОГДА СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект ЕСТЬ NULL
+			ТОГДА &amp;ПредставлениеНетОригиналовНаБумажномНосителе
+		ИНАЧЕ &amp;ПредставлениеНеЗавершенЭДО
+	КОНЕЦ КАК ПричинаОтсутствия
+ИЗ
+	Документ.ПоступлениеТоваровУслуг КАК ПоступлениеТоваровУслуг
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыДокументов КАК СтатусыДокументов
+		ПО ПоступлениеТоваровУслуг.Ссылка = СтатусыДокументов.Документ
+			И ПоступлениеТоваровУслуг.Организация = СтатусыДокументов.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияПоОбъектамУчетаЭДО КАК СостоянияПоОбъектамУчетаЭДО
+		ПО ПоступлениеТоваровУслуг.Ссылка = СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Валюты КАК Валюты
+		ПО ПоступлениеТоваровУслуг.ВалютаДокумента = Валюты.Ссылка
+ГДЕ
+	ПоступлениеТоваровУслуг.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПоступлениеТоваровУслуг.Проведен
+	И ЕСТЬNULL(СтатусыДокументов.Статус, ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовПоступления.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовПоступления.ОригиналПолучен)
+{ГДЕ
+	ПоступлениеТоваровУслуг.Организация КАК Организация,
+	ПоступлениеТоваровУслуг.Контрагент.* КАК Контрагент}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ПоступлениеДопРасходов.Ссылка,
+	ПоступлениеДопРасходов.Дата,
+	ЕСТЬNULL(ПоступлениеДопРасходов.НомерВходящегоДокумента, ""),
+	ЕСТЬNULL(ПоступлениеДопРасходов.ДатаВходящегоДокумента, ДАТАВРЕМЯ(1, 1, 1)),
+	ПоступлениеДопРасходов.СуммаДокумента,
+	&amp;ПредставлениеДокументаПоступлениеДопРасходов,
+	ЕСТЬNULL(Валюты.Наименование, "руб."),
+	ВЫБОР
+		КОГДА СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект ЕСТЬ NULL
+			ТОГДА &amp;ПредставлениеНетОригиналовНаБумажномНосителе
+		ИНАЧЕ &amp;ПредставлениеНеЗавершенЭДО
+	КОНЕЦ
+ИЗ
+	Документ.ПоступлениеДопРасходов КАК ПоступлениеДопРасходов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыДокументов КАК СтатусыДокументов
+		ПО ПоступлениеДопРасходов.Ссылка = СтатусыДокументов.Документ
+			И ПоступлениеДопРасходов.Организация = СтатусыДокументов.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияПоОбъектамУчетаЭДО КАК СостоянияПоОбъектамУчетаЭДО
+		ПО ПоступлениеДопРасходов.Ссылка = СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Валюты КАК Валюты
+		ПО ПоступлениеДопРасходов.ВалютаДокумента = Валюты.Ссылка
+ГДЕ
+	ПоступлениеДопРасходов.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И ПоступлениеДопРасходов.Проведен
+	И ЕСТЬNULL(СтатусыДокументов.Статус, ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовПоступления.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовПоступления.ОригиналПолучен)
+{ГДЕ
+	ПоступлениеДопРасходов.Организация КАК Организация,
+	ПоступлениеДопРасходов.Контрагент.* КАК Контрагент}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РеализацияТоваровУслуг.Ссылка,
+	РеализацияТоваровУслуг.Дата,
+	ЕСТЬNULL(ДанныеПервичныхДокументов.Номер, ""),
+	ЕСТЬNULL(ДанныеПервичныхДокументов.Дата, ДАТАВРЕМЯ(1, 1, 1)),
+	РеализацияТоваровУслуг.СуммаДокумента,
+	ВЫБОР
+		КОГДА РеализацияТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийРеализацияТоваров.Услуги)
+			ТОГДА ВЫБОР
+					КОГДА РеализацияТоваровУслуг.ЭтоУниверсальныйДокумент
+						ТОГДА &amp;ПредставлениеДокументаУПДРеализацияУслуг
+					ИНАЧЕ &amp;ПредставлениеДокументаАктРеализация
+				КОНЕЦ
+		КОГДА РеализацияТоваровУслуг.ВидОперации = ЗНАЧЕНИЕ(Перечисление.ВидыОперацийРеализацияТоваров.Товары)
+			ТОГДА ВЫБОР
+					КОГДА РеализацияТоваровУслуг.ЭтоУниверсальныйДокумент
+						ТОГДА &amp;ПредставлениеДокументаУПДРеализацияТоваров
+					ИНАЧЕ &amp;ПредставлениеДокументаНакладнаяРеализация
+				КОНЕЦ
+		ИНАЧЕ &amp;ПредставлениеДокументаРеализация
+	КОНЕЦ,
+	ЕСТЬNULL(Валюты.Наименование, "руб."),
+	ВЫБОР
+		КОГДА СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект ЕСТЬ NULL
+			ТОГДА &amp;ПредставлениеНетОригиналовНаБумажномНосителе
+		ИНАЧЕ &amp;ПредставлениеНеЗавершенЭДО
+	КОНЕЦ
+ИЗ
+	Документ.РеализацияТоваровУслуг КАК РеализацияТоваровУслуг
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СтатусыДокументов КАК СтатусыДокументов
+		ПО РеализацияТоваровУслуг.Ссылка = СтатусыДокументов.Документ
+			И РеализацияТоваровУслуг.Организация = СтатусыДокументов.Организация
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДанныеПервичныхДокументов КАК ДанныеПервичныхДокументов
+		ПО РеализацияТоваровУслуг.Ссылка = ДанныеПервичныхДокументов.Документ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияПоОбъектамУчетаЭДО КАК СостоянияПоОбъектамУчетаЭДО
+		ПО РеализацияТоваровУслуг.Ссылка = СостоянияПоОбъектамУчетаЭДО.СсылкаНаОбъект
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Валюты КАК Валюты
+		ПО РеализацияТоваровУслуг.ВалютаДокумента = Валюты.Ссылка
+ГДЕ
+	РеализацияТоваровУслуг.Дата МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+	И РеализацияТоваровУслуг.Проведен
+	И ЕСТЬNULL(СтатусыДокументов.Статус, ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовРеализации.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СтатусыДокументовРеализации.Подписан)
+{ГДЕ
+	РеализацияТоваровУслуг.Организация КАК Организация,
+	РеализацияТоваровУслуг.Контрагент.* КАК Контрагент}</query>
+	</dataSet>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаАктПередачиПрав</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа акт передачи прав</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаАктПоступление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа акт поступление</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаАктРеализация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа акт реализация</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаНакладнаяПоступление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа накладная поступление</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаНакладнаяРеализация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа накладная реализация</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаНакладнаяТопливо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа накладная топливо</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаПоступление</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа поступление</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаПоступлениеДопРасходов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа поступление доп расходов</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаРеализация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа реализация</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаУПДПоступлениеТоваров</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа УПДПоступление товаров</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаУПДПоступлениеУслуг</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа УПДПоступление услуг</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаУПДПриобретениеПрав</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа УПДПриобретение прав</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаУПДРеализацияТоваров</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа УПДРеализация товаров</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаУПДРеализацияУслуг</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа УПДРеализация услуг</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеДокументаУПДТопливо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление документа УПДТопливо</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеНеЗавершенЭДО</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление не завершен ЭДО</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПредставлениеНетОригиналовНаБумажномНосителе</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Представление нет оригиналов на бумажном носителе</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДатаДокумента</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">ДатаДокументаРасшифровка</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДатаДокумента</dcsat:name>
+			<dcsat:expression>ДатаДокумента</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>ДатаДокументаРасшифровка</dcsat:name>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">СуммаДокумента</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧДЦ=2</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>СуммаДокумента</dcsat:name>
+			<dcsat:expression>СуммаДокумента</dcsat:expression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>ДатаДокумента</field>
+		<template>Макет1</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>СуммаДокумента</field>
+		<template>Макет2</template>
+	</fieldTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Документ</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы без отметки о получении оригиналов</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПричинаОтсутствия</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Документ</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ДатаДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>НомерДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>СуммаДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВалютаДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>#</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

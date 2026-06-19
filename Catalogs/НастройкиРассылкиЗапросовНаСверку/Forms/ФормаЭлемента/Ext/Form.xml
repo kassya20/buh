@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalSpacing>Double</VerticalSpacing>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Single</VerticalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<InputField name="Наименование" id="8">
+					<DataPath>Объект.Description</DataPath>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="10">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Будет отображаться на кнопке в Мониторе сверки с контрагентами</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<UsualGroup name="ГруппаСценарий" id="37">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Порядок работы:</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ExtendedTooltip name="ГруппаСценарийРасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<RadioButtonField name="ЗапрашиватьАктСверки" id="46">
+							<DataPath>Объект.ПорядокСверки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Запрашивать акт сверки у контрагента</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ПорядокСверкиРасчетовСКонтрагентами.EnumValue.ЗапроситьАктСверки</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЗапрашиватьАктСверкиКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ЗапрашиватьАктСверкиРасширеннаяПодсказка" id="48">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Программа будет отправлять письма с просьбой предоставить акт сверки. Наш акт сверки не отправляется.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="OnChange">ПорядокСверкиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаОтправлятьАктСверки" id="49">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отправлять акт сверки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<VerticalAlign>Top</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтправлятьАктСверкиРасширеннаяПодсказка" id="50">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Программа будет автоматически формировать акты сверки по нашим данным и прикладывать их к письму</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<RadioButtonField name="ОтправлятьАктСверки" id="51">
+									<DataPath>Объект.ПорядокСверки</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отправлять наш акт сверки на проверку в формате:</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:DesignTimeRef">Enum.ПорядокСверкиРасчетовСКонтрагентами.EnumValue.ОтправитьНашАктСверки</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ОтправлятьАктСверкиКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ОтправлятьАктСверкиРасширеннаяПодсказка" id="53">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<HorizontalStretch>true</HorizontalStretch>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ПорядокСверкиПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="ГруппаПараметрыАктаСверки" id="54">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По договорам, полные названия документов, выводить СФ, документ PDF (.pdf)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Group>Vertical</Group>
+									<HorizontalSpacing>None</HorizontalSpacing>
+									<VerticalSpacing>Double</VerticalSpacing>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаПараметрыАктаСверкиРасширеннаяПодсказка" id="55"/>
+									<ChildItems>
+										<UsualGroup name="БлокПараметрыАктаСверки" id="191">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Блок параметры акта сверки</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Half</VerticalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="БлокПараметрыАктаСверкиРасширеннаяПодсказка" id="192"/>
+											<ChildItems>
+												<CheckBoxField name="РазбитьПоДоговорам" id="91">
+													<DataPath>Объект.РазбитьПоДоговорам</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="РазбитьПоДоговорамКонтекстноеМеню" id="92"/>
+													<ExtendedTooltip name="РазбитьПоДоговорамРасширеннаяПодсказка" id="93"/>
+													<Events>
+														<Event name="OnChange">ПриИзмененииПараметровАктаСверки</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ВыводитьПолныеНазванияДокументов" id="94">
+													<DataPath>Объект.ВыводитьПолныеНазванияДокументов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Выводить полные названия документов</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВыводитьПолныеНазванияДокументовКонтекстноеМеню" id="95"/>
+													<ExtendedTooltip name="ВыводитьПолныеНазванияДокументовРасширеннаяПодсказка" id="96"/>
+													<Events>
+														<Event name="OnChange">ПриИзмененииПараметровАктаСверки</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ВыводитьСчетаФактуры" id="97">
+													<DataPath>Объект.ВыводитьСчетаФактуры</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВыводитьСчетаФактурыКонтекстноеМеню" id="98"/>
+													<ExtendedTooltip name="ВыводитьСчетаФактурыРасширеннаяПодсказка" id="99"/>
+													<Events>
+														<Event name="OnChange">ПриИзмененииПараметровАктаСверки</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ФорматыВложенийАктСверки" id="100">
+											<Representation>List</Representation>
+											<TitleLocation>Top</TitleLocation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<HeightInTableRows>5</HeightInTableRows>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<DataPath>ФорматыВложенийАктСверки</DataPath>
+											<RowPictureDataPath>ФорматыВложенийАктСверки.Picture</RowPictureDataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Формат файла акта сверки</v8:content>
+												</v8:item>
+											</Title>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="ФорматыВложенийАктСверкиКонтекстноеМеню" id="101"/>
+											<AutoCommandBar name="ФорматыВложенийАктСверкиКоманднаяПанель" id="102"/>
+											<ExtendedTooltip name="ФорматыВложенийАктСверкиРасширеннаяПодсказка" id="103"/>
+											<SearchStringAddition name="ФорматыВложенийАктСверкиСтрокаПоиска" id="104">
+												<AdditionSource>
+													<Item>ФорматыВложенийАктСверки</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ФорматыВложенийАктСверкиСтрокаПоискаКонтекстноеМеню" id="105"/>
+												<ExtendedTooltip name="ФорматыВложенийАктСверкиСтрокаПоискаРасширеннаяПодсказка" id="106"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ФорматыВложенийАктСверкиСостояниеПросмотра" id="107">
+												<AdditionSource>
+													<Item>ФорматыВложенийАктСверки</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ФорматыВложенийАктСверкиСостояниеПросмотраКонтекстноеМеню" id="108"/>
+												<ExtendedTooltip name="ФорматыВложенийАктСверкиСостояниеПросмотраРасширеннаяПодсказка" id="109"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ФорматыВложенийАктСверкиУправлениеПоиском" id="110">
+												<AdditionSource>
+													<Item>ФорматыВложенийАктСверки</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ФорматыВложенийАктСверкиУправлениеПоискомКонтекстноеМеню" id="111"/>
+												<ExtendedTooltip name="ФорматыВложенийАктСверкиУправлениеПоискомРасширеннаяПодсказка" id="112"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnChange">ПриИзмененииПараметровАктаСверки</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="ФорматыВложенийАктСверкиПометка" id="113">
+													<DataPath>ФорматыВложенийАктСверки.Check</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФорматыВложенийАктСверкиПометкаКонтекстноеМеню" id="114"/>
+													<ExtendedTooltip name="ФорматыВложенийАктСверкиПометкаРасширеннаяПодсказка" id="115"/>
+												</CheckBoxField>
+												<InputField name="ФорматыВложенийАктСверкиПредставление" id="116">
+													<DataPath>ФорматыВложенийАктСверки.Presentation</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ФорматыВложенийАктСверкиПредставлениеКонтекстноеМеню" id="117"/>
+													<ExtendedTooltip name="ФорматыВложенийАктСверкиПредставлениеРасширеннаяПодсказка" id="118"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗапрашиватьОригиналы" id="62">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа запрашивать оригиналы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalSpacing>Half</HorizontalSpacing>
+							<VerticalAlign>Top</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗапрашиватьОригиналыРасширеннаяПодсказка" id="63">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>К письму будет приложен список документов, по которым не получены оригиналы. Это документы из колонки "Нет оригиналов или не завершен ЭДО" в Мониторе сверки.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<CheckBoxField name="ЗапрашиватьОригиналы" id="64">
+									<DataPath>Объект.ЗапрашиватьОригиналы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно запрашивать оригиналы и прикладывать список в формате:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗапрашиватьОригиналыКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ЗапрашиватьОригиналыРасширеннаяПодсказка" id="66">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<HorizontalStretch>true</HorizontalStretch>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ЗапрашиватьОригиналыПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаФорматыВложенийНеПолученыОригиналы" id="70">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ PDF (.pdf)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>style:ГиперссылкаЦвет</TitleTextColor>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаФорматыВложенийНеПолученыОригиналыРасширеннаяПодсказка" id="71"/>
+									<ChildItems>
+										<Table name="ФорматыВложенийНеПолученыОригиналы" id="72">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<HeightInTableRows>5</HeightInTableRows>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<DataPath>ФорматыВложенийНеПолученыОригиналы</DataPath>
+											<RowPictureDataPath>ФорматыВложенийНеПолученыОригиналы.Picture</RowPictureDataPath>
+											<SearchStringLocation>None</SearchStringLocation>
+											<ViewStatusLocation>None</ViewStatusLocation>
+											<SearchControlLocation>None</SearchControlLocation>
+											<ContextMenu name="ФорматыВложенийНеПолученыОригиналыКонтекстноеМеню" id="73"/>
+											<AutoCommandBar name="ФорматыВложенийНеПолученыОригиналыКоманднаяПанель" id="74"/>
+											<ExtendedTooltip name="ФорматыВложенийНеПолученыОригиналыРасширеннаяПодсказка" id="75"/>
+											<SearchStringAddition name="ФорматыВложенийНеПолученыОригиналыСтрокаПоиска" id="76">
+												<AdditionSource>
+													<Item>ФорматыВложенийНеПолученыОригиналы</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ФорматыВложенийНеПолученыОригиналыСтрокаПоискаКонтекстноеМеню" id="77"/>
+												<ExtendedTooltip name="ФорматыВложенийНеПолученыОригиналыСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ФорматыВложенийНеПолученыОригиналыСостояниеПросмотра" id="79">
+												<AdditionSource>
+													<Item>ФорматыВложенийНеПолученыОригиналы</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ФорматыВложенийНеПолученыОригиналыСостояниеПросмотраКонтекстноеМеню" id="80"/>
+												<ExtendedTooltip name="ФорматыВложенийНеПолученыОригиналыСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ФорматыВложенийНеПолученыОригиналыУправлениеПоиском" id="82">
+												<AdditionSource>
+													<Item>ФорматыВложенийНеПолученыОригиналы</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ФорматыВложенийНеПолученыОригиналыУправлениеПоискомКонтекстноеМеню" id="83"/>
+												<ExtendedTooltip name="ФорматыВложенийНеПолученыОригиналыУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnChange">ФорматыВложенийНеПолученыОригиналыПриИзменении</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="ФорматыВложенийНеПолученыОригиналыПометка" id="88">
+													<DataPath>ФорматыВложенийНеПолученыОригиналы.Check</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ФорматыВложенийНеПолученыОригиналыПометкаКонтекстноеМеню" id="89"/>
+													<ExtendedTooltip name="ФорматыВложенийНеПолученыОригиналыПометкаРасширеннаяПодсказка" id="90"/>
+												</CheckBoxField>
+												<InputField name="ФорматыВложенийНеПолученыОригиналыПредставление" id="119">
+													<DataPath>ФорматыВложенийНеПолученыОригиналы.Presentation</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ФорматыВложенийНеПолученыОригиналыПредставлениеКонтекстноеМеню" id="120"/>
+													<ExtendedTooltip name="ФорматыВложенийНеПолученыОригиналыПредставлениеРасширеннаяПодсказка" id="121"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонтрагентыЭДО" id="175">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для контрагентов с настроенным ЭДО:</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ExtendedTooltip name="ГруппаКонтрагентыЭДОРасширеннаяПодсказка" id="176"/>
+					<ChildItems>
+						<RadioButtonField name="ЭДООтправитьПисьмо" id="230">
+							<DataPath>Объект.СпособЗапросаПоЭДО</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправлять e-mail</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СпособыЗапросаСверкиЭДО.EnumValue.ОтправитьПисьмо</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЭДООтправитьПисьмоКонтекстноеМеню" id="231"/>
+							<ExtendedTooltip name="ЭДООтправитьПисьмоРасширеннаяПодсказка" id="232">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Будет отправлено электронное письмо по шаблону ниже, как и другим контрагентам</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</RadioButtonField>
+						<RadioButtonField name="ЭДООтправитьАктСверки" id="227">
+							<DataPath>Объект.СпособЗапросаПоЭДО</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправлять акт сверки в электронном формате по ЭДО</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СпособыЗапросаСверкиЭДО.EnumValue.ОтправитьАктСверки</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЭДООтправитьАктСверкиКонтекстноеМеню" id="228"/>
+							<ExtendedTooltip name="ЭДООтправитьАктСверкиРасширеннаяПодсказка" id="229">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Вместо письма будет сформирован и отправлен наш акт сверки в формализованном формате с электронной подписью.
+ВНИМАНИЕ! Каждый отправленный документ оплачивается в соответствии с вашим тарифом.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</RadioButtonField>
+						<RadioButtonField name="ЭДОНеОтправлять" id="233">
+							<DataPath>Объект.СпособЗапросаПоЭДО</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Пропускать</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xr:DesignTimeRef">Enum.СпособыЗапросаСверкиЭДО.EnumValue.НеОтправлять</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ЭДОНеОтправлятьКонтекстноеМеню" id="234"/>
+							<ExtendedTooltip name="ЭДОНеОтправлятьРасширеннаяПодсказка" id="235">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ничего не будет отправлено, даже если контрагент выбран в списке рассылки</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШаблон" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тема и текст письма:</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаШаблонРасширеннаяПодсказка" id="123"/>
+			<ChildItems>
+				<Pages name="ГруппаШаблонСтраницы" id="259">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаблон страницы</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>TabsOnBottom</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаШаблонСтраницыРасширеннаяПодсказка" id="260"/>
+					<Events>
+						<Event name="OnCurrentPageChange">ГруппаШаблонСтраницыПриСменеСтраницы</Event>
+					</Events>
+					<ChildItems>
+						<Page name="СтраницаРедактирование" id="261">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактирование</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СтраницаРедактированиеРасширеннаяПодсказка" id="262"/>
+							<ChildItems>
+								<InputField name="ШаблонТемы" id="153">
+									<DataPath>Объект.ШаблонТемы</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тема</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ШаблонТемыКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ШаблонТемыРасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<UsualGroup name="ГруппаКоманднаяПанельШаблона" id="244">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа командная панель шаблона</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Double</HorizontalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКоманднаяПанельШаблонаРасширеннаяПодсказка" id="245"/>
+									<ChildItems>
+										<UsualGroup name="КоманднаяПанельВставитьВТекстШаблона" id="257">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель вставить в текст шаблона</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>а</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Width>30</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="КоманднаяПанельВставитьВТекстШаблонаРасширеннаяПодсказка" id="258"/>
+											<ChildItems>
+												<LabelDecoration name="ВставитьВТекстШаблонаЗаголовок" id="250">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вставить в текст:</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ВставитьВТекстШаблонаЗаголовокКонтекстноеМеню" id="251"/>
+													<ExtendedTooltip name="ВставитьВТекстШаблонаЗаголовокРасширеннаяПодсказка" id="252"/>
+												</LabelDecoration>
+												<CommandBar name="ГруппаВставитьВТекстШаблона" id="242">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа вставить в текст шаблона</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ГруппаВставитьВТекстШаблонаРасширеннаяПодсказка" id="243"/>
+													<ChildItems>
+														<Popup name="МенюВставитьПараметр" id="246">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Параметр</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="МенюВставитьПараметрРасширеннаяПодсказка" id="247"/>
+														</Popup>
+														<Popup name="МенюВставитьУсловие" id="253">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Условие</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Меню вставить условие</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="МенюВставитьУсловиеРасширеннаяПодсказка" id="254"/>
+														</Popup>
+													</ChildItems>
+												</CommandBar>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="КоманднаяПанельЗаполнитьИзШаблона" id="279">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель заполнить из шаблона</v8:content>
+												</v8:item>
+											</Title>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="КоманднаяПанельЗаполнитьИзШаблонаРасширеннаяПодсказка" id="280"/>
+											<ChildItems>
+												<Button name="ЗаполнитьТекстИзШаблона" id="281">
+													<Type>UsualButton</Type>
+													<Height>1</Height>
+													<CommandName>Form.Command.ЗаполнитьТекстИзШаблона</CommandName>
+													<ExtendedTooltip name="ЗаполнитьТекстИзШаблонаРасширеннаяПодсказка" id="282"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<CommandBar name="КоманднаяПанельФорматированногоДокумента" id="186">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель форматированного документа</v8:content>
+												</v8:item>
+											</Title>
+											<CommandSource>Item.ШаблонПисьма</CommandSource>
+											<ExtendedTooltip name="КоманднаяПанельФорматированногоДокументаРасширеннаяПодсказка" id="187"/>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+								<FormattedDocumentField name="ШаблонПисьма" id="150">
+									<DataPath>ШаблонПисьма</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>105</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>14</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="ШаблонПисьмаКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ШаблонПисьмаРасширеннаяПодсказка" id="152"/>
+								</FormattedDocumentField>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаПросмотр" id="263">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предпросмотр</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница просмотр</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаПросмотрРасширеннаяПодсказка" id="264"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаБаннерПредпросмотр" id="274">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа баннер предпросмотр</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ExtendedTooltip name="ГруппаБаннерПредпросмотрРасширеннаяПодсказка" id="275"/>
+									<ChildItems>
+										<LabelDecoration name="БаннерПредпросмотр" id="276">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Предпросмотр на примере %1. Предпросмотр для других получателей будет доступен перед запуском рассылки.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="БаннерПредпросмотрКонтекстноеМеню" id="277"/>
+											<ExtendedTooltip name="БаннерПредпросмотрРасширеннаяПодсказка" id="278"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="ПредпросмотрТемы" id="271">
+									<DataPath>ПредпросмотрТемы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тема</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПредпросмотрТемыКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ПредпросмотрТемыРасширеннаяПодсказка" id="273"/>
+								</InputField>
+								<FormattedDocumentField name="ПредпросмотрПисьма" id="268">
+									<DataPath>ПредпросмотрПисьма</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<Width>105</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>14</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="ПредпросмотрПисьмаКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ПредпросмотрПисьмаРасширеннаяПодсказка" id="270"/>
+								</FormattedDocumentField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиРассылкиЗапросовНаСверку</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматыВложенийАктСверки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматы вложений акт сверки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ФорматыВложенийНеПолученыОригиналы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматы вложений не получены оригиналы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ШаблонПисьма" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон письма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="УсловияТекстаПисьма" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия для вставки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ПредпросмотрПисьма" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предпросмотр письма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредпросмотрТемы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предпросмотр темы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаНачала" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончания" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресДанныхКонтрагента" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес данных контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеКонтрагента" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьТекстИзШаблона" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить текст из шаблона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить текст письма из первоначального шаблона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьИзШаблона</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьТекстИзШаблона</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="АдресДанныхКонтрагента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДатаНачала">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДатаОкончания">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="НаименованиеКонтрагента">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

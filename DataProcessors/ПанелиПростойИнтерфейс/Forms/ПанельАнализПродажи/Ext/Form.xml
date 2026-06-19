@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщиеПоказатели" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие показатели</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщиеПоказателиРасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<Button name="ОтчетВаловаяПрибыльКомандаВаловаяПрибыль" id="1">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ВаловаяПрибыль.Command.ВаловаяПрибыль</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетВаловаяПрибыльКомандаВаловаяПрибыльРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<Button name="ОбработкаМониторМаркетплейсовКомандаОткрытьМониторМаркетплейсов" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>DataProcessor.МониторМаркетплейсов.Command.ОткрытьМониторМаркетплейсов</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОбработкаМониторМаркетплейсовКомандаОткрытьМониторМаркетплейсовРасширеннаяПодсказка" id="36"/>
+				</Button>
+				<Button name="ОтчетНадежностьДебиторовСПАРКРискиБПКомандаНадежностьДебиторов" id="33">
+					<Type>UsualButton</Type>
+					<CommandName>Report.НадежностьДебиторовСПАРКРискиБП.Command.НадежностьДебиторов</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетНадежностьДебиторовСПАРКРискиБПКомандаНадежностьДебиторовРасширеннаяПодсказка" id="34"/>
+				</Button>
+				<Button name="ОтчетСравнениеПродажКомандаСравнениеПродажПоКонтрагентам" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Report.СравнениеПродаж.Command.СравнениеПродажПоКонтрагентам</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетСравнениеПродажКомандаСравнениеПродажПоКонтрагентамРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="ОтчетСравнениеПродажКомандаСравнениеПродажПоНоменклатуре" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Report.СравнениеПродаж.Command.СравнениеПродажПоНоменклатуре</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетСравнениеПродажКомандаСравнениеПродажПоНоменклатуреРасширеннаяПодсказка" id="16"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЗадолженность" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задолженность</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<Button name="ОтчетДинамикаЗадолженностиПокупателейКомандаДинамикаЗадолженностиПокупателей" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ДинамикаЗадолженностиПокупателей.Command.ДинамикаЗадолженностиПокупателей</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетДинамикаЗадолженностиПокупателейКомандаДинамикаЗадолженностиПокупателейРасширеннаяПодсказка" id="24"/>
+				</Button>
+				<Button name="ОтчетЗадолженностьПокупателейКомандаЗадолженностьПокупателей" id="25">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ЗадолженностьПокупателей.Command.ЗадолженностьПокупателей</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетЗадолженностьПокупателейКомандаЗадолженностьПокупателейРасширеннаяПодсказка" id="26"/>
+				</Button>
+				<Button name="ОтчетЗадолженностьПокупателейКомандаЗадолженностьПокупателейПоДоговорам" id="27">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ЗадолженностьПокупателей.Command.ЗадолженностьПокупателейПоДоговорам</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетЗадолженностьПокупателейКомандаЗадолженностьПокупателейПоДоговорамРасширеннаяПодсказка" id="28"/>
+				</Button>
+				<Button name="ОтчетЗадолженностьПокупателейПоСрокамДолгаКомандаЗадолженностьПокупателейПоСрокамДолга" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Report.ЗадолженностьПокупателейПоСрокамДолга.Command.ЗадолженностьПокупателейПоСрокамДолга</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетЗадолженностьПокупателейПоСрокамДолгаКомандаЗадолженностьПокупателейПоСрокамДолгаРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="ОтчетАнализНеоплаченныхСчетовПокупателямКомандаНеоплаченныеСчетаПокупателям" id="31">
+					<Type>UsualButton</Type>
+					<CommandName>Report.АнализНеоплаченныхСчетовПокупателям.Command.НеоплаченныеСчетаПокупателям</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетАнализНеоплаченныхСчетовПокупателямКомандаНеоплаченныеСчетаПокупателямРасширеннаяПодсказка" id="32"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПродажи" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продажи</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПродажиРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Button name="ОтчетПродажиКомандаПродажиПоКонтрагентам" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>Report.Продажи.Command.ПродажиПоКонтрагентам</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетПродажиКомандаПродажиПоКонтрагентамРасширеннаяПодсказка" id="4"/>
+				</Button>
+				<Button name="ОтчетПродажиКомандаПродажиПоКонтрагентамПоОплате" id="5">
+					<Type>UsualButton</Type>
+					<CommandName>Report.Продажи.Command.ПродажиПоКонтрагентамПоОплате</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетПродажиКомандаПродажиПоКонтрагентамПоОплатеРасширеннаяПодсказка" id="6"/>
+				</Button>
+				<Button name="ОтчетПродажиКомандаПродажиПоНоменклатуре" id="7">
+					<Type>UsualButton</Type>
+					<CommandName>Report.Продажи.Command.ПродажиПоНоменклатуре</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетПродажиКомандаПродажиПоНоменклатуреРасширеннаяПодсказка" id="8"/>
+				</Button>
+				<Button name="ОтчетПродажиКомандаПродажиПоНоменклатурнымГруппам" id="9">
+					<Type>UsualButton</Type>
+					<CommandName>Report.Продажи.Command.ПродажиПоНоменклатурнымГруппам</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетПродажиКомандаПродажиПоНоменклатурнымГруппамРасширеннаяПодсказка" id="10"/>
+				</Button>
+				<Button name="ОтчетПродажиКомандаПродажиПоОтветственным" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Report.Продажи.Command.ПродажиПоОтветственным</CommandName>
+					<TextColor>style:ЦветГиперссылки</TextColor>
+					<ShapeRepresentation>None</ShapeRepresentation>
+					<ExtendedTooltip name="ОтчетПродажиКомандаПродажиПоОтветственнымРасширеннаяПодсказка" id="12"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

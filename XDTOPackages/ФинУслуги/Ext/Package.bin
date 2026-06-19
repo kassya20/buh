@@ -1,0 +1,105 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://www.v8.1c.ru/banks/FinancialServices" elementFormQualified="true" attributeFormQualified="false">
+	<import namespace="http://www.v8.1c.ru/banks/CommonCharacteristic"/>
+	<property xmlns:d2p1="http://www.v8.1c.ru/banks/FinancialServices" name="ПредложенияУслуг" type="d2p1:ПредложенияУслуг"/>
+	<valueType name="ТипКоличествоЛет" base="xs:int" variety="Atomic"/>
+	<valueType name="ТипКоличествоМесяцев" base="xs:int" variety="Atomic"/>
+	<valueType name="ТипКоэффициент" base="xs:decimal" variety="Atomic" totalDigits="5" fractionDigits="2"/>
+	<valueType name="ТипСумма" base="xs:decimal" variety="Atomic" totalDigits="15" fractionDigits="2"/>
+	<valueType name="ВидыПроверокПодключения" base="xs:string" variety="Atomic">
+		<enumeration xsi:type="xs:string">Подключен</enumeration>
+		<enumeration xsi:type="xs:string">НеПодключен</enumeration>
+		<enumeration xsi:type="xs:string">НеПроверять</enumeration>
+	</valueType>
+	<valueType name="ВидыПроверокПодключенияОткрытый" variety="Union" memberTypes="{http://www.v8.1c.ru/banks/FinancialServices}ВидыПроверокПодключения {http://www.w3.org/2001/XMLSchema}string"/>
+	<objectType name="ГруппыКонтрагентов" open="true" ordered="false" sequenced="true">
+		<property name="Идентификатор" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="DATA" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="ФинансоваяУслуга" open="true" ordered="false" sequenced="true">
+		<property name="Идентификатор" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ДатаНачала" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ДатаОкончания" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="МинВерсияСервиса" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="МаксВерсияСервиса" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ПорядокСортировки" type="xs:int" lowerBound="0"/>
+		<property name="ИдентификаторРекламы" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="НавигационнаяСсылка" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинСрокОтДатыРегистрации" type="d3p1:ТипКоличествоМесяцев" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинСрокФактическойДеятельности" type="d3p1:ТипКоличествоМесяцев" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинВозрастИП" type="d3p1:ТипКоличествоЛет" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МаксВозрастИП" type="d3p1:ТипКоличествоЛет" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинСреднемесячноеПоступлениеНаСчет" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинЕжемесячноеПоступлениеНаСчет" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property name="ВозможноОбслуживаниеИП" type="xs:boolean" lowerBound="0"/>
+		<property name="ВозможноОбслуживаниеЮЛ" type="xs:boolean" lowerBound="0"/>
+		<property name="ГруппаКонтрагентов" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинСреднемесячноеПоГруппеКонтрагентов" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинЕжемесячноеПоГруппеКонтрагентов" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="КоличествоМесяцевПоГруппеКонтрагентов" type="d3p1:ТипКоличествоМесяцев" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинСуммаВыручки" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МаксСуммаВыручки" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property name="ГруппаПоставщиков" type="xs:string" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинСреднемесячноеПоГруппеПоставщиков" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="МинЕжемесячноеПоГруппеПоставщиков" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="КоличествоМесяцевПоГруппеПоставщиков" type="d3p1:ТипКоличествоМесяцев" lowerBound="0"/>
+		<property name="СлучайныйПорядокСортировкиОт" type="xs:int" lowerBound="0"/>
+		<property name="СлучайныйПорядокСортировкиДо" type="xs:int" lowerBound="0"/>
+		<property name="ИмяФайлаКреатива" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="ГруппаПолучателейУслуг" type="xs:string" lowerBound="0"/>
+		<property name="НаименованиеРекламодателя" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="ИННРекламодателя" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="Сервис1С" type="xs:boolean" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="КоличествоМесяцевОтключенияБаннера" type="d3p1:ТипКоличествоМесяцев" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ПроверкаПодключенияДиректБанк" type="d3p1:ВидыПроверокПодключенияОткрытый" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ПроверкаПодключенияЭквайринг" type="d3p1:ВидыПроверокПодключенияОткрытый" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ПроверкаПодключенияСБП" type="d3p1:ВидыПроверокПодключенияОткрытый" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ПроверкаНаличияЗППроекта" type="d3p1:ВидыПроверокПодключенияОткрытый" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ПроверкаНаличияКорпКарт" type="d3p1:ВидыПроверокПодключенияОткрытый" lowerBound="0"/>
+		<property name="НавигационнаяСсылкаСПараметрами" type="xs:string" lowerBound="0" nillable="true" form="Element"/>
+		<property name="ПодробноеОписание" type="xs:string" lowerBound="0" nillable="true" form="Element"/>
+		<property name="КраткоеОписание" type="xs:string" lowerBound="0" nillable="true" form="Element"/>
+		<property name="ТолькоФинансыОрганизации" type="xs:boolean" lowerBound="0"/>
+		<property name="ИмяФайлаКреативаИнфоПанель" type="xs:string" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ТаможеннаяСтоимость" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ЗначениеПоказателя" type="d3p1:ТипСумма" lowerBound="0"/>
+		<property name="ИмяПоказателя" type="xs:string" lowerBound="0" nillable="true" form="Element"/>
+	</objectType>
+	<objectType name="ВидыДеятельности" open="true" ordered="false" sequenced="true">
+		<property name="ДатаНачала" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ДатаОкончания" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ИдентификаторПродукта" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="БелыйСписок" type="xs:boolean" lowerBound="0" fixed="false" default="false" form="Attribute"/>
+		<property name="КодОКВЭД2" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="ОрганизационноПравовыеФормы" open="true" ordered="false" sequenced="true">
+		<property name="ДатаНачала" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ДатаОкончания" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ИдентификаторПродукта" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="БелыйСписок" type="xs:boolean" lowerBound="0" fixed="false" default="false" form="Attribute"/>
+		<property name="КодОКОПФ" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="Регионы" open="true" ordered="false" sequenced="true">
+		<property name="ДатаНачала" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ДатаОкончания" type="xs:date" lowerBound="1" form="Attribute"/>
+		<property name="ИдентификаторПродукта" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="БелыйСписок" type="xs:boolean" lowerBound="0" fixed="false" default="false" form="Attribute"/>
+		<property name="КодРегиона" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="ПредложенияУслуг" open="true" ordered="false" sequenced="true">
+		<property name="Версия" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ФинансоваяУслуга" type="d3p1:ФинансоваяУслуга" lowerBound="0" upperBound="-1"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ВидыДеятельности" type="d3p1:ВидыДеятельности" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="Регионы" type="d3p1:Регионы" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ОрганизационноПравовыеФормы" type="d3p1:ОрганизационноПравовыеФормы" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ГруппыКонтрагентов" type="d3p1:ГруппыКонтрагентов" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ГруппыПолучателейУслуг" type="d3p1:ГруппыПолучателейУслуг" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="http://www.v8.1c.ru/banks/FinancialServices" name="ГруппыКомпанийБанков" type="d3p1:ГруппыКомпанийБанков" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="ГруппыПолучателейУслуг" open="true" ordered="false" sequenced="true">
+		<property name="Идентификатор" type="xs:string" lowerBound="0" form="Attribute"/>
+		<property name="DATA" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="ГруппыКомпанийБанков" open="true" ordered="false" sequenced="true">
+		<property name="DATA" type="xs:string" lowerBound="0"/>
+	</objectType>
+</package>

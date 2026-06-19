@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Обновите драйвера оборудования</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="38">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация7" id="40">
+					<Picture>
+						<xr:Ref>CommonPicture.КотПредупреждениеКасса</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="Декорация7КонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="42"/>
+				</PictureDecoration>
+				<UsualGroup name="ПредупреждениеНачалоРаботы" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предупреждение начало работы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предупреждение начало работы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПредупреждениеНачалоРаботыРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<Pages name="СтраницыПредупреждение" id="106">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы предупреждение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы предупреждение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыПредупреждениеРасширеннаяПодсказка" id="107"/>
+							<ChildItems>
+								<Page name="НачалоРаботы" id="108">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начало работы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начало работы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="НачалоРаботыРасширеннаяПодсказка" id="109"/>
+									<ChildItems>
+										<LabelDecoration name="НачалоРаботыЗаголовок" id="89">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Мы заметили, что некоторые драйвера вашего оборудования устарели. Важно вовремя обновлять их, чтобы оборудование работало правильно.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НачалоРаботыЗаголовокКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="НачалоРаботыЗаголовокРасширеннаяПодсказка" id="91"/>
+											<Events>
+												<Event name="URLProcessing">ТекстПредупреждениеОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+										<Pages name="СтраницыИнтерфейс" id="100">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы интерфейс</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы интерфейс</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="СтраницыИнтерфейсРасширеннаяПодсказка" id="101"/>
+											<ChildItems>
+												<Page name="ПростойИнтерфейс" id="102">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Простой интерфейс</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Простой интерфейс</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ПростойИнтерфейсРасширеннаяПодсказка" id="103"/>
+													<ChildItems>
+														<LabelDecoration name="НачалоРаботыПростой" id="95">
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обновить драйвера, а также настроить их автоматическое обновление, можно в разделе &lt;link ПоддержкаОборудования&gt;«Настройки» — «Поддержка оборудования»&lt;/&gt;.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НачалоРаботыПростойКонтекстноеМеню" id="96"/>
+															<ExtendedTooltip name="НачалоРаботыПростойРасширеннаяПодсказка" id="97"/>
+															<Events>
+																<Event name="URLProcessing">ТекстПредупреждениеОбработкаНавигационнойСсылки</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+												<Page name="ПолныйИнтерфейс" id="104">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Полный интерфейс</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Полный интерфейс</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ПолныйИнтерфейсРасширеннаяПодсказка" id="105"/>
+													<ChildItems>
+														<LabelDecoration name="НачалоРаботыПолный" id="92">
+															<Title formatted="true">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обновить драйвера, а также настроить их автоматическое обновление, можно в разделе &lt;link ПоддержкаОборудования&gt;«Администрирование» — «Поддержка оборудования»&lt;/&gt;.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НачалоРаботыПолныйКонтекстноеМеню" id="93"/>
+															<ExtendedTooltip name="НачалоРаботыПолныйРасширеннаяПодсказка" id="94"/>
+															<Events>
+																<Event name="URLProcessing">ТекстПредупреждениеОбработкаНавигационнойСсылки</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</Page>
+								<Page name="ОткрытиеСмены" id="110">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открытие смены</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открытие смены</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОткрытиеСменыРасширеннаяПодсказка" id="111"/>
+									<ChildItems>
+										<LabelDecoration name="ПредупреждениеОборудование" id="82">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Работа с устаревшим драйвером может привести к ошибкам при печати чека!
+
+Обновите драйвер в разделе &lt;link ПоддержкаОборудования&gt;«Администрирование» — «Поддержка оборудования» &lt;/&gt;или обратитесь к администратору.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПредупреждениеОборудованиеКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="ПредупреждениеОборудованиеРасширеннаяПодсказка" id="84"/>
+											<Events>
+												<Event name="URLProcessing">ТекстПредупреждениеОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<UsualGroup name="ГруппаКнопки" id="115">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<CheckBoxField name="НапомнитьПозже" id="112">
+									<DataPath>НапомнитьПозже</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НапомнитьПозжеКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="НапомнитьПозжеРасширеннаяПодсказка" id="114"/>
+								</CheckBoxField>
+								<LabelDecoration name="Декорация1" id="117">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="119"/>
+								</LabelDecoration>
+								<Button name="ОК" id="120">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.StandardCommand.OK</CommandName>
+									<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="121"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИдентификаторОборудования" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПодключаемоеОборудование</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НапомнитьПозже" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напомнить позже</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

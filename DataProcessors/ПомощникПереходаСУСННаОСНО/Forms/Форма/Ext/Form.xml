@@ -1,0 +1,1674 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник по переходу с УСН на ОСНО</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шпка</v8:content>
+				</v8:item>
+			</Title>
+			<Width>100</Width>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<UsualGroup name="Состояния" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояния</v8:content>
+						</v8:item>
+					</Title>
+					<Width>77</Width>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СостоянияРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<InputField name="Организация" id="198">
+							<DataPath>Объект.Организация</DataPath>
+							<MaxWidth>65</MaxWidth>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="199"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="200"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelField name="ОрганизацияПредставление" id="582">
+							<DataPath>ОрганизацияПредставление</DataPath>
+							<MaxWidth>25</MaxWidth>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="ОрганизацияПредставлениеКонтекстноеМеню" id="583"/>
+							<ExtendedTooltip name="ОрганизацияПредставлениеРасширеннаяПодсказка" id="584"/>
+						</LabelField>
+						<LabelDecoration name="НадписьПериод" id="187">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Переход на ОСНО с 1 января 2026 г.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПериодКонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="НадписьПериодРасширеннаяПодсказка" id="189"/>
+							<Events>
+								<Event name="Click">НадписьПериодНажатие</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="НадписьПодсказка" id="19">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>90</MaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:NormalTextFont" kind="StyleItem"/>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перед началом работы на ОСНО введите начальные остатки и отразите операции переходного периода.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьПодсказкаКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НадписьПодсказкаРасширеннаяПодсказка" id="21"/>
+				</LabelDecoration>
+				<UsualGroup name="Актуализация" id="201">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Актуализация</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="АктуализацияРасширеннаяПодсказка" id="202"/>
+					<ChildItems>
+						<UsualGroup name="ИдетПроверкаАктуальности" id="203">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идет проверка актуальности</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИдетПроверкаАктуальностиРасширеннаяПодсказка" id="204"/>
+							<ChildItems>
+								<PictureDecoration name="РисПриПроверкеАктуальности" id="205">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет проверка актуальности</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РисПриПроверкеАктуальностиКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="РисПриПроверкеАктуальностиРасширеннаяПодсказка" id="207"/>
+								</PictureDecoration>
+								<LabelDecoration name="ТекстПриПроверкеАктуальности" id="208">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет проверка актуальности</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ТекстПриПроверкеАктуальностиКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="ТекстПриПроверкеАктуальностиРасширеннаяПодсказка" id="210">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПроверкаАктуализацииСкрыть" id="211">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа проверка актуализации скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаАктуализацииСкрытьРасширеннаяПодсказка" id="212"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриПроверкеАктуальности" id="213">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриПроверкеАктуальностиКонтекстноеМеню" id="214"/>
+											<ExtendedTooltip name="СкрытьПриПроверкеАктуальностиРасширеннаяПодсказка" id="215"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ИдетАктуализация" id="216">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идет актуализация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ИдетАктуализацияРасширеннаяПодсказка" id="217"/>
+							<ChildItems>
+								<PictureDecoration name="РисПриАктуализации" id="218">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет актуализация данных</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Picture>
+										<xr:Ref>CommonPicture.НезавершившаясяПроверка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="РисПриАктуализацииКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="РисПриАктуализацииРасширеннаяПодсказка" id="220"/>
+								</PictureDecoration>
+								<LabelField name="ПрогрессорАктуализации" id="221">
+									<DataPath>ПрогрессорАктуализации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идет актуализация данных</v8:content>
+										</v8:item>
+									</Title>
+									<Width>4</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПрогрессорАктуализацииКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="ПрогрессорАктуализацииРасширеннаяПодсказка" id="223"/>
+								</LabelField>
+								<LabelDecoration name="ТекстПриАктуализации" id="224">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные могут измениться.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ТекстПриАктуализацииКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="ТекстПриАктуализацииРасширеннаяПодсказка" id="226"/>
+								</LabelDecoration>
+								<Button name="ОтменитьАктуализацию" id="227">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтменитьАктуализацию</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="ОтменитьАктуализациюРасширеннаяПодсказка" id="228">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<UsualGroup name="ГруппаИдетАктуализацияСкрыть" id="229">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа идет актуализация скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИдетАктуализацияСкрытьРасширеннаяПодсказка" id="230"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриАктуализации" id="231">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриАктуализацииКонтекстноеМеню" id="232"/>
+											<ExtendedTooltip name="СкрытьПриАктуализацииРасширеннаяПодсказка" id="233"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ДанныеАктуализированы" id="234">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные актуализированы</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>#CCFFCC</BackColor>
+							<ExtendedTooltip name="ДанныеАктуализированыРасширеннаяПодсказка" id="235"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстПриАктуальныхДанных" id="236">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные учета актуализированы.</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="ТекстПриАктуальныхДанныхКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="ТекстПриАктуальныхДанныхРасширеннаяПодсказка" id="238"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаДанныеАктуализированыСкрыть" id="239">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа данные актуализированы скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДанныеАктуализированыСкрытьРасширеннаяПодсказка" id="240"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриАктуальныхДанных" id="241">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриАктуальныхДанныхКонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="СкрытьПриАктуальныхДанныхРасширеннаяПодсказка" id="243"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ТребуетсяАктуализация" id="244">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требуется актуализация</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ЦветФонаПредупреждения</BackColor>
+							<ExtendedTooltip name="ТребуетсяАктуализацияРасширеннаяПодсказка" id="245"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстПриНеобходимостиАктуализации" id="246">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные учета актуальны на &lt;b&gt;15.12.2025&lt;/&gt;. Рекомендуется актуализировать данные.</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ТекстПриНеобходимостиАктуализацииКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="ТекстПриНеобходимостиАктуализацииРасширеннаяПодсказка" id="248">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<Button name="Актуализировать" id="249">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Актуализировать</CommandName>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ExtendedTooltip name="АктуализироватьРасширеннаяПодсказка" id="250">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Корректные остатки можно сформировать только на основе актуальных данных.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</Button>
+								<UsualGroup name="ГруппаТребуетсяАктуализацияСкрыть" id="251">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа требуется актуализация скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаТребуетсяАктуализацияСкрытьРасширеннаяПодсказка" id="252"/>
+									<ChildItems>
+										<LabelDecoration name="СкрытьПриНеобходимостиАктуализации" id="253">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скрыть</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<HorizontalAlign>Right</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<ContextMenu name="СкрытьПриНеобходимостиАктуализацииКонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="СкрытьПриНеобходимостиАктуализацииРасширеннаяПодсказка" id="255"/>
+											<Events>
+												<Event name="Click">СкрытьНажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДоПерехода" id="428">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка к переходу на ОСНО (выполняется - 31.12.2025)</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+			<Width>100</Width>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаДоПереходаРасширеннаяПодсказка" id="429"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОС" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ОС</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОСРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаСтатусОС" id="33">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаСтатусОСРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<PictureDecoration name="СтатусОС" id="39">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="СтатусОСКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="СтатусОСРасширеннаяПодсказка" id="590"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстОС" id="35">
+							<Width>50</Width>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстОСРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстОСЗаголовок" id="42">
+									<TextColor>style:FormTextColor</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод остатков по основным средствам</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстОСЗаголовокКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ТекстОСЗаголовокРасширеннаяПодсказка" id="44">
+										<Title formatted="true"/>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<LabelDecoration name="ТекстОСПодсказка" id="45">
+									<Width>78</Width>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Введите остаточную стоимость основных средств (оборудование, техника, мебель), которые не были полностью списаны в расходы при применении УСН. Это позволит продолжить начислять амортизацию после перехода на ОСНО и учитывать ее в расходах по налогу на прибыль.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстОСПодсказкаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ТекстОСПодсказкаРасширеннаяПодсказка" id="47">
+										<MaxWidth>20</MaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКомандыОС" id="258">
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="259"/>
+									<ChildItems>
+										<Button name="ВводНачальныхОстатковПоОС" id="531">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ВводНачальныхОстатковОС</CommandName>
+											<ExtendedTooltip name="ВводНачальныхОстатковПоОСРасширеннаяПодсказка" id="532"/>
+										</Button>
+										<Button name="ИзменитьСтатусОС" id="559">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьСтатусОС</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусОСРасширеннаяПодсказка" id="560"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНМА" id="262">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа НМА</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНМАРасширеннаяПодсказка" id="263"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаСтатусНМА" id="266">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаСтатусНМАРасширеннаяПодсказка" id="267"/>
+							<ChildItems>
+								<PictureDecoration name="СтатусНМА" id="268">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Статус НМА</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="СтатусНМАКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="СтатусНМАРасширеннаяПодсказка" id="270"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстНМА" id="271">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстНМАРасширеннаяПодсказка" id="272"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстНМАЗаголовок" id="273">
+									<TextColor>style:FormTextColor</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод остатков по нематериальным активам</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ТекстНМАЗаголовокКонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="ТекстНМАЗаголовокРасширеннаяПодсказка" id="275">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары, приобретенные до перехода, а оплаченные после перехода на УСН "доходы минус расходы", можно учесть
+как расходы. Признаются такие расходы в обычном порядке - на момент реализации товаров (или оплаты от покупателя)
+(пп. 2 п. 2 ст. 346.17 НК РФ). Одновременно учитывается в расходах "входной" ("ввозной") НДС по ним.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<LabelDecoration name="ТекстНМАПодсказка" id="276">
+									<Width>78</Width>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Введите остаточную стоимость нематериальных активов, которые не были полностью списаны в расходы при применении УСН. Это позволит продолжить начислять амортизацию после перехода на ОСНО и учитывать ее в расходах по налогу на прибыль.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстНМАПодсказкаКонтекстноеМеню" id="277"/>
+									<ExtendedTooltip name="ТекстНМАПодсказкаРасширеннаяПодсказка" id="278">
+										<MaxWidth>20</MaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКомандыНМА" id="284">
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандыНМАРасширеннаяПодсказка" id="285"/>
+									<ChildItems>
+										<Button name="ВводНачальныхОстатковПоНМА" id="286">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ВводНачальныхОстатковНМА</CommandName>
+											<ExtendedTooltip name="ВводНачальныхОстатковПоНМАРасширеннаяПодсказка" id="287"/>
+										</Button>
+										<Button name="ИзменитьСтатусНМА" id="580">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьСтатусНМА</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусНМАРасширеннаяПодсказка" id="581"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНДС" id="290">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа НДС</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНДСРасширеннаяПодсказка" id="291"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаСтатусНДС" id="294">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаСтатусНДСРасширеннаяПодсказка" id="295"/>
+							<ChildItems>
+								<PictureDecoration name="СтатусНДС" id="296">
+									<Picture>
+										<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="СтатусНДСКонтекстноеМеню" id="297"/>
+									<ExtendedTooltip name="СтатусНДСРасширеннаяПодсказка" id="298"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстНДС" id="299">
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстНДСРасширеннаяПодсказка" id="300"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстНДСЗаголовок" id="301">
+									<Width>78</Width>
+									<TextColor>style:FormTextColor</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подготовка к вычету НДС, включенного в стоимость</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ТекстНДСЗаголовокКонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="ТекстНДСЗаголовокРасширеннаяПодсказка" id="303">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары, приобретенные до перехода, а оплаченные после перехода на УСН "доходы минус расходы", можно учесть
+как расходы. Признаются такие расходы в обычном порядке - на момент реализации товаров (или оплаты от покупателя)
+(пп. 2 п. 2 ст. 346.17 НК РФ). Одновременно учитывается в расходах "входной" ("ввозной") НДС по ним.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<LabelDecoration name="ТекстНДСПодсказка" id="304">
+									<Width>78</Width>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверьте остатки товаров, материалов и капитальных вложений, которые не были использованы в деятельности и не списаны в расходы при УСН. Их стоимость может содержать НДС, который, при наличии корректно оформленных счетов-фактур, можно будет принять к вычету после перехода на ОСНО.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстНДСПодсказкаКонтекстноеМеню" id="305"/>
+									<ExtendedTooltip name="ТекстНДСПодсказкаРасширеннаяПодсказка" id="306">
+										<MaxWidth>20</MaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКомандыНДС" id="307">
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандыНДСРасширеннаяПодсказка" id="308"/>
+									<ChildItems>
+										<Button name="ПомощникПодготовкиКВычетуНДС" id="588">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ПомощникПодготовкиКВычетуНДС</CommandName>
+											<ExtendedTooltip name="ПомощникПодготовкиКВычетуНДСРасширеннаяПодсказка" id="589"/>
+										</Button>
+										<Button name="ИзменитьСтатусНДС" id="561">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьСтатусНДС</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусНДСРасширеннаяПодсказка" id="562"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВводОстатковПоНУ" id="450">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ввод остатков по НУ</v8:content>
+						</v8:item>
+					</Title>
+					<Width>100</Width>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВводОстатковПоНУРасширеннаяПодсказка" id="451"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаВводОстатковПоНУ" id="452">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа картинка ввод остатков по НУ</v8:content>
+								</v8:item>
+							</Title>
+							<Width>2</Width>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаВводОстатковПоНУРасширеннаяПодсказка" id="453"/>
+							<ChildItems>
+								<PictureDecoration name="ВводОстатковПоНУ" id="454">
+									<Picture>
+										<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ВводОстатковПоНУКонтекстноеМеню" id="455"/>
+									<ExtendedTooltip name="ВводОстатковПоНУРасширеннаяПодсказка" id="456"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстВводОстатковПоНУ" id="457">
+							<Width>78</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстВводОстатковПоНУРасширеннаяПодсказка" id="458"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстВводОстатковПоНУЗаголовок" id="459">
+									<Width>90</Width>
+									<TextColor>style:FormTextColor</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод остатков по налоговому учету</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ТекстВводОстатковПоНУЗаголовокКонтекстноеМеню" id="460"/>
+									<ExtendedTooltip name="ТекстВводОстатковПоНУЗаголовокРасширеннаяПодсказка" id="461">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары, приобретенные до перехода, а оплаченные после перехода на УСН "доходы минус расходы", можно учесть
+как расходы. Признаются такие расходы в обычном порядке - на момент реализации товаров (или оплаты от покупателя)
+(пп. 2 п. 2 ст. 346.17 НК РФ). Одновременно учитывается в расходах "входной" ("ввозной") НДС по ним.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<LabelDecoration name="ТекстВводОстатковПоНУПодсказка" id="462">
+									<Width>78</Width>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для правильного учета доходов и расходов на ОСНО введите остатки по налоговому учету. Убедитесь, что расхождения между бухгалтерским и налоговым учетом отсутствуют или имеют обоснование.
+</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстВводОстатковПоНУПодсказкаКонтекстноеМеню" id="463"/>
+									<ExtendedTooltip name="ТекстВводОстатковПоНУПодсказкаРасширеннаяПодсказка" id="464">
+										<MaxWidth>20</MaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКомандыВводОстатковПоНУ" id="465">
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандыВводОстатковПоНУРасширеннаяПодсказка" id="466"/>
+									<ChildItems>
+										<Button name="ВвестиОстаткиПоНалоговомуУчету" id="473">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВвестиОстаткиПоНалоговомуУчету</CommandName>
+											<ExtendedTooltip name="ВвестиОстаткиПоНалоговомуУчетуРасширеннаяПодсказка" id="474"/>
+										</Button>
+										<Button name="ВводОстатковПоНУСозданныеДокументы" id="533">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ВводОстатковПоНУСозданныеДокументы</CommandName>
+											<ExtendedTooltip name="ВводОстатковПоНУСозданныеДокументыРасширеннаяПодсказка" id="534"/>
+										</Button>
+										<Button name="ИзменитьСтатусВводОстатковПоНУ" id="563">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьСтатусВводОстатковПоНУ</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусВводОстатковПоНУРасширеннаяПодсказка" id="564"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасшифровкаВводОстатковПоНУ" id="555">
+							<Width>18</Width>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасшифровкаВводОстатковПоНУРасширеннаяПодсказка" id="556"/>
+							<ChildItems>
+								<Button name="РасшифровкаВводОстатковПоНУ" id="541">
+									<Type>Hyperlink</Type>
+									<CommandName>Form.Command.РасшифровкаВводОстатковПоНУ</CommandName>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<ExtendedTooltip name="РасшифровкаВводОстатковПоНУРасширеннаяПодсказка" id="542"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<PictureDecoration name="РазделительПодготовкаКПереходу" id="444">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>100</MaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделитель подготовка к переходу</v8:content>
+						</v8:item>
+					</Title>
+					<PictureSize>Stretch</PictureSize>
+					<Zoomable>true</Zoomable>
+					<Picture>
+						<xr:Ref>CommonPicture.ГоризонтальныйРазделитель</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="РазделительПодготовкаКПереходуКонтекстноеМеню" id="445"/>
+					<ExtendedTooltip name="РазделительПодготовкаКПереходуРасширеннаяПодсказка" id="446"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПослеПерехода" id="433">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>После перехода на ОСНО  (выполняется - 01.01.2026)</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="style:LargeTextFont" kind="StyleItem"/>
+			<Width>100</Width>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаПослеПереходаРасширеннаяПодсказка" id="434"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДоходы" id="345">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доходы переходного периода</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаДоходыРасширеннаяПодсказка" id="346"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаСтатусДоходы" id="349">
+							<Width>2</Width>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаСтатусДоходыРасширеннаяПодсказка" id="350"/>
+							<ChildItems>
+								<PictureDecoration name="СтатусДоходы" id="351">
+									<Height>1</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="СтатусДоходыКонтекстноеМеню" id="352"/>
+									<ExtendedTooltip name="СтатусДоходыРасширеннаяПодсказка" id="353"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстДоходы" id="354">
+							<Width>78</Width>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстДоходыРасширеннаяПодсказка" id="355"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстДоходы" id="356">
+									<Width>42</Width>
+									<TextColor>style:FormTextColor</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доходы переходного периода</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ТекстДоходыКонтекстноеМеню" id="357"/>
+									<ExtendedTooltip name="ТекстДоходыРасширеннаяПодсказка" id="358">
+										<Width>20</Width>
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары, приобретенные до перехода, а оплаченные после перехода на УСН "доходы минус расходы", можно учесть
+как расходы. Признаются такие расходы в обычном порядке - на момент реализации товаров (или оплаты от покупателя)
+(пп. 2 п. 2 ст. 346.17 НК РФ). Одновременно учитывается в расходах "входной" ("ввозной") НДС по ним.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<LabelDecoration name="ТекстДоходыПодсказка" id="359">
+									<Width>78</Width>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отразите в составе доходов по налогу на прибыль дебиторскую задолженность покупателей, не оплаченную на момент перехода с УСН на ОСНО.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстДоходыПодсказкаКонтекстноеМеню" id="360"/>
+									<ExtendedTooltip name="ТекстДоходыПодсказкаРасширеннаяПодсказка" id="361">
+										<MaxWidth>20</MaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКомандыДоходы" id="367">
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандыДоходыРасширеннаяПодсказка" id="368"/>
+									<ChildItems>
+										<Button name="ОтразитьДоходы" id="422">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтразитьДоходы</CommandName>
+											<ExtendedTooltip name="ОтразитьДоходыРасширеннаяПодсказка" id="423"/>
+										</Button>
+										<Button name="СозданныеДокументыДоходы" id="424">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СозданныеДокументы</CommandName>
+											<ExtendedTooltip name="СозданныеДокументыДоходыРасширеннаяПодсказка" id="425"/>
+										</Button>
+										<Button name="ИзменитьСтатусДоходы" id="565">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьСтатусДоходы</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусДоходыРасширеннаяПодсказка" id="566"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасшифровкаДоходы" id="362">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расшифровка доходы</v8:content>
+								</v8:item>
+							</Title>
+							<Width>18</Width>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасшифровкаДоходыРасширеннаяПодсказка" id="363"/>
+							<ChildItems>
+								<LabelDecoration name="РасшифровкаДоходы" id="364">
+									<TextColor>style:ГиперссылкаЦвет</TextColor>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>0,00 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="РасшифровкаДоходыКонтекстноеМеню" id="365"/>
+									<ExtendedTooltip name="РасшифровкаДоходыРасширеннаяПодсказка" id="366"/>
+									<Events>
+										<Event name="Click">СуммаДоходыНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРасходы" id="374">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расходы переходного периода</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасходыРасширеннаяПодсказка" id="375"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКартинкаСтатусРасходы" id="378">
+							<Width>2</Width>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКартинкаСтатусРасходыРасширеннаяПодсказка" id="379"/>
+							<ChildItems>
+								<PictureDecoration name="СтатусРасходы" id="380">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="СтатусРасходыКонтекстноеМеню" id="381"/>
+									<ExtendedTooltip name="СтатусРасходыРасширеннаяПодсказка" id="382"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстРасходы" id="383">
+							<Width>78</Width>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстРасходыРасширеннаяПодсказка" id="384"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстРасходыЗаголовок" id="385">
+									<Width>42</Width>
+									<TextColor>style:FormTextColor</TextColor>
+									<Font ref="style:LargeTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расходы переходного периода</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ContextMenu name="ТекстРасходыЗаголовокКонтекстноеМеню" id="386"/>
+									<ExtendedTooltip name="ТекстРасходыЗаголовокРасширеннаяПодсказка" id="387">
+										<Width>20</Width>
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Товары, приобретенные до перехода, а оплаченные после перехода на УСН "доходы минус расходы", можно учесть
+как расходы. Признаются такие расходы в обычном порядке - на момент реализации товаров (или оплаты от покупателя)
+(пп. 2 п. 2 ст. 346.17 НК РФ). Одновременно учитывается в расходах "входной" ("ввозной") НДС по ним.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<LabelDecoration name="ТекстРасходыПодсказка" id="388">
+									<Width>78</Width>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отразите в составе расходов по налогу на прибыль затраты, которые были приняты к учету на УСН, но не оплачены поставщикам на момент перехода с УСН на ОСНО.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстРасходыПодсказкаКонтекстноеМеню" id="389"/>
+									<ExtendedTooltip name="ТекстРасходыПодсказкаРасширеннаяПодсказка" id="390">
+										<MaxWidth>20</MaxWidth>
+									</ExtendedTooltip>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКомандыРасходы" id="396">
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандыРасходыРасширеннаяПодсказка" id="397"/>
+									<ChildItems>
+										<Button name="ОтразитьРасходы" id="420">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ОтразитьРасходы</CommandName>
+											<ExtendedTooltip name="ОтразитьРасходыРасширеннаяПодсказка" id="421"/>
+										</Button>
+										<Button name="СозданныеДокументыРасходы" id="426">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СозданныеДокументы</CommandName>
+											<ExtendedTooltip name="СозданныеДокументыРасходыРасширеннаяПодсказка" id="427"/>
+										</Button>
+										<Button name="ИзменитьСтатусРасходы" id="567">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьСтатусРасходы</CommandName>
+											<ExtendedTooltip name="ИзменитьСтатусРасходыРасширеннаяПодсказка" id="568"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРасшифровкаРасходы" id="391">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа расшифровка расходы</v8:content>
+								</v8:item>
+							</Title>
+							<Width>18</Width>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРасшифровкаРасходыРасширеннаяПодсказка" id="392"/>
+							<ChildItems>
+								<LabelDecoration name="РасшифровкаРасходы" id="393">
+									<TextColor>style:ГиперссылкаЦвет</TextColor>
+									<Font ref="style:NormalTextFont" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>0,00 руб.</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="РасшифровкаРасходыКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="РасшифровкаРасходыРасширеннаяПодсказка" id="395"/>
+									<Events>
+										<Event name="Click">СуммаРасходыНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<PictureDecoration name="РазделительПослеПерехода" id="475">
+					<Width>100</Width>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделитель после перехода</v8:content>
+						</v8:item>
+					</Title>
+					<PictureSize>Stretch</PictureSize>
+					<Zoomable>true</Zoomable>
+					<Picture>
+						<xr:Ref>CommonPicture.ГоризонтальныйРазделитель</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="РазделительПослеПереходаКонтекстноеМеню" id="476"/>
+					<ExtendedTooltip name="РазделительПослеПереходаРасширеннаяПодсказка" id="477"/>
+				</PictureDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСтатусы" id="478">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСтатусыРасширеннаяПодсказка" id="479"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьСтатусы" id="512">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статусы:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьСтатусыКонтекстноеМеню" id="513"/>
+					<ExtendedTooltip name="НадписьСтатусыРасширеннаяПодсказка" id="514"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаНеВыполнено" id="480">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНеВыполненоРасширеннаяПодсказка" id="481"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияНеВыполнено" id="482">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорация не выполнено</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.ОперацияРучнаяКорректировка</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияНеВыполненоКонтекстноеМеню" id="483"/>
+							<ExtendedTooltip name="ДекорацияНеВыполненоРасширеннаяПодсказка" id="484"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьНеВыполнено" id="485">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>- не выполнено</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьНеВыполненоКонтекстноеМеню" id="486"/>
+							<ExtendedTooltip name="НадписьНеВыполненоРасширеннаяПодсказка" id="487"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыполнено" id="496">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыполненоРасширеннаяПодсказка" id="497"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияВыполнено" id="498">
+							<Picture>
+								<xr:Ref>CommonPicture.ВыполненоУспешно</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияВыполненоКонтекстноеМеню" id="499"/>
+							<ExtendedTooltip name="ДекорацияВыполненоРасширеннаяПодсказка" id="500"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьВыполнено" id="501">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>- выполнено</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьВыполненоКонтекстноеМеню" id="502"/>
+							<ExtendedTooltip name="НадписьВыполненоРасширеннаяПодсказка" id="503"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыполненоСОшибками" id="504">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыполненоСОшибкамиРасширеннаяПодсказка" id="505"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияВыполненоСОшибками" id="506">
+							<Picture>
+								<xr:Ref>CommonPicture.ОперацияВыполненаСОшибками</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияВыполненоСОшибкамиКонтекстноеМеню" id="507"/>
+							<ExtendedTooltip name="ДекорацияВыполненоСОшибкамиРасширеннаяПодсказка" id="508"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьВыполненоСОшибками" id="509">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>- выполнено с ошибками</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьВыполненоСОшибкамиКонтекстноеМеню" id="510"/>
+							<ExtendedTooltip name="НадписьВыполненоСОшибкамиРасширеннаяПодсказка" id="511"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПропущено" id="547">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПропущеноРасширеннаяПодсказка" id="548"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияПропущено" id="549">
+							<Picture>
+								<xr:Ref>CommonPicture.ОперацияПропущена</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияПропущеноКонтекстноеМеню" id="550"/>
+							<ExtendedTooltip name="ДекорацияПропущеноРасширеннаяПодсказка" id="551"/>
+						</PictureDecoration>
+						<LabelDecoration name="НадписьПропущено" id="552">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>- пропущено</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПропущеноКонтекстноеМеню" id="553"/>
+							<ExtendedTooltip name="НадписьПропущеноРасширеннаяПодсказка" id="554"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Инструкция" id="569">
+			<Font ref="style:NormalTextFont" kind="StyleItem"/>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;link https://its.1c.ru/db/accusn#content:579:hdoc&gt;Инструкция на ИТС&lt;/&gt;
+</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнструкцияКонтекстноеМеню" id="570"/>
+			<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="571"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникПереходаСУСННаОСНО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтатусФоновогоЗадания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус фонового задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИдентификаторЗаданияАктуализации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор задания актуализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаАктуальности" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные учета актуальны на</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрогрессорАктуализации" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прогрессор актуализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресХранилищаАктуализации" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища актуализации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="БылПереходСУСННаОСНО" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Был переход с УСН на ОСНО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступностьКнопок" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступность кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеПоОперациям" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные по операциям</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОписаниеЗаданияАктуализации" id="28">
+			<Type/>
+		</Attribute>
+		<Attribute name="ОрганизацияПредставление" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<FunctionalOptions>
+				<Item>FunctionalOption.НеИспользоватьНесколькоОрганизацийБухгалтерскийУчет</Item>
+			</FunctionalOptions>
+		</Attribute>
+		<Attribute name="ДатыПерехода" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Даты перехода с УСН на ОСНО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДоступенПомощникПодготовкиКВычетуНДС" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступен помощник подготовки к вычету НДС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Актуализировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуализировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Актуализировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Актуализировать</Action>
+		</Command>
+		<Command name="ОтменитьАктуализацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтменитьАктуализацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтразитьДоходы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отразить доходы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтразитьДоходы</Action>
+		</Command>
+		<Command name="ОтразитьРасходы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отразить расходы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтразитьРасходы</Action>
+		</Command>
+		<Command name="СозданныеДокументы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Созданные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СозданныеДокументы</Action>
+		</Command>
+		<Command name="ВвестиОстаткиПоНалоговомуУчету" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести остатки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВвестиОстаткиПоНалоговомуУчету</Action>
+		</Command>
+		<Command name="ВводНачальныхОстатковОС" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести начальные остатки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВводНачальныхОстатковПоОС</Action>
+		</Command>
+		<Command name="ВводНачальныхОстатковНМА" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввод начальных остатков НМА</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВводНачальныхОстатковПоНМА</Action>
+		</Command>
+		<Command name="ВводОстатковПоНУСозданныеДокументы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Созданные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВводОстатковПоНУСозданныеДокументы</Action>
+		</Command>
+		<Command name="РасшифровкаВводОстатковПоНУ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить остатки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>РасшифровкаВводОстатковПоНУ</Action>
+		</Command>
+		<Command name="ИзменитьСтатусОС" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить </v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатусОС</Action>
+		</Command>
+		<Command name="ИзменитьСтатусНДС" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатусНДС</Action>
+		</Command>
+		<Command name="ИзменитьСтатусВводОстатковПоНУ" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатусВводОстатковПоНУ</Action>
+		</Command>
+		<Command name="ИзменитьСтатусДоходы" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатусДоходы</Action>
+		</Command>
+		<Command name="ИзменитьСтатусРасходы" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатусРасходы</Action>
+		</Command>
+		<Command name="ИзменитьСтатусНМА" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропустить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьСтатусНМА</Action>
+		</Command>
+		<Command name="ПомощникПодготовкиКВычетуНДС" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощник подготовки к вычету НДС</v8:content>
+				</v8:item>
+			</Title>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДатаПерехода">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>
