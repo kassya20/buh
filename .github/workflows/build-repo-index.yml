@@ -1,0 +1,52 @@
+name: Build repository index
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Build file index
+        shell: bash
+        run: |
+          {
+            echo "Repository: $GITHUB_REPOSITORY"
+            echo "Branch: ${GITHUB_REF_NAME}"
+            echo "Commit: ${GITHUB_SHA}"
+            echo "Generated at: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo
+            echo "== Top-level directories =="
+            find . -mindepth 1 -maxdepth 1 -type d \
+              ! -path './.git' \
+              | sed 's#^./##' \
+              | sort
+            echo
+            echo "== All files =="
+            find . -type f \
+              ! -path './.git/*' \
+              ! -path './REPO_INDEX.txt' \
+              | sed 's#^./##' \
+              | sort
+          } > REPO_INDEX.txt
+
+      - name: Commit index
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add REPO_INDEX.txt
+          if git diff --cached --quiet; then
+            echo "REPO_INDEX.txt is already up to date"
+          else
+            git commit -m "Обновить карту файлов репозитория"
+            git push
+          fi
