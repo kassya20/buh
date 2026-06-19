@@ -1,0 +1,134 @@
+Repository: kassya20/buh
+Branch: master
+Commit: 680c97f8e917c3efceae11c398f4692ca44d4970
+Generated at: 2026-06-19T14:53:50Z
+Total files: 94120
+
+== Top-level directories ==
+.github
+AccountingRegisters
+AccumulationRegisters
+BusinessProcesses
+Catalogs
+ChartsOfAccounts
+ChartsOfCalculationTypes
+ChartsOfCharacteristicTypes
+CommandGroups
+CommonAttributes
+CommonCommands
+CommonForms
+CommonModules
+CommonPictures
+CommonTemplates
+Constants
+DataProcessors
+DefinedTypes
+DocumentJournals
+DocumentNumerators
+Documents
+Enums
+EventSubscriptions
+ExchangePlans
+Ext
+FilterCriteria
+FunctionalOptions
+FunctionalOptionsParameters
+HTTPServices
+InformationRegisters
+IntegrationServices
+Languages
+Reports
+Roles
+ScheduledJobs
+Sequences
+SessionParameters
+SettingsStorages
+StyleItems
+Subsystems
+Tasks
+WSReferences
+WebServices
+XDTOPackages
+
+== Top-level file counts ==
+  39992 Reports
+   7552 DataProcessors
+   7313 Catalogs
+   7194 Documents
+   7060 CommonModules
+   5986 InformationRegisters
+   5935 CommonPictures
+   1551 CommonForms
+   1436 Enums
+   1330 Roles
+   1146 CommonCommands
+   1115 Constants
+   1015 Subsystems
+    876 XDTOPackages
+    595 CommonTemplates
+    520 FunctionalOptions
+    517 StyleItems
+    501 DefinedTypes
+    452 EventSubscriptions
+    357 AccumulationRegisters
+    328 ScheduledJobs
+    310 DocumentJournals
+    257 ExchangePlans
+    181 BusinessProcesses
+     95 SessionParameters
+     92 ChartsOfCharacteristicTypes
+     82 SettingsStorages
+     79 ChartsOfAccounts
+     64 Tasks
+     39 CommandGroups
+     34 WebServices
+     29 ChartsOfCalculationTypes
+     18 HTTPServices
+     14 Ext
+     10 Sequences
+      9 FilterCriteria
+      8 AccountingRegisters
+      7 FunctionalOptionsParameters
+      7 CommonAttributes
+      6 WSReferences
+      2 IntegrationServices
+      1 README.md
+      1 Languages
+      1 DocumentNumerators
+      1 Configuration.xml
+      1 ConfigDumpInfo.xml
+      1 .github
+
+== Index chunks ==
+files_0000.txt 3000 lines
+files_0001.txt 3000 lines
+files_0002.txt 3000 lines
+files_0003.txt 3000 lines
+files_0004.txt 3000 lines
+files_0005.txt 3000 lines
+files_0006.txt 3000 lines
+files_0007.txt 3000 lines
+files_0008.txt 3000 lines
+files_0009.txt 3000 lines
+files_0010.txt 3000 lines
+files_0011.txt 3000 lines
+files_0012.txt 3000 lines
+files_0013.txt 3000 lines
+files_0014.txt 3000 lines
+files_0015.txt 3000 lines
+files_0016.txt 3000 lines
+files_0017.txt 3000 lines
+files_0018.txt 3000 lines
+files_0019.txt 3000 lines
+files_0020.txt 3000 lines
+files_0021.txt 3000 lines
+files_0022.txt 3000 lines
+files_0023.txt 3000 lines
+files_0024.txt 3000 lines
+files_0025.txt 3000 lines
+files_0026.txt 3000 lines
+files_0027.txt 3000 lines
+files_0028.txt 3000 lines
+files_0029.txt 3000 lines
+files_0030.txt 3000 lines
+files_0031.txt 1120 lines
