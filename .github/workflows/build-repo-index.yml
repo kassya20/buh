@@ -15,37 +15,57 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Build file index
+      - name: Build split file index
         shell: bash
         run: |
+          rm -f REPO_INDEX.txt
+          rm -rf REPO_INDEX
+          mkdir -p REPO_INDEX
+
+          find . -type f \
+            ! -path './.git/*' \
+            ! -path './REPO_INDEX/*' \
+            ! -path './REPO_INDEX.txt' \
+            | sed 's#^./##' \
+            | sort > /tmp/all_files.txt
+
           {
             echo "Repository: $GITHUB_REPOSITORY"
             echo "Branch: ${GITHUB_REF_NAME}"
             echo "Commit: ${GITHUB_SHA}"
             echo "Generated at: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+            echo "Total files: $(wc -l < /tmp/all_files.txt)"
             echo
             echo "== Top-level directories =="
             find . -mindepth 1 -maxdepth 1 -type d \
               ! -path './.git' \
+              ! -path './REPO_INDEX' \
               | sed 's#^./##' \
               | sort
             echo
-            echo "== All files =="
-            find . -type f \
-              ! -path './.git/*' \
-              ! -path './REPO_INDEX.txt' \
-              | sed 's#^./##' \
-              | sort
-          } > REPO_INDEX.txt
+            echo "== Top-level file counts =="
+            awk -F/ '{print $1}' /tmp/all_files.txt | sort | uniq -c | sort -nr
+            echo
+            echo "== Index chunks =="
+          } > REPO_INDEX/SUMMARY.txt
 
-      - name: Commit index
+          split -d -a 4 -l 3000 /tmp/all_files.txt REPO_INDEX/files_
+          for file in REPO_INDEX/files_*; do
+            mv "$file" "$file.txt"
+          done
+
+          for file in REPO_INDEX/files_*.txt; do
+            echo "$(basename "$file") $(wc -l < "$file") lines" >> REPO_INDEX/SUMMARY.txt
+          done
+
+      - name: Commit split index
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add REPO_INDEX.txt
+          git add REPO_INDEX REPO_INDEX.txt
           if git diff --cached --quiet; then
-            echo "REPO_INDEX.txt is already up to date"
+            echo "Repository index is already up to date"
           else
             git commit -m "Обновить карту файлов репозитория"
             git push
